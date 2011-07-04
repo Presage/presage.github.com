@@ -158,7 +158,13 @@
     <li class="api apilevel-">
   <a href="./uk/ac/imperial/presage2/db/jdo/package-summary.html">uk.ac.imperial.presage2.db.jdo</a></li>
     <li class="api apilevel-">
-  <a href="./uk/ac/imperial/presage2/util/environment/location/package-summary.html">uk.ac.imperial.presage2.util.environment.location</a></li>
+  <a href="./uk/ac/imperial/presage2/util/environment/package-summary.html">uk.ac.imperial.presage2.util.environment</a></li>
+    <li class="api apilevel-">
+  <a href="./uk/ac/imperial/presage2/util/location/package-summary.html">uk.ac.imperial.presage2.util.location</a></li>
+    <li class="api apilevel-">
+  <a href="./uk/ac/imperial/presage2/util/network/package-summary.html">uk.ac.imperial.presage2.util.network</a></li>
+    <li class="api apilevel-">
+  <a href="./uk/ac/imperial/presage2/util/participant/package-summary.html">uk.ac.imperial.presage2.util.participant</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
@@ -233,13 +239,13 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/environment/AbstractEnvironment.html">AbstractEnvironment</a></td>
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html">AbstractEnvironment</a></td>
             <td class="jd-descrcol" width="100%">Abstract implementation of an environment.&nbsp;</td>
         </tr>
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/participant/AbstractParticipant.html">AbstractParticipant</a></td>
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/participant/AbstractParticipant.html">AbstractParticipant</a></td>
             <td class="jd-descrcol" width="100%"><p>This implements the core of a <code><a href="./uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></code> to manage the majority of the
  mundane functions allowing the user to start writing the agent's behaviours sooner.&nbsp;</td>
         </tr>
@@ -260,6 +266,25 @@
         <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/environment/ActionHandlingException.html">ActionHandlingException</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/location/Area.html">Area</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/location/Area2D.html">Area2D</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/location/AreaService.html">AreaService</a></td>
+            <td class="jd-descrcol" width="100%"><p>Global environment service to get the simulation <code><a href="./uk/ac/imperial/presage2/util/location/Area.html">Area</a></code> as defined 
+ by the environment and provided through <code><a href="./uk/ac/imperial/presage2/util/location/HasArea.html">HasArea</a></code>.&nbsp;</td>
         </tr>
     
     
@@ -290,8 +315,28 @@
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/location/CannotSeeAgent.html">CannotSeeAgent</a></td>
+            <td class="jd-descrcol" width="100%">Exception thrown when an agent requests directly for the <code><a href="./uk/ac/imperial/presage2/util/location/Location.html">Location</a></code> of
+ another but the request agent is further away then the maximum distance the
+ former can perceive (as defined by <code><a href="./uk/ac/imperial/presage2/util/participant/HasPerceptionRange.html">HasPerceptionRange</a></code>).&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/environment/CommunicationRangeService.html">CommunicationRangeService</a></td>
+            <td class="jd-descrcol" width="100%"><p>An <code><a href="./uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code> to retrieve agents' communication ranges.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/network/ConstrainedNetworkController.html">ConstrainedNetworkController</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
+            <td class="jd-descrcol" width="100%"><p>A <code><a href="./uk/ac/imperial/presage2/core/network/NetworkController.html">NetworkController</a></code> which allows the use of <code><a href="./uk/ac/imperial/presage2/core/network/NetworkConstraint.html">NetworkConstraint</a></code>s.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/location/Continuous2DLocation.html">Continuous2DLocation</a></td>
+            <td class="jd-descrcol" width="100%">A 2D Location consisting of double coordinates.&nbsp;</td>
         </tr>
     
     
@@ -305,6 +350,12 @@
         <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/db/DatabaseService.html">DatabaseService</a></td>
             <td class="jd-descrcol" width="100%">This is a generic description of a Database service in presage.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/location/Discrete2DLocation.html">Discrete2DLocation</a></td>
+            <td class="jd-descrcol" width="100%">A 2D Location consisting of integer coordinates.&nbsp;</td>
         </tr>
     
     
@@ -324,7 +375,7 @@
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/environment/EnvironmentMembersService.html">EnvironmentMembersService</a></td>
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/environment/EnvironmentMembersService.html">EnvironmentMembersService</a></td>
             <td class="jd-descrcol" width="100%"><p>This service provides access to the UUIDs of all the participants in the
  simulation.&nbsp;</td>
         </tr>
@@ -382,13 +433,25 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/environment/location/HasLocation.html">HasLocation</a></td>
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/location/HasArea.html">HasArea</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/environment/location/HasPerceptionRange.html">HasPerceptionRange</a></td>
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/participant/HasCommunicationRange.html">HasCommunicationRange</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/location/HasLocation.html">HasLocation</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/participant/HasPerceptionRange.html">HasPerceptionRange</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
@@ -470,13 +533,19 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/environment/location/Location.html">Location</a></td>
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/location/Location.html">Location</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/environment/location/LocationService.html">LocationService</a></td>
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/location/Location2D.html">Location2D</a>&lt;T&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Number.html">Number</a>&gt;</td>
+            <td class="jd-descrcol" width="100%">A <code><a href="./uk/ac/imperial/presage2/util/location/Location.html">Location</a></code> which is represented by two numerical coordinates.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/location/LocationService.html">LocationService</a></td>
             <td class="jd-descrcol" width="100%">An <code><a href="./uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code> to provide information
  on the locations of agents.&nbsp;</td>
         </tr>
@@ -496,24 +565,42 @@
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/network/MulticastMessage.html">MulticastMessage</a></td>
-            <td class="jd-descrcol" width="100%"><p>This is a basic multicast message to be sent between agents.&nbsp;</td>
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/location/Move.html">Move</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/simulator/MultiThreadedSimulator.html">MultiThreadedSimulator</a></td>
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/location/Move2D.html">Move2D</a>&lt;T&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Number.html">Number</a>&gt;</td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/db/jdo/MXJDataDir.html">MXJDataDir</a></td>
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/location/MoveHandler.html">MoveHandler</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/network/MulticastMessage.html">MulticastMessage</a></td>
+            <td class="jd-descrcol" width="100%"><p>This is a basic multicast message to be sent between agents.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/simulator/MultiThreadedSimulator.html">MultiThreadedSimulator</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/db/jdo/MXJDataDir.html">MXJDataDir</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/db/jdo/MxjJDODatabaseService.html">MxjJDODatabaseService</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
@@ -591,6 +678,12 @@
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/network/NetworkRangeConstraint.html">NetworkRangeConstraint</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/network/NetworkRegistrationRequest.html">NetworkRegistrationRequest</a></td>
             <td class="jd-descrcol" width="100%">Object to pass parameters to the NetworkController
  when registering with the network.&nbsp;</td>
@@ -630,8 +723,8 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/environment/location/ParticipantLocationService.html">ParticipantLocationService</a></td>
-            <td class="jd-descrcol" width="100%"><p>This is an extension of the <code><a href="./uk/ac/imperial/presage2/util/environment/location/LocationService.html">LocationService</a></code> to provide tools
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/util/location/ParticipantLocationService.html">ParticipantLocationService</a></td>
+            <td class="jd-descrcol" width="100%"><p>This is an extension of the <code><a href="./uk/ac/imperial/presage2/util/location/LocationService.html">LocationService</a></code> to provide tools
  specifically for <code><a href="./uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></code>s.&nbsp;</td>
         </tr>
     
@@ -721,43 +814,49 @@
     
     
         <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/simulator/ScenarioBuilder.html">ScenarioBuilder</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/simulator/ScenarioModule.html">ScenarioModule</a></td>
             <td class="jd-descrcol" width="100%"><p>A ScenarioModule provides Guice bindings which allow the simulation components to
  be loaded by an <code><a href="./uk/ac/imperial/presage2/core/simulator/InjectedScenario.html">InjectedScenario</a></code>.&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/simulator/ScenarioSource.html">ScenarioSource</a></td>
             <td class="jd-descrcol" width="100%"><p>Binding annotation for the database connection provided to the Simulator.&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/environment/SharedState.html">SharedState</a>&lt;T&gt;</td>
             <td class="jd-descrcol" width="100%">General shared state in the environment.&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/environment/SharedStateAccessException.html">SharedStateAccessException</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/simulator/Simulator.html">Simulator</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/simulator/SimulatorModule.html">SimulatorModule</a></td>
             <td class="jd-descrcol" width="100%"><p>Global simulator level guice bindings</p>&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./uk/ac/imperial/presage2/core/simulator/SingleThreadedSimulator.html">SingleThreadedSimulator</a></td>
             <td class="jd-descrcol" width="100%"><p>Simulator which executes agents consecutively in a single
  thread</p>&nbsp;</td>

@@ -158,8 +158,14 @@
   <a href="../../../../../../uk/ac/imperial/presage2/db/package-summary.html">uk.ac.imperial.presage2.db</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/db/jdo/package-summary.html">uk.ac.imperial.presage2.db.jdo</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/environment/package-summary.html">uk.ac.imperial.presage2.util.environment</a></li>
     <li class="selected api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/util/location/package-summary.html">uk.ac.imperial.presage2.util.location</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/network/package-summary.html">uk.ac.imperial.presage2.util.network</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/participant/package-summary.html">uk.ac.imperial.presage2.util.participant</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
@@ -168,19 +174,35 @@
               
     <li><h2>Interfaces</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Area.html">Area</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/HasArea.html">HasArea</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/HasLocation.html">HasLocation</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Move.html">Move</a></li>
       </ul>
     </li>
               
     <li><h2>Classes</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Area2D.html">Area2D</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/AreaService.html">AreaService</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Continuous2DLocation.html">Continuous2DLocation</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Discrete2DLocation.html">Discrete2DLocation</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location2D.html">Location2D</a>&lt;T&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Number.html">Number</a>&gt;</li>
           <li class="selected api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/LocationService.html">LocationService</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Move2D.html">Move2D</a>&lt;T&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Number.html">Number</a>&gt;</li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/MoveHandler.html">MoveHandler</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/ParticipantLocationService.html">ParticipantLocationService</a></li>
       </ul>
     </li>
               
               
               
+    <li><h2>Exceptions</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/CannotSeeAgent.html">CannotSeeAgent</a></li>
+      </ul>
+    </li>
               
             </ul><br/>
           </div><!-- end classes -->
@@ -220,6 +242,8 @@
 
 
   
+   
+  
   
   
    
@@ -249,9 +273,9 @@ Summary:
   
 
 
-
-  &#124; <a href="#proctors">Protected Ctors</a>
+  &#124; <a href="#pubctors">Ctors</a>
   
+
 
 
   &#124; <a href="#pubmethods">Methods</a>
@@ -363,7 +387,8 @@ Summary:
   <table class="jd-sumtable-expando">
         <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/location/ParticipantLocationService.html">ParticipantLocationService</a></td>
-              <td class="jd-descrcol" width="100%">&nbsp;</td>
+              <td class="jd-descrcol" width="100%"><p>This is an extension of the <code><a href="../../../../../../uk/ac/imperial/presage2/util/location/LocationService.html">LocationService</a></code> to provide tools
+ specifically for <code><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></code>s.&nbsp;</td>
           </tr>
   </table>
       </div>
@@ -378,7 +403,11 @@ Summary:
 
 <h2>Class Overview</h2>
 <p>An <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code> to provide information
- on the locations of agents.</p>
+ on the locations of agents.
+ 
+ <h3>Usage</h3>
+ 
+ <p>Add as a global environment service in the environment<p></p>
 
 
 
@@ -473,10 +502,8 @@ Summary:
 
 
 
-
-
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
-<table id="proctors" class="jd-sumtable"><tr><th colspan="12">Protected Constructors</th></tr>
+<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
 
 
 
@@ -498,6 +525,8 @@ Summary:
 
 
 </table>
+
+
 
 
 
@@ -539,6 +568,66 @@ Summary:
   <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
   <div style="clear:left;">Inherited Methods</div></th></tr>
 
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-uk.ac.imperial.presage2.core.environment.EnvironmentService" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-uk.ac.imperial.presage2.core.environment.EnvironmentService-trigger"
+          src="../../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">uk.ac.imperial.presage2.core.environment.EnvironmentService</a>
+
+<div id="inherited-methods-uk.ac.imperial.presage2.core.environment.EnvironmentService">
+  <div id="inherited-methods-uk.ac.imperial.presage2.core.environment.EnvironmentService-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-uk.ac.imperial.presage2.core.environment.EnvironmentService-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html#initialise(java.util.Map<java.lang.String, uk.ac.imperial.presage2.core.environment.SharedState<?>>)">initialise</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>,&nbsp;<a href="../../../../../../uk/ac/imperial/presage2/core/environment/SharedState.html">SharedState</a>&lt;?&gt;&gt; globalSharedState)</nobr>
+        
+        <div class="jd-descrdiv">Initialise global shared state required by this environmentservice (optional).</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html#registerParticipant(uk.ac.imperial.presage2.core.environment.EnvironmentRegistrationRequest, java.util.Map<java.lang.String, uk.ac.imperial.presage2.core.environment.SharedState<?>>)">registerParticipant</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentRegistrationRequest.html">EnvironmentRegistrationRequest</a> req, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>,&nbsp;<a href="../../../../../../uk/ac/imperial/presage2/core/environment/SharedState.html">SharedState</a>&lt;?&gt;&gt; globalSharedState)</nobr>
+        
+        <div class="jd-descrdiv">Called when a participant is registered (optional).</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
 
 
 
@@ -772,11 +861,8 @@ From class
 <!-- Public ctors -->
 
 
-
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
-<!-- Protected ctors -->
-
-<h2>Protected Constructors</h2>
+<h2>Public Constructors</h2>
 
 
 
@@ -785,7 +871,7 @@ From class
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
       <span class="normal">
-        protected 
+        public 
          
          
          
@@ -811,6 +897,11 @@ From class
 </div>
 
 
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
 
 
 
@@ -858,8 +949,16 @@ From class
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li><code><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a></code> of participant.
-</li></ul>
+      <ul class="nolist"><li><code><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a></code> of participant.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="../../../../../../uk/ac/imperial/presage2/util/location/CannotSeeAgent.html">CannotSeeAgent</a></td>
+            <td></td>
+        </tr>
+      </table>
   </div>
 
     </div>

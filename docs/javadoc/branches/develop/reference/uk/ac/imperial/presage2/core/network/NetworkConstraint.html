@@ -159,7 +159,13 @@
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/db/jdo/package-summary.html">uk.ac.imperial.presage2.db.jdo</a></li>
     <li class="api apilevel-">
-  <a href="../../../../../../uk/ac/imperial/presage2/util/environment/location/package-summary.html">uk.ac.imperial.presage2.util.environment.location</a></li>
+  <a href="../../../../../../uk/ac/imperial/presage2/util/environment/package-summary.html">uk.ac.imperial.presage2.util.environment</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/location/package-summary.html">uk.ac.imperial.presage2.util.location</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/network/package-summary.html">uk.ac.imperial.presage2.util.network</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/participant/package-summary.html">uk.ac.imperial.presage2.util.participant</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
@@ -244,6 +250,25 @@
 
 <div class="sum-details-links">
 
+Summary:
+
+
+
+
+
+
+
+
+
+
+
+  <a href="#pubmethods">Methods</a>
+  
+
+
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
 </div><!-- end sum-details-links -->
 <div class="api-level">
   
@@ -293,6 +318,37 @@
 
 
 
+
+<table class="jd-sumtable jd-sumtable-subclasses"><tr><td colspan="12" style="border:none;margin:0;padding:0;">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="subclasses-indirect" class="jd-expando-trigger closed"
+          ><img id="subclasses-indirect-trigger"
+          src="../../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>Known Indirect Subclasses
+
+  <div id="subclasses-indirect">
+      <div id="subclasses-indirect-list"
+              class="jd-inheritedlinks"
+              
+              >
+          
+            
+              <a href="../../../../../../uk/ac/imperial/presage2/util/network/NetworkRangeConstraint.html">NetworkRangeConstraint</a>
+            
+          
+      </div>
+      <div id="subclasses-indirect-summary"
+              style="display: none;"
+              >
+  <table class="jd-sumtable-expando">
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/network/NetworkRangeConstraint.html">NetworkRangeConstraint</a></td>
+              <td class="jd-descrcol" width="100%">&nbsp;</td>
+          </tr>
+  </table>
+      </div>
+  </div>
+</td></tr></table>
 
 
 <div class="jd-descr">
@@ -363,6 +419,24 @@
             
             
             
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConstraint.html#blockMessageDelivery(uk.ac.imperial.presage2.core.network.NetworkAddress, uk.ac.imperial.presage2.core.network.Message)">blockMessageDelivery</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAddress.html">NetworkAddress</a> to, <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</nobr>
+        
+        <div class="jd-descrdiv">Block the message m from being delivered to recipient to.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
             <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
@@ -420,6 +494,56 @@
 
 <h2>Public Methods</h2>
 
+
+
+<A NAME="blockMessageDelivery(uk.ac.imperial.presage2.core.network.NetworkAddress, uk.ac.imperial.presage2.core.network.Message)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        boolean
+      </span>
+      <span class="sympad">blockMessageDelivery</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAddress.html">NetworkAddress</a> to, <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Block the message m from being delivered to recipient to.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>to</td>
+          <td>a recipient of the message m</td>
+        </tr>
+        <tr>
+          <th>m</td>
+          <td>the message being sent.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>True if the NetworkController should block the message,
+ 			false otherwise.
+</li></ul>
+  </div>
+
+    </div>
+</div>
 
 
 <A NAME="constrainMessage(uk.ac.imperial.presage2.core.network.Message)"></A>

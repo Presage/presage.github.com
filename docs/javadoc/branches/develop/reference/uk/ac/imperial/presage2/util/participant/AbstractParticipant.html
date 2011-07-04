@@ -146,7 +146,7 @@
   <a href="../../../../../../uk/ac/imperial/presage2/core/messaging/package-summary.html">uk.ac.imperial.presage2.core.messaging</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/network/package-summary.html">uk.ac.imperial.presage2.core.network</a></li>
-    <li class="selected api apilevel-">
+    <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/participant/package-summary.html">uk.ac.imperial.presage2.core.participant</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/plugin/package-summary.html">uk.ac.imperial.presage2.core.plugin</a></li>
@@ -159,7 +159,13 @@
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/db/jdo/package-summary.html">uk.ac.imperial.presage2.db.jdo</a></li>
     <li class="api apilevel-">
-  <a href="../../../../../../uk/ac/imperial/presage2/util/environment/location/package-summary.html">uk.ac.imperial.presage2.util.environment.location</a></li>
+  <a href="../../../../../../uk/ac/imperial/presage2/util/environment/package-summary.html">uk.ac.imperial.presage2.util.environment</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/location/package-summary.html">uk.ac.imperial.presage2.util.location</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/network/package-summary.html">uk.ac.imperial.presage2.util.network</a></li>
+    <li class="selected api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/participant/package-summary.html">uk.ac.imperial.presage2.util.participant</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
@@ -168,26 +174,19 @@
               
     <li><h2>Interfaces</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></li>
-          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/ParticipantFactory.html">ParticipantFactory</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/HasCommunicationRange.html">HasCommunicationRange</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/HasPerceptionRange.html">HasPerceptionRange</a></li>
       </ul>
     </li>
               
     <li><h2>Classes</h2>
       <ul>
-          <li class="selected api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html">AbstractParticipant</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html">AbstractParticipant</a></li>
       </ul>
     </li>
               
               
               
-    <li><h2>Exceptions</h2>
-      <ul>
-          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/ParticipantException.html">ParticipantException</a></li>
-          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/ParticipantInitialisationException.html">ParticipantInitialisationException</a></li>
-          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/ParticipantRunTimeException.html">ParticipantRunTimeException</a></li>
-      </ul>
-    </li>
               
             </ul><br/>
           </div><!-- end classes -->
@@ -270,6 +269,9 @@ Summary:
 
 
 
+  &#124; <a href="#pubctors">Ctors</a>
+  
+
 
   &#124; <a href="#proctors">Protected Ctors</a>
   
@@ -347,7 +349,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">uk.ac.imperial.presage2.core.participant.AbstractParticipant</td>
+        <td colspan="1" class="jd-inheritance-class-cell">uk.ac.imperial.presage2.util.participant.AbstractParticipant</td>
     </tr>
     
 
@@ -422,7 +424,7 @@ Summary:
           
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#authkey">authkey</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#authkey">authkey</a></td>
           <td class="jd-descrcol" width="100%">This Participant's authkey obtained when registering with
  the environment.</td>
       </tr>
@@ -434,7 +436,7 @@ Summary:
           
           
           <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentConnector.html">EnvironmentConnector</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#environment">environment</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#environment">environment</a></td>
           <td class="jd-descrcol" width="100%">Connector to the environment the participant is in.</td>
       </tr>
       
@@ -445,7 +447,7 @@ Summary:
           
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Queue.html">Queue</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/messaging/Input.html">Input</a>&gt;</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#inputQueue">inputQueue</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#inputQueue">inputQueue</a></td>
           <td class="jd-descrcol" width="100%">FIFO queue of inputs to be processed.</td>
       </tr>
       
@@ -456,7 +458,7 @@ Summary:
           
           
           <a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAdaptor.html">NetworkAdaptor</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#network">network</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#network">network</a></td>
           <td class="jd-descrcol" width="100%">Connector to the network.</td>
       </tr>
       
@@ -467,7 +469,7 @@ Summary:
           
           final
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Set.html">Set</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a>&gt;</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#services">services</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#services">services</a></td>
           <td class="jd-descrcol" width="100%">Set of <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code>s available to the agent.</td>
       </tr>
       
@@ -479,6 +481,33 @@ Summary:
 
 
 
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            </nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#AbstractParticipant(java.util.UUID, java.lang.String)">AbstractParticipant</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> id, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name)</nobr>
+        
+        <div class="jd-descrdiv"><p>Basic Participant constructor.</div>
+  
+  </td></tr>
+
+
+
+</table>
 
 
 
@@ -499,8 +528,10 @@ Summary:
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#AbstractParticipant(java.util.UUID, java.lang.String, uk.ac.imperial.presage2.core.environment.EnvironmentConnector, uk.ac.imperial.presage2.core.network.NetworkAdaptor, uk.ac.imperial.presage2.core.Time)">AbstractParticipant</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> id, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentConnector.html">EnvironmentConnector</a> environment, <a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAdaptor.html">NetworkAdaptor</a> network, <a href="../../../../../../uk/ac/imperial/presage2/core/Time.html">Time</a> time)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#AbstractParticipant(java.util.UUID, java.lang.String, uk.ac.imperial.presage2.core.environment.EnvironmentConnector, uk.ac.imperial.presage2.core.network.NetworkAdaptor, uk.ac.imperial.presage2.core.Time)">AbstractParticipant</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> id, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentConnector.html">EnvironmentConnector</a> environment, <a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAdaptor.html">NetworkAdaptor</a> network, <a href="../../../../../../uk/ac/imperial/presage2/core/Time.html">Time</a> time)</nobr>
         
+        <div class="jd-descrdiv">Assisted Inject constructor.</div>
+  
   </td></tr>
 
 
@@ -526,7 +557,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#enqueueInput(java.util.Collection<? extends uk.ac.imperial.presage2.core.messaging.Input>)">enqueueInput</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Collection.html">Collection</a>&lt;?&nbsp;extends&nbsp;<a href="../../../../../../uk/ac/imperial/presage2/core/messaging/Input.html">Input</a>&gt; inputs)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#enqueueInput(java.util.Collection<? extends uk.ac.imperial.presage2.core.messaging.Input>)">enqueueInput</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Collection.html">Collection</a>&lt;?&nbsp;extends&nbsp;<a href="../../../../../../uk/ac/imperial/presage2/core/messaging/Input.html">Input</a>&gt; inputs)</nobr>
         
         <div class="jd-descrdiv">Adds multiple new inputs to be processed by this participant.</div>
   
@@ -544,7 +575,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#enqueueInput(uk.ac.imperial.presage2.core.messaging.Input)">enqueueInput</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/messaging/Input.html">Input</a> input)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#enqueueInput(uk.ac.imperial.presage2.core.messaging.Input)">enqueueInput</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/messaging/Input.html">Input</a> input)</nobr>
         
         <div class="jd-descrdiv">Adds a new input to be processed by this participant.</div>
   
@@ -562,7 +593,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#execute()">execute</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#execute()">execute</a></span>()</nobr>
         
         <div class="jd-descrdiv"><p>This provides an example start to an agent's <code><a href="../../../../../../uk/ac/imperial/presage2/core/TimeDriven.html#incrementTime()">incrementTime()</a></code> method.</div>
   
@@ -580,7 +611,7 @@ Summary:
             T</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#getEnvironmentService(java.lang.Class<T>)">getEnvironmentService</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; type)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#getEnvironmentService(java.lang.Class<T>)">getEnvironmentService</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; type)</nobr>
         
   </td></tr>
 
@@ -596,7 +627,7 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#getID()">getID</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#getID()">getID</a></span>()</nobr>
         
         <div class="jd-descrdiv">Returns the participant's unique ID.</div>
   
@@ -614,7 +645,7 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#getName()">getName</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#getName()">getName</a></span>()</nobr>
         
         <div class="jd-descrdiv">Returns a unique string identifier for this participant.</div>
   
@@ -632,7 +663,7 @@ Summary:
             <a href="../../../../../../uk/ac/imperial/presage2/core/Time.html">Time</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#getTime()">getTime</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#getTime()">getTime</a></span>()</nobr>
         
         <div class="jd-descrdiv">Returns the agent's current perception of the simulation time.</div>
   
@@ -650,7 +681,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#incrementTime()">incrementTime</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#incrementTime()">incrementTime</a></span>()</nobr>
         
   </td></tr>
 
@@ -666,7 +697,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#initialise()">initialise</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#initialise()">initialise</a></span>()</nobr>
         
         <div class="jd-descrdiv"><p>The initialisation process for the AbstractParticipant involves the following:</p>
  <ul>
@@ -683,10 +714,58 @@ Summary:
             
             
             
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#initialiseEnvironment(uk.ac.imperial.presage2.core.environment.EnvironmentConnector)">initialiseEnvironment</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentConnector.html">EnvironmentConnector</a> e)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#initialiseNetwork(uk.ac.imperial.presage2.core.network.NetworkConnectorFactory)">initialiseNetwork</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConnectorFactory.html">NetworkConnectorFactory</a> networkFactory)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#initialiseTime(uk.ac.imperial.presage2.core.Time)">initialiseTime</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/Time.html">Time</a> t)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#toString()">toString</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#toString()">toString</a></span>()</nobr>
         
   </td></tr>
 
@@ -713,7 +792,7 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Set.html">Set</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;?&gt;&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#getSharedState()">getSharedState</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#getSharedState()">getSharedState</a></span>()</nobr>
         
         <div class="jd-descrdiv">Get the set of shared states that this Participant has.</div>
   
@@ -731,9 +810,9 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#initialiseInputQueue()">initialiseInputQueue</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#initialiseInputQueue()">initialiseInputQueue</a></span>()</nobr>
         
-        <div class="jd-descrdiv">Initialises <code><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#inputQueue">inputQueue</a></code> which will be a FIFO queue
+        <div class="jd-descrdiv">Initialises <code><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#inputQueue">inputQueue</a></code> which will be a FIFO queue
  for Inputs received by the Participant.</div>
   
   </td></tr>
@@ -750,7 +829,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#processEnvironmentServices(java.util.Set<uk.ac.imperial.presage2.core.environment.EnvironmentService>)">processEnvironmentServices</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Set.html">Set</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a>&gt; services)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#processEnvironmentServices(java.util.Set<uk.ac.imperial.presage2.core.environment.EnvironmentService>)">processEnvironmentServices</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Set.html">Set</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a>&gt; services)</nobr>
         
         <div class="jd-descrdiv"><p>Process the <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code>s from environment registration.</div>
   
@@ -768,7 +847,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#processInput(uk.ac.imperial.presage2.core.messaging.Input)">processInput</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/messaging/Input.html">Input</a> in)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#processInput(uk.ac.imperial.presage2.core.messaging.Input)">processInput</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/messaging/Input.html">Input</a> in)</nobr>
         
         <div class="jd-descrdiv">Process the given input.</div>
   
@@ -1421,6 +1500,54 @@ From interface
 <!-- Public ctors -->
 
 
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2>Public Constructors</h2>
+
+
+
+<A NAME="AbstractParticipant(java.util.UUID, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        
+      </span>
+      <span class="sympad">AbstractParticipant</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> id, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Basic Participant constructor. </p>
+ 
+ <p>Requires environment & network to be injected by
+ field injection. This can be done either by creating this object
+ with a guice injector or by using on-demand injection:
+ <pre class="prettyprint">
+ Injector injector = Guice.createInjector(...);
+ 
+ RealParticipant participant = new RealParticipant(...);
+ injector.injectMembers(participant);</pre>
+ </p></p></div>
+
+    </div>
+</div>
+
+
+
+
 
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <!-- Protected ctors -->
@@ -1454,7 +1581,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Assisted Inject constructor.</p></div>
 
     </div>
 </div>
@@ -1789,6 +1916,99 @@ From interface
 </div>
 
 
+<A NAME="initialiseEnvironment(uk.ac.imperial.presage2.core.environment.EnvironmentConnector)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">initialiseEnvironment</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentConnector.html">EnvironmentConnector</a> e)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="initialiseNetwork(uk.ac.imperial.presage2.core.network.NetworkConnectorFactory)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">initialiseNetwork</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConnectorFactory.html">NetworkConnectorFactory</a> networkFactory)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="initialiseTime(uk.ac.imperial.presage2.core.Time)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">initialiseTime</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/Time.html">Time</a> t)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
 <A NAME="toString()"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -1886,7 +2106,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Initialises <code><a href="../../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html#inputQueue">inputQueue</a></code> which will be a FIFO queue
+  <div class="jd-tagdata jd-tagdescr"><p>Initialises <code><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#inputQueue">inputQueue</a></code> which will be a FIFO queue
  for Inputs received by the Participant.
 </p></div>
 
