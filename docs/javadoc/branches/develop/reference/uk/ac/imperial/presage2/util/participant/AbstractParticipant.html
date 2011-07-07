@@ -143,6 +143,8 @@
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/environment/package-summary.html">uk.ac.imperial.presage2.core.environment</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/core/event/package-summary.html">uk.ac.imperial.presage2.core.event</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/messaging/package-summary.html">uk.ac.imperial.presage2.core.messaging</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/network/package-summary.html">uk.ac.imperial.presage2.core.network</a></li>
@@ -365,10 +367,13 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p><p>This implements the core of a <code><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></code> to manage the majority of the
- mundane functions allowing the user to start writing the agent's behaviours sooner.
- It implements <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentServiceProvider.html">EnvironmentServiceProvider</a></code> to provide an interface to <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code>s
- that are available to the agent</p></p>
+<p><p>
+ This implements the core of a <code><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></code> to manage the majority of
+ the mundane functions allowing the user to start writing the agent's
+ behaviours sooner. It implements <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentServiceProvider.html">EnvironmentServiceProvider</a></code> to
+ provide an interface to <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code>s that are available to the
+ agent
+ </p></p>
 
 
 
@@ -425,8 +430,8 @@ Summary:
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a></nobr></td>
           <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#authkey">authkey</a></td>
-          <td class="jd-descrcol" width="100%">This Participant's authkey obtained when registering with
- the environment.</td>
+          <td class="jd-descrcol" width="100%">This Participant's authkey obtained when registering with the
+ environment.</td>
       </tr>
       
     
@@ -456,6 +461,17 @@ Summary:
           <td class="jd-typecol"><nobr>
           protected
           
+          final
+          Logger</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#logger">logger</a></td>
+          <td class="jd-descrcol" width="100%">Logger for this agent.</td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          protected
+          
           
           <a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAdaptor.html">NetworkAdaptor</a></nobr></td>
           <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#network">network</a></td>
@@ -463,7 +479,7 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-" >
+      <tr class=" api apilevel-" >
           <td class="jd-typecol"><nobr>
           protected
           
@@ -501,7 +517,8 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#AbstractParticipant(java.util.UUID, java.lang.String)">AbstractParticipant</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> id, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name)</nobr>
         
-        <div class="jd-descrdiv"><p>Basic Participant constructor.</div>
+        <div class="jd-descrdiv"><p>
+ Basic Participant constructor.</div>
   
   </td></tr>
 
@@ -595,7 +612,9 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#execute()">execute</a></span>()</nobr>
         
-        <div class="jd-descrdiv"><p>This provides an example start to an agent's <code><a href="../../../../../../uk/ac/imperial/presage2/core/TimeDriven.html#incrementTime()">incrementTime()</a></code> method.</div>
+        <div class="jd-descrdiv"><p>
+ This provides an example start to an agent's
+ <code><a href="../../../../../../uk/ac/imperial/presage2/core/TimeDriven.html#incrementTime()">incrementTime()</a></code> method.</div>
   
   </td></tr>
 
@@ -699,9 +718,12 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#initialise()">initialise</a></span>()</nobr>
         
-        <div class="jd-descrdiv"><p>The initialisation process for the AbstractParticipant involves the following:</p>
+        <div class="jd-descrdiv"><p>
+ The initialisation process for the AbstractParticipant involves the
+ following:
+ </p>
  <ul>
- 	<li>Registering with the environment.</div>
+ <li>Registering with the environment.</div>
   
   </td></tr>
 
@@ -762,6 +784,24 @@ Summary:
             
             
             
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#onSimulationComplete()">onSimulationComplete</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Called at the end of the simulation.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
@@ -812,8 +852,8 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#initialiseInputQueue()">initialiseInputQueue</a></span>()</nobr>
         
-        <div class="jd-descrdiv">Initialises <code><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#inputQueue">inputQueue</a></code> which will be a FIFO queue
- for Inputs received by the Participant.</div>
+        <div class="jd-descrdiv">Initialises <code><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#inputQueue">inputQueue</a></code> which will be a FIFO
+ queue for Inputs received by the Participant.</div>
   
   </td></tr>
 
@@ -831,7 +871,8 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#processEnvironmentServices(java.util.Set<uk.ac.imperial.presage2.core.environment.EnvironmentService>)">processEnvironmentServices</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Set.html">Set</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a>&gt; services)</nobr>
         
-        <div class="jd-descrdiv"><p>Process the <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code>s from environment registration.</div>
+        <div class="jd-descrdiv"><p>
+ Process the <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code>s from environment registration.</div>
   
   </td></tr>
 
@@ -1302,6 +1343,24 @@ From interface
   </td></tr>
 
 
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html#onSimulationComplete()">onSimulationComplete</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Called at the end of the simulation.</div>
+  
+  </td></tr>
+
+
 </table>
   </div>
 </div>
@@ -1362,8 +1421,8 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>This Participant's authkey obtained when registering with
- the environment.
+  <div class="jd-tagdata jd-tagdescr"><p>This Participant's authkey obtained when registering with the
+ environment.
 </p></div>
 
     
@@ -1426,6 +1485,37 @@ From interface
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p>FIFO queue of inputs to be processed.
+</p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="logger"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+        final 
+        Logger
+      </span>
+        logger
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Logger for this agent.
 </p></div>
 
     
@@ -1530,16 +1620,22 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p><p>Basic Participant constructor. </p>
+  <div class="jd-tagdata jd-tagdescr"><p><p>
+ Basic Participant constructor.
+ </p>
  
- <p>Requires environment & network to be injected by
- field injection. This can be done either by creating this object
- with a guice injector or by using on-demand injection:
+ <p>
+ Requires environment & network to be injected by field injection. This
+ can be done either by creating this object with a guice injector or by
+ using on-demand injection:
+ 
  <pre class="prettyprint">
  Injector injector = Guice.createInjector(...);
  
  RealParticipant participant = new RealParticipant(...);
- injector.injectMembers(participant);</pre>
+ injector.injectMembers(participant);
+ </pre>
+ 
  </p></p></div>
 
     </div>
@@ -1684,12 +1780,18 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p><p>This provides an example start to an agent's <code><a href="../../../../../../uk/ac/imperial/presage2/core/TimeDriven.html#incrementTime()">incrementTime()</a></code> method. You may
- want to use this by using <code>this.execute()</code> at the top of your implementation, or not use
- it at all.</p>
- <p>In this implementation we simply pull in any messages sent from the network, then process
- our entire message queue. Obviously, in order for the agent to be anything more than purely reactive
- you should add more to this.</p>
+  <div class="jd-tagdata jd-tagdescr"><p><p>
+ This provides an example start to an agent's
+ <code><a href="../../../../../../uk/ac/imperial/presage2/core/TimeDriven.html#incrementTime()">incrementTime()</a></code> method. You may want to use this by
+ using <code>this.execute()</code> at the top of your implementation, or
+ not use it at all.
+ </p>
+ <p>
+ In this implementation we simply pull in any messages sent from the
+ network, then process our entire message queue. Obviously, in order for
+ the agent to be anything more than purely reactive you should add more to
+ this.
+ </p>
 </p></div>
 
     </div>
@@ -1797,10 +1899,9 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Returns a unique string identifier for this participant.
- This is used purely for a human readable identifier of the
- agent so the unique requirement is not mandatory. However it
- is convenient.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Returns a unique string identifier for this participant. This is used
+ purely for a human readable identifier of the agent so the unique
+ requirement is not mandatory. However it is convenient.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>unique string identifier for this participant
@@ -1903,13 +2004,16 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p><p>The initialisation process for the AbstractParticipant involves the following:</p>
+  <div class="jd-tagdata jd-tagdescr"><p><p>
+ The initialisation process for the AbstractParticipant involves the
+ following:
+ </p>
  <ul>
- 	<li>Registering with the environment.</li>
- 	<li>Creating a Queue for incoming <code><a href="../../../../../../uk/ac/imperial/presage2/core/messaging/Input.html">Input</a></code>s</li>
+ <li>Registering with the environment.</li>
+ <li>Creating a Queue for incoming <code><a href="../../../../../../uk/ac/imperial/presage2/core/messaging/Input.html">Input</a></code>s</li>
  </ul>
- We split these up into protected function calls in case the implementor wishes to override only
- certain parts of this process.
+ We split these up into protected function calls in case the implementor
+ wishes to override only certain parts of this process.
 </p></div>
 
     </div>
@@ -2009,6 +2113,39 @@ From interface
 </div>
 
 
+<A NAME="onSimulationComplete()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">onSimulationComplete</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Called at the end of the simulation. A chance for the Participant to tidy
+ itself up before the garbage collector comes for it...
+</p></div>
+
+    </div>
+</div>
+
+
 <A NAME="toString()"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -2074,8 +2211,8 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Get the set of shared states that this Participant has. Used for the environment registration request
- for this participant.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Get the set of shared states that this Participant has. Used for the
+ environment registration request for this participant.</p></div>
 
     </div>
 </div>
@@ -2106,8 +2243,8 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Initialises <code><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#inputQueue">inputQueue</a></code> which will be a FIFO queue
- for Inputs received by the Participant.
+  <div class="jd-tagdata jd-tagdescr"><p>Initialises <code><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html#inputQueue">inputQueue</a></code> which will be a FIFO
+ queue for Inputs received by the Participant.
 </p></div>
 
     </div>
@@ -2139,9 +2276,13 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p><p>Process the <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code>s from environment registration.</p>
- <p>This will probably involve looking for ones you can use, pulling them out, and
- casting them to the correct type.</p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p><p>
+ Process the <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code>s from environment registration.
+ </p>
+ <p>
+ This will probably involve looking for ones you can use, pulling them
+ out, and casting them to the correct type.
+ </p></p></div>
 
     </div>
 </div>

@@ -8,4 +8,8 @@ uk.ac.imperial.presage2.core.simulator
 uk.ac.imperial.presage2.core.util.random
 uk.ac.imperial.presage2.db
 uk.ac.imperial.presage2.db.jdo
+uk.ac.imperial.presage2.util.environment
+uk.ac.imperial.presage2.util.location
+uk.ac.imperial.presage2.util.network
+uk.ac.imperial.presage2.util.participant
 

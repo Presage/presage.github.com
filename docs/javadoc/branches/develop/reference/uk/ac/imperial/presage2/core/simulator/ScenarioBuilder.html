@@ -143,6 +143,8 @@
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/environment/package-summary.html">uk.ac.imperial.presage2.core.environment</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/core/event/package-summary.html">uk.ac.imperial.presage2.core.event</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/messaging/package-summary.html">uk.ac.imperial.presage2.core.messaging</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/network/package-summary.html">uk.ac.imperial.presage2.core.network</a></li>
@@ -182,6 +184,7 @@
       <ul>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/InjectedScenario.html">InjectedScenario</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/MultiThreadedSimulator.html">MultiThreadedSimulator</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.Builder.html">Scenario.Builder</a></li>
           <li class="selected api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/ScenarioBuilder.html">ScenarioBuilder</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/ScenarioModule.html">ScenarioModule</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Simulator.html">Simulator</a></li>
@@ -192,7 +195,6 @@
               
     <li><h2>Annotations</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/FinishTime.html">FinishTime</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/ScenarioSource.html">ScenarioSource</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Threads.html">Threads</a></li>
       </ul>
@@ -267,9 +269,9 @@ Summary:
 
 
 
-  &#124; <a href="#pubctors">Ctors</a>
-  
 
+  &#124; <a href="#proctors">Protected Ctors</a>
+  
 
 
   &#124; <a href="#pubmethods">Methods</a>
@@ -354,6 +356,14 @@ Summary:
 <div class="jd-descr">
 
 
+<h2>Class Overview</h2>
+<p><p>This is a <code><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.html">Scenario</a></code> which allows you to build up
+ your scenario step by step before submitting it to the <code><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Simulator.html">Simulator</a></code>.</p>
+ 
+ <p>
+ This is created by <code><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.Builder.html#createFromModules(com.google.inject.AbstractModule...)">createFromModules(AbstractModule)</a></code>
+ </p></p>
+
 
 
 
@@ -406,10 +416,10 @@ Summary:
           <td class="jd-typecol"><nobr>
           public
           
-          
+          final
           <a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Injector.html">Injector</a></nobr></td>
           <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/ScenarioBuilder.html#injector">injector</a></td>
-          <td class="jd-descrcol" width="100%"></td>
+          <td class="jd-descrcol" width="100%">Injector for scenario elements.</td>
       </tr>
       
     
@@ -422,8 +432,10 @@ Summary:
 
 
 
+
+
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
-<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
+<table id="proctors" class="jd-sumtable"><tr><th colspan="12">Protected Constructors</th></tr>
 
 
 
@@ -438,31 +450,15 @@ Summary:
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/ScenarioBuilder.html#ScenarioBuilder()">ScenarioBuilder</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/ScenarioBuilder.html#ScenarioBuilder(com.google.inject.Injector)">ScenarioBuilder</a></span>(<a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Injector.html">Injector</a> injector)</nobr>
         
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            </nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/ScenarioBuilder.html#ScenarioBuilder(com.google.inject.AbstractModule)">ScenarioBuilder</a></span>(<a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/AbstractModule.html">AbstractModule</a> module)</nobr>
-        
+        <div class="jd-descrdiv">Injectable constructor used by <code><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.Builder.html#createFromModules(com.google.inject.AbstractModule...)">createFromModules(AbstractModule)</a></code></div>
+  
   </td></tr>
 
 
 
 </table>
-
-
 
 
 
@@ -894,6 +890,54 @@ From interface
             
             
             
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.html#addParticipant(uk.ac.imperial.presage2.core.participant.Participant)">addParticipant</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a> p)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.html#addPlugin(uk.ac.imperial.presage2.core.plugin.Plugin)">addPlugin</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/plugin/Plugin.html">Plugin</a> p)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.html#addTimeDriven(uk.ac.imperial.presage2.core.TimeDriven)">addTimeDriven</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/TimeDriven.html">TimeDriven</a> t)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
             <a href="../../../../../../uk/ac/imperial/presage2/core/Time.html">Time</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
@@ -905,7 +949,7 @@ From interface
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -921,7 +965,7 @@ From interface
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -937,7 +981,7 @@ From interface
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -997,7 +1041,7 @@ From interface
       <span class="normal">
         public 
          
-         
+        final 
         <a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Injector.html">Injector</a>
       </span>
         injector
@@ -1012,7 +1056,8 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Injector for scenario elements.
+</p></div>
 
     
     </div>
@@ -1024,78 +1069,45 @@ From interface
 <!-- Public ctors -->
 
 
-<!-- ========= CONSTRUCTOR DETAIL ======== -->
-<h2>Public Constructors</h2>
-
-
-
-<A NAME="ScenarioBuilder()"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        
-      </span>
-      <span class="sympad">ScenarioBuilder</span>
-      <span class="normal">()</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    </div>
-</div>
-
-
-<A NAME="ScenarioBuilder(com.google.inject.AbstractModule)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        
-      </span>
-      <span class="sympad">ScenarioBuilder</span>
-      <span class="normal">(<a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/AbstractModule.html">AbstractModule</a> module)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    </div>
-</div>
-
-
-
-
 
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <!-- Protected ctors -->
+
+<h2>Protected Constructors</h2>
+
+
+
+<A NAME="ScenarioBuilder(com.google.inject.Injector)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+         
+         
+         
+        
+      </span>
+      <span class="sympad">ScenarioBuilder</span>
+      <span class="normal">(<a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Injector.html">Injector</a> injector)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Injectable constructor used by <code><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.Builder.html#createFromModules(com.google.inject.AbstractModule...)">createFromModules(AbstractModule)</a></code></p></div>
+
+    </div>
+</div>
+
+
 
 
 

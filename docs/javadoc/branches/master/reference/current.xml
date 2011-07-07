@@ -1,7 +1,15 @@
 <api>
 <package name="uk.ac.imperial.presage2.core"
 >
-<class name="Action"
+<interface name="Action"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</interface>
+<class name="FinishTime"
  extends="java.lang.Object"
  abstract="true"
  static="false"
@@ -9,14 +17,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<constructor name="Action"
- type="uk.ac.imperial.presage2.core.Action"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</constructor>
+<implements name="java.lang.annotation.Annotation">
+</implements>
 </class>
 <class name="IntegerTime"
  extends="java.lang.Object"
@@ -188,6 +190,36 @@
 >
 </method>
 </interface>
+<class name="Time.Bind"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Time.Bind"
+ type="uk.ac.imperial.presage2.core.Time.Bind"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="integerTime"
+ return="com.google.inject.AbstractModule"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="finishTime" type="int">
+</parameter>
+</method>
+</class>
 <interface name="TimeDriven"
  abstract="true"
  static="false"
@@ -210,178 +242,6 @@
 </package>
 <package name="uk.ac.imperial.presage2.core.environment"
 >
-<class name="AbstractEnvironment"
- extends="java.lang.Object"
- abstract="true"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<implements name="uk.ac.imperial.presage2.core.environment.EnvironmentConnector">
-</implements>
-<implements name="uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider">
-</implements>
-<implements name="uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess">
-</implements>
-<constructor name="AbstractEnvironment"
- type="uk.ac.imperial.presage2.core.environment.AbstractEnvironment"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</constructor>
-<method name="act"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="action" type="uk.ac.imperial.presage2.core.Action">
-</parameter>
-<parameter name="actor" type="java.util.UUID">
-</parameter>
-<parameter name="authkey" type="java.util.UUID">
-</parameter>
-<exception name="ActionHandlingException" type="uk.ac.imperial.presage2.core.environment.ActionHandlingException">
-</exception>
-</method>
-<method name="deregister"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="participantID" type="java.util.UUID">
-</parameter>
-<parameter name="authkey" type="java.util.UUID">
-</parameter>
-</method>
-<method name="generateServices"
- return="java.util.Set&lt;uk.ac.imperial.presage2.core.environment.EnvironmentService&gt;"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="participant" type="uk.ac.imperial.presage2.core.participant.Participant">
-</parameter>
-</method>
-<method name="get"
- return="uk.ac.imperial.presage2.core.environment.ParticipantSharedState&lt;?&gt;"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="name" type="java.lang.String">
-</parameter>
-<parameter name="participantID" type="java.util.UUID">
-</parameter>
-</method>
-<method name="getGlobal"
- return="uk.ac.imperial.presage2.core.environment.SharedState&lt;?&gt;"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="name" type="java.lang.String">
-</parameter>
-</method>
-<method name="initialiseActionHandlers"
- return="java.util.Set&lt;uk.ac.imperial.presage2.core.environment.ActionHandler&gt;"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</method>
-<method name="register"
- return="uk.ac.imperial.presage2.core.environment.EnvironmentRegistrationResponse"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="request" type="uk.ac.imperial.presage2.core.environment.EnvironmentRegistrationRequest">
-</parameter>
-</method>
-<field name="actionHandlers"
- type="java.util.Set"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="authkeys"
- type="java.util.Map"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="globalSharedState"
- type="java.util.Map"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="participantState"
- type="java.util.Map"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="registeredParticipants"
- type="java.util.Map"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-</class>
 <interface name="ActionHandler"
  abstract="true"
  static="false"
@@ -648,7 +508,7 @@
  static="false"
  final="false"
  deprecated="not deprecated"
- visibility="protected"
+ visibility="public"
 >
 <parameter name="authKey" type="java.util.UUID">
 </parameter>
@@ -696,6 +556,34 @@
 <parameter name="sharedState" type="uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess">
 </parameter>
 </constructor>
+<method name="initialise"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="globalSharedState" type="java.util.Map&lt;java.lang.String, uk.ac.imperial.presage2.core.environment.SharedState&lt;?&gt;&gt;">
+</parameter>
+</method>
+<method name="registerParticipant"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="req" type="uk.ac.imperial.presage2.core.environment.EnvironmentRegistrationRequest">
+</parameter>
+<parameter name="globalSharedState" type="java.util.Map&lt;java.lang.String, uk.ac.imperial.presage2.core.environment.SharedState&lt;?&gt;&gt;">
+</parameter>
+</method>
 <field name="sharedState"
  type="uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess"
  transient="false"
@@ -738,7 +626,7 @@
  visibility="public"
 >
 <method name="get"
- return="uk.ac.imperial.presage2.core.environment.SharedState&lt;?&gt;"
+ return="uk.ac.imperial.presage2.core.environment.ParticipantSharedState&lt;?&gt;"
  abstract="true"
  native="false"
  synchronized="false"
@@ -837,6 +725,37 @@
 <parameter name="participantID" type="java.util.UUID">
 </parameter>
 </constructor>
+<field name="participantID"
+ type="java.util.UUID"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="SharedState"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="SharedState"
+ type="uk.ac.imperial.presage2.core.environment.SharedState"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="type" type="java.lang.String">
+</parameter>
+<parameter name="value" type="T">
+</parameter>
+</constructor>
 <method name="getType"
  return="java.lang.String"
  abstract="false"
@@ -883,16 +802,6 @@
 <parameter name="value" type="T">
 </parameter>
 </method>
-<field name="participantID"
- type="java.util.UUID"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
 <field name="type"
  type="java.lang.String"
  transient="false"
@@ -978,6 +887,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<parameter name="type" type="java.lang.Class&lt;? extends uk.ac.imperial.presage2.core.environment.EnvironmentService&gt;">
+</parameter>
 </constructor>
 </class>
 <class name="UnregisteredParticipantException"
@@ -1042,6 +953,40 @@
  visibility="public"
 >
 <parameter name="t" type="uk.ac.imperial.presage2.core.Time">
+</parameter>
+</method>
+</interface>
+<interface name="InputHandler"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="canHandle"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="in" type="uk.ac.imperial.presage2.core.messaging.Input">
+</parameter>
+</method>
+<method name="handle"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="in" type="uk.ac.imperial.presage2.core.messaging.Input">
 </parameter>
 </method>
 </interface>
@@ -1173,6 +1118,65 @@
 <parameter name="timestamp" type="uk.ac.imperial.presage2.core.Time">
 </parameter>
 </constructor>
+</class>
+<class name="ConstrainedNetworkController"
+ extends="uk.ac.imperial.presage2.core.network.NetworkController"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ConstrainedNetworkController"
+ type="uk.ac.imperial.presage2.core.network.ConstrainedNetworkController"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="time" type="uk.ac.imperial.presage2.core.Time">
+</parameter>
+<parameter name="environment" type="uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess">
+</parameter>
+<parameter name="s" type="uk.ac.imperial.presage2.core.simulator.Scenario">
+</parameter>
+</constructor>
+<method name="addConstaints"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="cons" type="java.util.Set&lt;uk.ac.imperial.presage2.core.network.NetworkConstraint&gt;">
+</parameter>
+</method>
+<method name="addConstraint"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="c" type="uk.ac.imperial.presage2.core.network.NetworkConstraint">
+</parameter>
+</method>
+<field name="constraints"
+ type="java.util.Set"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
 </class>
 <class name="Message"
  extends="java.lang.Object"
@@ -1624,6 +1628,42 @@
 </parameter>
 </method>
 </interface>
+<interface name="NetworkConstraint"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="blockMessageDelivery"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="to" type="uk.ac.imperial.presage2.core.network.NetworkAddress">
+</parameter>
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
+</parameter>
+</method>
+<method name="constrainMessage"
+ return="uk.ac.imperial.presage2.core.network.Message"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
+</parameter>
+</method>
+</interface>
 <class name="NetworkController"
  extends="java.lang.Object"
  abstract="false"
@@ -1649,6 +1689,8 @@
 </parameter>
 <parameter name="environment" type="uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess">
 </parameter>
+<parameter name="s" type="uk.ac.imperial.presage2.core.simulator.Scenario">
+</parameter>
 </constructor>
 <method name="deliverMessage"
  return="void"
@@ -1660,6 +1702,21 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
+</parameter>
+</method>
+<method name="deliverMessageTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="to" type="uk.ac.imperial.presage2.core.network.NetworkAddress">
+</parameter>
 <parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
@@ -2057,215 +2114,6 @@
 </package>
 <package name="uk.ac.imperial.presage2.core.participant"
 >
-<class name="AbstractParticipant"
- extends="java.lang.Object"
- abstract="true"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<implements name="uk.ac.imperial.presage2.core.participant.Participant">
-</implements>
-<constructor name="AbstractParticipant"
- type="uk.ac.imperial.presage2.core.participant.AbstractParticipant"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="id" type="java.util.UUID">
-</parameter>
-<parameter name="name" type="java.lang.String">
-</parameter>
-<parameter name="environment" type="uk.ac.imperial.presage2.core.environment.EnvironmentConnector">
-</parameter>
-<parameter name="network" type="uk.ac.imperial.presage2.core.network.NetworkAdaptor">
-</parameter>
-<parameter name="time" type="uk.ac.imperial.presage2.core.Time">
-</parameter>
-</constructor>
-<method name="enqueueInput"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="inputs" type="java.util.Collection&lt;? extends uk.ac.imperial.presage2.core.messaging.Input&gt;">
-</parameter>
-</method>
-<method name="enqueueInput"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="input" type="uk.ac.imperial.presage2.core.messaging.Input">
-</parameter>
-</method>
-<method name="execute"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getID"
- return="java.util.UUID"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getName"
- return="java.lang.String"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getSharedState"
- return="java.util.Set&lt;uk.ac.imperial.presage2.core.environment.ParticipantSharedState&lt;?&gt;&gt;"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</method>
-<method name="getTime"
- return="uk.ac.imperial.presage2.core.Time"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="incrementTime"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="initialise"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="initialiseInputQueue"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</method>
-<method name="processEnvironmentServices"
- return="void"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="services" type="java.util.Set&lt;uk.ac.imperial.presage2.core.environment.EnvironmentService&gt;">
-</parameter>
-</method>
-<method name="processInput"
- return="void"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="in" type="uk.ac.imperial.presage2.core.messaging.Input">
-</parameter>
-</method>
-<field name="authkey"
- type="java.util.UUID"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="environment"
- type="uk.ac.imperial.presage2.core.environment.EnvironmentConnector"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="inputQueue"
- type="java.util.Queue"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="network"
- type="uk.ac.imperial.presage2.core.network.NetworkAdaptor"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-</class>
 <interface name="Participant"
  abstract="true"
  static="false"
@@ -2532,8 +2380,6 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="sharedState" type="uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess">
-</parameter>
 <parameter name="serviceProvider" type="uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider">
 </parameter>
 </constructor>
@@ -2585,17 +2431,6 @@
 </package>
 <package name="uk.ac.imperial.presage2.core.simulator"
 >
-<class name="FinishTime"
- extends="java.lang.Object"
- abstract="true"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<implements name="java.lang.annotation.Annotation">
-</implements>
-</class>
 <class name="InjectedScenario"
  extends="java.lang.Object"
  abstract="false"
@@ -2622,6 +2457,45 @@
 <parameter name="finish" type="uk.ac.imperial.presage2.core.Time">
 </parameter>
 </constructor>
+<method name="addParticipant"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="p" type="uk.ac.imperial.presage2.core.participant.Participant">
+</parameter>
+</method>
+<method name="addPlugin"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="p" type="uk.ac.imperial.presage2.core.plugin.Plugin">
+</parameter>
+</method>
+<method name="addTimeDriven"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="t" type="uk.ac.imperial.presage2.core.TimeDriven">
+</parameter>
+</method>
 <method name="getFinishTime"
  return="uk.ac.imperial.presage2.core.Time"
  abstract="false"
@@ -2667,6 +2541,62 @@
 >
 </method>
 </class>
+<class name="MultiThreadedSimulator"
+ extends="uk.ac.imperial.presage2.core.simulator.Simulator"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="MultiThreadedSimulator"
+ type="uk.ac.imperial.presage2.core.simulator.MultiThreadedSimulator"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="scenario" type="uk.ac.imperial.presage2.core.simulator.Scenario">
+</parameter>
+<parameter name="t" type="uk.ac.imperial.presage2.core.Time">
+</parameter>
+<parameter name="threads" type="int">
+</parameter>
+</constructor>
+<method name="complete"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="initialise"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="run"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
 <interface name="Scenario"
  abstract="true"
  static="false"
@@ -2674,6 +2604,45 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<method name="addParticipant"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="p" type="uk.ac.imperial.presage2.core.participant.Participant">
+</parameter>
+</method>
+<method name="addPlugin"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="p" type="uk.ac.imperial.presage2.core.plugin.Plugin">
+</parameter>
+</method>
+<method name="addTimeDriven"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="t" type="uk.ac.imperial.presage2.core.TimeDriven">
+</parameter>
+</method>
 <method name="getFinishTime"
  return="uk.ac.imperial.presage2.core.Time"
  abstract="true"
@@ -2719,6 +2688,225 @@
 >
 </method>
 </interface>
+<class name="Scenario.Builder"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Scenario.Builder"
+ type="uk.ac.imperial.presage2.core.simulator.Scenario.Builder"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="createFromModules"
+ return="uk.ac.imperial.presage2.core.simulator.Scenario"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="modules" type="com.google.inject.AbstractModule...">
+</parameter>
+</method>
+<method name="injectMembers"
+ return="T"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="obj" type="T">
+</parameter>
+</method>
+<field name="injector"
+ type="com.google.inject.Injector"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="ScenarioBuilder"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="uk.ac.imperial.presage2.core.simulator.Scenario">
+</implements>
+<constructor name="ScenarioBuilder"
+ type="uk.ac.imperial.presage2.core.simulator.ScenarioBuilder"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="injector" type="com.google.inject.Injector">
+</parameter>
+</constructor>
+<method name="addParticipant"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="p" type="uk.ac.imperial.presage2.core.participant.Participant">
+</parameter>
+</method>
+<method name="addPlugin"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="p" type="uk.ac.imperial.presage2.core.plugin.Plugin">
+</parameter>
+</method>
+<method name="addTimeDriven"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="t" type="uk.ac.imperial.presage2.core.TimeDriven">
+</parameter>
+</method>
+<method name="getFinishTime"
+ return="uk.ac.imperial.presage2.core.Time"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getParticipants"
+ return="java.util.Set&lt;uk.ac.imperial.presage2.core.participant.Participant&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPlugins"
+ return="java.util.Set&lt;uk.ac.imperial.presage2.core.plugin.Plugin&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTimeDriven"
+ return="java.util.Set&lt;uk.ac.imperial.presage2.core.TimeDriven&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="initialiseFinishTime"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="finish" type="uk.ac.imperial.presage2.core.Time">
+</parameter>
+</method>
+<method name="initialiseParticipants"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="participants" type="java.util.Set&lt;uk.ac.imperial.presage2.core.participant.Participant&gt;">
+</parameter>
+</method>
+<method name="initialisePlugins"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="plugins" type="java.util.Set&lt;uk.ac.imperial.presage2.core.plugin.Plugin&gt;">
+</parameter>
+</method>
+<method name="initialiseTimeDriven"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="timedriven" type="java.util.Set&lt;uk.ac.imperial.presage2.core.TimeDriven&gt;">
+</parameter>
+</method>
+<field name="injector"
+ type="com.google.inject.Injector"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
 <class name="ScenarioModule"
  extends="com.google.inject.AbstractModule"
  abstract="true"
@@ -2801,6 +2989,17 @@
 <method name="run"
  return="void"
  abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="start"
+ return="void"
+ abstract="false"
  native="false"
  synchronized="false"
  static="false"
@@ -2901,6 +3100,17 @@
  visibility="public"
 >
 </method>
+</class>
+<class name="Threads"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
 </class>
 </package>
 <package name="uk.ac.imperial.presage2.core.util.random"
@@ -3283,5 +3493,1536 @@
 >
 </field>
 </class>
+</package>
+<package name="uk.ac.imperial.presage2.util.environment"
+>
+<class name="AbstractEnvironment"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="uk.ac.imperial.presage2.core.environment.EnvironmentConnector">
+</implements>
+<implements name="uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider">
+</implements>
+<implements name="uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess">
+</implements>
+<implements name="uk.ac.imperial.presage2.core.TimeDriven">
+</implements>
+<constructor name="AbstractEnvironment"
+ type="uk.ac.imperial.presage2.util.environment.AbstractEnvironment"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="act"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="uk.ac.imperial.presage2.core.Action">
+</parameter>
+<parameter name="actor" type="java.util.UUID">
+</parameter>
+<parameter name="authkey" type="java.util.UUID">
+</parameter>
+<exception name="ActionHandlingException" type="uk.ac.imperial.presage2.core.environment.ActionHandlingException">
+</exception>
+</method>
+<method name="deregister"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="participantID" type="java.util.UUID">
+</parameter>
+<parameter name="authkey" type="java.util.UUID">
+</parameter>
+</method>
+<method name="generateServices"
+ return="java.util.Set&lt;uk.ac.imperial.presage2.core.environment.EnvironmentService&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="request" type="uk.ac.imperial.presage2.core.environment.EnvironmentRegistrationRequest">
+</parameter>
+</method>
+<method name="get"
+ return="uk.ac.imperial.presage2.core.environment.ParticipantSharedState&lt;?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="participantID" type="java.util.UUID">
+</parameter>
+</method>
+<method name="getEnvironmentService"
+ return="T"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="type" type="java.lang.Class&lt;T&gt;">
+</parameter>
+<exception name="UnavailableServiceException" type="uk.ac.imperial.presage2.core.environment.UnavailableServiceException">
+</exception>
+</method>
+<method name="getGlobal"
+ return="uk.ac.imperial.presage2.core.environment.SharedState&lt;?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="incrementTime"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="initialiseActionHandlers"
+ return="java.util.Set&lt;uk.ac.imperial.presage2.core.environment.ActionHandler&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="initialiseGlobalEnvironmentServices"
+ return="java.util.Set&lt;uk.ac.imperial.presage2.core.environment.EnvironmentService&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="register"
+ return="uk.ac.imperial.presage2.core.environment.EnvironmentRegistrationResponse"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="request" type="uk.ac.imperial.presage2.core.environment.EnvironmentRegistrationRequest">
+</parameter>
+</method>
+<method name="registerTimeDriven"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="s" type="uk.ac.imperial.presage2.core.simulator.Scenario">
+</parameter>
+</method>
+<field name="actionHandlers"
+ type="java.util.Set"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="authkeys"
+ type="java.util.Map"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="deferActions"
+ type="boolean"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="deferedActions"
+ type="java.util.Queue"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="globalEnvironmentServices"
+ type="java.util.Set"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="globalSharedState"
+ type="java.util.Map"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="participantState"
+ type="java.util.Map"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="registeredParticipants"
+ type="java.util.Map"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="CommunicationRangeService"
+ extends="uk.ac.imperial.presage2.core.environment.EnvironmentService"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="CommunicationRangeService"
+ type="uk.ac.imperial.presage2.util.environment.CommunicationRangeService"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="sharedState" type="uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess">
+</parameter>
+</constructor>
+<method name="createSharedState"
+ return="uk.ac.imperial.presage2.core.environment.ParticipantSharedState&lt;java.lang.Double&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="pid" type="java.util.UUID">
+</parameter>
+<parameter name="range" type="uk.ac.imperial.presage2.util.participant.HasCommunicationRange">
+</parameter>
+</method>
+<method name="getAgentCommunicationRange"
+ return="double"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="participantID" type="java.util.UUID">
+</parameter>
+</method>
+</class>
+<class name="EnvironmentMembersService"
+ extends="uk.ac.imperial.presage2.core.environment.EnvironmentService"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="EnvironmentMembersService"
+ type="uk.ac.imperial.presage2.util.environment.EnvironmentMembersService"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="sharedState" type="uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess">
+</parameter>
+</constructor>
+<method name="getParticipants"
+ return="java.util.Set&lt;java.util.UUID&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="uk.ac.imperial.presage2.util.location"
+>
+<interface name="Area"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="contains"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="l" type="uk.ac.imperial.presage2.util.location.Location">
+</parameter>
+</method>
+</interface>
+<class name="Area.Bind"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Area.Bind"
+ type="uk.ac.imperial.presage2.util.location.Area.Bind"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="area2D"
+ return="com.google.inject.AbstractModule"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="x" type="int">
+</parameter>
+<parameter name="y" type="int">
+</parameter>
+</method>
+</class>
+<class name="Area2D"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="uk.ac.imperial.presage2.util.location.Area">
+</implements>
+<constructor name="Area2D"
+ type="uk.ac.imperial.presage2.util.location.Area2D"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="x" type="int">
+</parameter>
+<parameter name="y" type="int">
+</parameter>
+</constructor>
+<method name="contains"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="l" type="uk.ac.imperial.presage2.util.location.Location">
+</parameter>
+</method>
+</class>
+<class name="AreaService"
+ extends="uk.ac.imperial.presage2.core.environment.EnvironmentService"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AreaService"
+ type="uk.ac.imperial.presage2.util.location.AreaService"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="sharedState" type="uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess">
+</parameter>
+<parameter name="area" type="uk.ac.imperial.presage2.util.location.HasArea">
+</parameter>
+</constructor>
+<method name="getSimulationArea"
+ return="uk.ac.imperial.presage2.util.location.Area"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="CannotSeeAgent"
+ extends="java.lang.Exception"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</class>
+<class name="Continuous2DLocation"
+ extends="uk.ac.imperial.presage2.util.location.Location2D"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Continuous2DLocation"
+ type="uk.ac.imperial.presage2.util.location.Continuous2DLocation"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="x" type="double">
+</parameter>
+<parameter name="y" type="double">
+</parameter>
+</constructor>
+<method name="add"
+ return="uk.ac.imperial.presage2.util.location.Location"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="m" type="uk.ac.imperial.presage2.util.location.Move">
+</parameter>
+</method>
+</class>
+<class name="Discrete2DLocation"
+ extends="uk.ac.imperial.presage2.util.location.Location2D"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Discrete2DLocation"
+ type="uk.ac.imperial.presage2.util.location.Discrete2DLocation"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="x" type="int">
+</parameter>
+<parameter name="y" type="int">
+</parameter>
+</constructor>
+<method name="add"
+ return="uk.ac.imperial.presage2.util.location.Location"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="m" type="uk.ac.imperial.presage2.util.location.Move">
+</parameter>
+</method>
+</class>
+<interface name="HasArea"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getArea"
+ return="uk.ac.imperial.presage2.util.location.Area"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="HasLocation"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getLocation"
+ return="uk.ac.imperial.presage2.util.location.Location"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<class name="Location"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="uk.ac.imperial.presage2.util.location.HasLocation">
+</implements>
+<constructor name="Location"
+ type="uk.ac.imperial.presage2.util.location.Location"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="add"
+ return="uk.ac.imperial.presage2.util.location.Location"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="loc" type="uk.ac.imperial.presage2.util.location.Location">
+</parameter>
+<parameter name="m" type="uk.ac.imperial.presage2.util.location.Move">
+</parameter>
+</method>
+<method name="add"
+ return="uk.ac.imperial.presage2.util.location.Location"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="m" type="uk.ac.imperial.presage2.util.location.Move">
+</parameter>
+</method>
+<method name="distanceTo"
+ return="double"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="l" type="uk.ac.imperial.presage2.util.location.Location">
+</parameter>
+</method>
+<method name="equals"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="l" type="uk.ac.imperial.presage2.util.location.Location">
+</parameter>
+</method>
+<method name="in"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="a" type="uk.ac.imperial.presage2.util.location.Area">
+</parameter>
+</method>
+<method name="toString"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="Location2D"
+ extends="uk.ac.imperial.presage2.util.location.Location"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Location2D"
+ type="uk.ac.imperial.presage2.util.location.Location2D"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="distanceTo"
+ return="double"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="l" type="uk.ac.imperial.presage2.util.location.Location">
+</parameter>
+</method>
+<method name="distanceTo"
+ return="double"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="l" type="uk.ac.imperial.presage2.util.location.Location2D&lt;?&gt;">
+</parameter>
+</method>
+<method name="equals"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="l" type="uk.ac.imperial.presage2.util.location.Location">
+</parameter>
+</method>
+<method name="equals"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="l" type="uk.ac.imperial.presage2.util.location.Location2D&lt;?&gt;">
+</parameter>
+</method>
+<method name="getLocation"
+ return="uk.ac.imperial.presage2.util.location.Location"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="toString"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="x"
+ type="T"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="y"
+ type="T"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="LocationService"
+ extends="uk.ac.imperial.presage2.core.environment.EnvironmentService"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="LocationService"
+ type="uk.ac.imperial.presage2.util.location.LocationService"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="sharedState" type="uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess">
+</parameter>
+</constructor>
+<method name="getAgentLocation"
+ return="uk.ac.imperial.presage2.util.location.Location"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="participantID" type="java.util.UUID">
+</parameter>
+<exception name="CannotSeeAgent" type="uk.ac.imperial.presage2.util.location.CannotSeeAgent">
+</exception>
+</method>
+</class>
+<interface name="Move"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="uk.ac.imperial.presage2.core.Action">
+</implements>
+</interface>
+<class name="Move2D"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="uk.ac.imperial.presage2.util.location.Move">
+</implements>
+<constructor name="Move2D"
+ type="uk.ac.imperial.presage2.util.location.Move2D"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="x" type="T">
+</parameter>
+<parameter name="y" type="T">
+</parameter>
+</constructor>
+<field name="x"
+ type="T"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="y"
+ type="T"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="MoveHandler"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="uk.ac.imperial.presage2.core.environment.ActionHandler">
+</implements>
+<constructor name="MoveHandler"
+ type="uk.ac.imperial.presage2.util.location.MoveHandler"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="environment" type="uk.ac.imperial.presage2.util.location.HasArea">
+</parameter>
+<parameter name="serviceProvider" type="uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider">
+</parameter>
+<exception name="UnavailableServiceException" type="uk.ac.imperial.presage2.core.environment.UnavailableServiceException">
+</exception>
+</constructor>
+<method name="canHandle"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="uk.ac.imperial.presage2.core.Action">
+</parameter>
+</method>
+<method name="handle"
+ return="uk.ac.imperial.presage2.core.messaging.Input"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="uk.ac.imperial.presage2.core.Action">
+</parameter>
+<parameter name="actor" type="java.util.UUID">
+</parameter>
+<exception name="ActionHandlingException" type="uk.ac.imperial.presage2.core.environment.ActionHandlingException">
+</exception>
+</method>
+<field name="environment"
+ type="uk.ac.imperial.presage2.util.location.HasArea"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="locationService"
+ type="uk.ac.imperial.presage2.util.location.LocationService"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="ParticipantLocationService"
+ extends="uk.ac.imperial.presage2.util.location.LocationService"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ParticipantLocationService"
+ type="uk.ac.imperial.presage2.util.location.ParticipantLocationService"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="p" type="uk.ac.imperial.presage2.core.participant.Participant">
+</parameter>
+<parameter name="sharedState" type="uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess">
+</parameter>
+<parameter name="serviceProvider" type="uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider">
+</parameter>
+</constructor>
+<constructor name="ParticipantLocationService"
+ type="uk.ac.imperial.presage2.util.location.ParticipantLocationService"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="p" type="uk.ac.imperial.presage2.core.participant.Participant">
+</parameter>
+<parameter name="locationState" type="uk.ac.imperial.presage2.core.environment.ParticipantSharedState&lt;uk.ac.imperial.presage2.util.location.Location&gt;">
+</parameter>
+<parameter name="sharedState" type="uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess">
+</parameter>
+<parameter name="serviceProvider" type="uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider">
+</parameter>
+</constructor>
+<constructor name="ParticipantLocationService"
+ type="uk.ac.imperial.presage2.util.location.ParticipantLocationService"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="p" type="uk.ac.imperial.presage2.core.participant.Participant">
+</parameter>
+<parameter name="locationState" type="uk.ac.imperial.presage2.core.environment.ParticipantSharedState&lt;uk.ac.imperial.presage2.util.location.Location&gt;">
+</parameter>
+<parameter name="hasRange" type="uk.ac.imperial.presage2.util.participant.HasPerceptionRange">
+</parameter>
+<parameter name="sharedState" type="uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess">
+</parameter>
+<parameter name="serviceProvider" type="uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider">
+</parameter>
+</constructor>
+<constructor name="ParticipantLocationService"
+ type="uk.ac.imperial.presage2.util.location.ParticipantLocationService"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="p" type="uk.ac.imperial.presage2.core.participant.Participant">
+</parameter>
+<parameter name="hasLoc" type="uk.ac.imperial.presage2.util.location.HasLocation">
+</parameter>
+<parameter name="hasRange" type="uk.ac.imperial.presage2.util.participant.HasPerceptionRange">
+</parameter>
+<parameter name="sharedState" type="uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess">
+</parameter>
+<parameter name="serviceProvider" type="uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider">
+</parameter>
+</constructor>
+<method name="createSharedState"
+ return="uk.ac.imperial.presage2.core.environment.ParticipantSharedState&lt;uk.ac.imperial.presage2.util.location.Location&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="pid" type="java.util.UUID">
+</parameter>
+<parameter name="loc" type="uk.ac.imperial.presage2.util.location.HasLocation">
+</parameter>
+</method>
+<method name="getLocationState"
+ return="uk.ac.imperial.presage2.core.environment.ParticipantSharedState&lt;uk.ac.imperial.presage2.util.location.Location&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getNearbyAgents"
+ return="java.util.Map&lt;java.util.UUID, uk.ac.imperial.presage2.util.location.Location&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="locationProvider"
+ type="uk.ac.imperial.presage2.util.location.HasLocation"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="me"
+ type="uk.ac.imperial.presage2.core.participant.Participant"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="membersService"
+ type="uk.ac.imperial.presage2.util.environment.EnvironmentMembersService"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="rangeProvider"
+ type="uk.ac.imperial.presage2.util.participant.HasPerceptionRange"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="state"
+ type="uk.ac.imperial.presage2.core.environment.ParticipantSharedState"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="SimSize"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
+<class name="SimSize.x"
+ extends="java.lang.Object"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
+<class name="SimSize.y"
+ extends="java.lang.Object"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
+<class name="SimSize.z"
+ extends="java.lang.Object"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
+</package>
+<package name="uk.ac.imperial.presage2.util.network"
+>
+<class name="NetworkRangeConstraint"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="uk.ac.imperial.presage2.core.network.NetworkConstraint">
+</implements>
+<constructor name="NetworkRangeConstraint"
+ type="uk.ac.imperial.presage2.util.network.NetworkRangeConstraint"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="serviceProvider" type="uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider">
+</parameter>
+<exception name="UnavailableServiceException" type="uk.ac.imperial.presage2.core.environment.UnavailableServiceException">
+</exception>
+</constructor>
+<method name="blockMessageDelivery"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="to" type="uk.ac.imperial.presage2.core.network.NetworkAddress">
+</parameter>
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
+</parameter>
+</method>
+<method name="constrainMessage"
+ return="uk.ac.imperial.presage2.core.network.Message"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
+</parameter>
+</method>
+</class>
+</package>
+<package name="uk.ac.imperial.presage2.util.participant"
+>
+<class name="AbstractParticipant"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider">
+</implements>
+<implements name="uk.ac.imperial.presage2.core.participant.Participant">
+</implements>
+<constructor name="AbstractParticipant"
+ type="uk.ac.imperial.presage2.util.participant.AbstractParticipant"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.util.UUID">
+</parameter>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor name="AbstractParticipant"
+ type="uk.ac.imperial.presage2.util.participant.AbstractParticipant"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="java.util.UUID">
+</parameter>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="environment" type="uk.ac.imperial.presage2.core.environment.EnvironmentConnector">
+</parameter>
+<parameter name="network" type="uk.ac.imperial.presage2.core.network.NetworkAdaptor">
+</parameter>
+<parameter name="time" type="uk.ac.imperial.presage2.core.Time">
+</parameter>
+</constructor>
+<method name="enqueueInput"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="inputs" type="java.util.Collection&lt;? extends uk.ac.imperial.presage2.core.messaging.Input&gt;">
+</parameter>
+</method>
+<method name="enqueueInput"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="input" type="uk.ac.imperial.presage2.core.messaging.Input">
+</parameter>
+</method>
+<method name="execute"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getEnvironmentService"
+ return="T"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="type" type="java.lang.Class&lt;T&gt;">
+</parameter>
+<exception name="UnavailableServiceException" type="uk.ac.imperial.presage2.core.environment.UnavailableServiceException">
+</exception>
+</method>
+<method name="getID"
+ return="java.util.UUID"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getSharedState"
+ return="java.util.Set&lt;uk.ac.imperial.presage2.core.environment.ParticipantSharedState&lt;?&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="getTime"
+ return="uk.ac.imperial.presage2.core.Time"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="incrementTime"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="initialise"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="initialiseEnvironment"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="e" type="uk.ac.imperial.presage2.core.environment.EnvironmentConnector">
+</parameter>
+</method>
+<method name="initialiseInputQueue"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="initialiseNetwork"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="networkFactory" type="uk.ac.imperial.presage2.core.network.NetworkConnectorFactory">
+</parameter>
+</method>
+<method name="initialiseTime"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="t" type="uk.ac.imperial.presage2.core.Time">
+</parameter>
+</method>
+<method name="processEnvironmentServices"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="services" type="java.util.Set&lt;uk.ac.imperial.presage2.core.environment.EnvironmentService&gt;">
+</parameter>
+</method>
+<method name="processInput"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="in" type="uk.ac.imperial.presage2.core.messaging.Input">
+</parameter>
+</method>
+<field name="authkey"
+ type="java.util.UUID"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="environment"
+ type="uk.ac.imperial.presage2.core.environment.EnvironmentConnector"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="inputQueue"
+ type="java.util.Queue"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="network"
+ type="uk.ac.imperial.presage2.core.network.NetworkAdaptor"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="services"
+ type="java.util.Set"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<interface name="HasCommunicationRange"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getCommunicationRange"
+ return="double"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="HasPerceptionRange"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getPerceptionRange"
+ return="double"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
 </package>
 </api>

@@ -143,6 +143,8 @@
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/environment/package-summary.html">uk.ac.imperial.presage2.core.environment</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/core/event/package-summary.html">uk.ac.imperial.presage2.core.event</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/messaging/package-summary.html">uk.ac.imperial.presage2.core.messaging</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/network/package-summary.html">uk.ac.imperial.presage2.core.network</a></li>
@@ -182,6 +184,7 @@
       <ul>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/InjectedScenario.html">InjectedScenario</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/MultiThreadedSimulator.html">MultiThreadedSimulator</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.Builder.html">Scenario.Builder</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/ScenarioBuilder.html">ScenarioBuilder</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/ScenarioModule.html">ScenarioModule</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Simulator.html">Simulator</a></li>
@@ -192,7 +195,6 @@
               
     <li><h2>Annotations</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/FinishTime.html">FinishTime</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/ScenarioSource.html">ScenarioSource</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Threads.html">Threads</a></li>
       </ul>
@@ -271,10 +273,10 @@ Summary:
 
 
 
-  <a href="#pubctors">Ctors</a>
+
+
+  <a href="#pubmethods">Methods</a>
   
-
-
 
 
   &#124; <a href="#promethods">Protected Methods</a>
@@ -368,7 +370,9 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p><p>Global simulator level guice bindings</p></p>
+<p><p>
+ Global simulator level guice bindings
+ </p></p>
 
 
 
@@ -418,8 +422,12 @@ Summary:
 
 
 
-<!-- ======== CONSTRUCTOR SUMMARY ======== -->
-<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="jd-sumtable"><tr><th colspan="12">Public Methods</th></tr>
 
 
 
@@ -429,22 +437,34 @@ Summary:
             
             
             
+            static
             
-            
-            </nobr>
+            <a href="../../../../../../uk/ac/imperial/presage2/core/simulator/SimulatorModule.html">SimulatorModule</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/SimulatorModule.html#SimulatorModule()">SimulatorModule</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/SimulatorModule.html#multiThreadedSimulator(int)">multiThreadedSimulator</a></span>(int threads)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            <a href="../../../../../../uk/ac/imperial/presage2/core/simulator/SimulatorModule.html">SimulatorModule</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/SimulatorModule.html#singleThreadedSimulator()">singleThreadedSimulator</a></span>()</nobr>
         
   </td></tr>
 
 
 
 </table>
-
-
-
-
 
 
 
@@ -1165,24 +1185,63 @@ From interface
 <!-- Public ctors -->
 
 
+
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
-<h2>Public Constructors</h2>
+<!-- Protected ctors -->
 
 
 
-<A NAME="SimulatorModule()"></A>
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2>Public Methods</h2>
+
+
+
+<A NAME="multiThreadedSimulator(int)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
       <span class="normal">
         public 
+        static 
          
          
          
-         
-        
+        <a href="../../../../../../uk/ac/imperial/presage2/core/simulator/SimulatorModule.html">SimulatorModule</a>
       </span>
-      <span class="sympad">SimulatorModule</span>
+      <span class="sympad">multiThreadedSimulator</span>
+      <span class="normal">(int threads)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="singleThreadedSimulator()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        <a href="../../../../../../uk/ac/imperial/presage2/core/simulator/SimulatorModule.html">SimulatorModule</a>
+      </span>
+      <span class="sympad">singleThreadedSimulator</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">
@@ -1201,16 +1260,6 @@ From interface
 </div>
 
 
-
-
-
-<!-- ========= CONSTRUCTOR DETAIL ======== -->
-<!-- Protected ctors -->
-
-
-
-<!-- ========= METHOD DETAIL ======== -->
-<!-- Public methdos -->
 
 
 

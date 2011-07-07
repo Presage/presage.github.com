@@ -143,6 +143,8 @@
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/environment/package-summary.html">uk.ac.imperial.presage2.core.environment</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/core/event/package-summary.html">uk.ac.imperial.presage2.core.event</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/messaging/package-summary.html">uk.ac.imperial.presage2.core.messaging</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/network/package-summary.html">uk.ac.imperial.presage2.core.network</a></li>
@@ -183,6 +185,7 @@
               
     <li><h2>Classes</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Area.Bind.html">Area.Bind</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Area2D.html">Area2D</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/AreaService.html">AreaService</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Continuous2DLocation.html">Continuous2DLocation</a></li>
@@ -196,6 +199,14 @@
       </ul>
     </li>
               
+    <li><h2>Annotations</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/SimSize.html">SimSize</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/SimSize.x.html">SimSize.x</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/SimSize.y.html">SimSize.y</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/SimSize.z.html">SimSize.z</a></li>
+      </ul>
+    </li>
               
               
     <li><h2>Exceptions</h2>
@@ -471,7 +482,7 @@ Summary:
           <td class="jd-typecol"><nobr>
           protected
           
-          
+          final
           T&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Number.html">Number</a></nobr></td>
           <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location2D.html#x">x</a></td>
           <td class="jd-descrcol" width="100%"></td>
@@ -482,7 +493,7 @@ Summary:
           <td class="jd-typecol"><nobr>
           protected
           
-          
+          final
           T&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Number.html">Number</a></nobr></td>
           <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location2D.html#y">y</a></td>
           <td class="jd-descrcol" width="100%"></td>
@@ -514,7 +525,7 @@ Summary:
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location2D.html#Location2D()">Location2D</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location2D.html#Location2D(T, T)">Location2D</a></span>(T x, T y)</nobr>
         
   </td></tr>
 
@@ -538,6 +549,22 @@ Summary:
             
             
             
+            static
+            
+            <a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location2D.html#add(uk.ac.imperial.presage2.util.location.Location2D<?>, uk.ac.imperial.presage2.util.location.Move2D<?>)">add</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location2D.html">Location2D</a>&lt;?&gt; loc, <a href="../../../../../../uk/ac/imperial/presage2/util/location/Move2D.html">Move2D</a>&lt;?&gt; m)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
             
             
             double</nobr>
@@ -551,7 +578,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -567,7 +594,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -585,7 +612,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -601,7 +628,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -617,7 +644,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -687,7 +714,7 @@ From class
 	 
     <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
-            abstract
+            
             
             
             
@@ -697,7 +724,11 @@ From class
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html#add(uk.ac.imperial.presage2.util.location.Move)">add</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/util/location/Move.html">Move</a> m)</nobr>
         
-        <div class="jd-descrdiv">Modify this Location by the Move m.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Location is now immutable
+</em></div>
   
   </td></tr>
 
@@ -775,6 +806,24 @@ From class
 
 	 
     <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html#setLocation(uk.ac.imperial.presage2.util.location.Location)">setLocation</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a> l)</nobr>
+        
+        <div class="jd-descrdiv">Not available in Immutable Location class.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -1035,6 +1084,22 @@ From interface
   </td></tr>
 
 
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/HasLocation.html#setLocation(uk.ac.imperial.presage2.util.location.Location)">setLocation</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a> l)</nobr>
+        
+  </td></tr>
+
+
 </table>
   </div>
 </div>
@@ -1080,7 +1145,7 @@ From interface
       <span class="normal">
         protected 
          
-         
+        final 
         T&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Number.html">Number</a>
       </span>
         x
@@ -1110,7 +1175,7 @@ From interface
       <span class="normal">
         protected 
          
-         
+        final 
         T&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Number.html">Number</a>
       </span>
         y
@@ -1142,7 +1207,7 @@ From interface
 
 
 
-<A NAME="Location2D()"></A>
+<A NAME="Location2D(T, T)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1155,7 +1220,7 @@ From interface
         
       </span>
       <span class="sympad">Location2D</span>
-      <span class="normal">()</span>
+      <span class="normal">(T x, T y)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1186,6 +1251,37 @@ From interface
 
 <h2>Public Methods</h2>
 
+
+
+<A NAME="add(uk.ac.imperial.presage2.util.location.Location2D<?>, uk.ac.imperial.presage2.util.location.Move2D<?>)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        <a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a>
+      </span>
+      <span class="sympad">add</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location2D.html">Location2D</a>&lt;?&gt; loc, <a href="../../../../../../uk/ac/imperial/presage2/util/location/Move2D.html">Move2D</a>&lt;?&gt; m)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
 
 
 <A NAME="distanceTo(uk.ac.imperial.presage2.util.location.Location)"></A>

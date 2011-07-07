@@ -1,5 +1,6 @@
 uk.ac.imperial.presage2.core
 uk.ac.imperial.presage2.core.environment
+uk.ac.imperial.presage2.core.event
 uk.ac.imperial.presage2.core.messaging
 uk.ac.imperial.presage2.core.network
 uk.ac.imperial.presage2.core.participant

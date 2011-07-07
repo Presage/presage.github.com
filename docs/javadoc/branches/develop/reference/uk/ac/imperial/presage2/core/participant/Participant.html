@@ -143,6 +143,8 @@
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/environment/package-summary.html">uk.ac.imperial.presage2.core.environment</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/core/event/package-summary.html">uk.ac.imperial.presage2.core.event</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/messaging/package-summary.html">uk.ac.imperial.presage2.core.messaging</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/network/package-summary.html">uk.ac.imperial.presage2.core.network</a></li>
@@ -337,8 +339,10 @@ Summary:
   <table class="jd-sumtable-expando">
         <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html">AbstractParticipant</a></td>
-              <td class="jd-descrcol" width="100%"><p>This implements the core of a <code><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></code> to manage the majority of the
- mundane functions allowing the user to start writing the agent's behaviours sooner.&nbsp;</td>
+              <td class="jd-descrcol" width="100%"><p>
+ This implements the core of a <code><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></code> to manage the majority of
+ the mundane functions allowing the user to start writing the agent's
+ behaviours sooner.&nbsp;</td>
           </tr>
   </table>
       </div>
@@ -350,8 +354,8 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>This is the interface used by the simulator to interact with
- agents. All participants must implement this interface.</p>
+<p>This is the interface used by the simulator to interact with agents. All
+ participants must implement this interface.</p>
 
 
 
@@ -536,6 +540,24 @@ Summary:
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html#initialise()">initialise</a></span>()</nobr>
         
         <div class="jd-descrdiv">Called by the simulator after creating your agent.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html#onSimulationComplete()">onSimulationComplete</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Called at the end of the simulation.</div>
   
   </td></tr>
 
@@ -730,8 +752,8 @@ From interface
   This method is deprecated.</strong><br/> Use <code><a href="../../../../../../uk/ac/imperial/presage2/core/TimeDriven.html#incrementTime()">incrementTime()</a></code> now.
 
   </p>
-  <div class="jd-tagdata jd-tagdescr"><p>Called once per simulation cycle. Gives the agent time to process
- inputs, send message and perform actions.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Called once per simulation cycle. Gives the agent time to process inputs,
+ send message and perform actions.</p></div>
 
     </div>
 </div>
@@ -798,10 +820,9 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Returns a unique string identifier for this participant.
- This is used purely for a human readable identifier of the
- agent so the unique requirement is not mandatory. However it
- is convenient.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Returns a unique string identifier for this participant. This is used
+ purely for a human readable identifier of the agent so the unique
+ requirement is not mandatory. However it is convenient.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>unique string identifier for this participant
@@ -873,8 +894,41 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Called by the simulator after creating your agent.
- Allows you to initialise the agent before simulation cycle starts
+  <div class="jd-tagdata jd-tagdescr"><p>Called by the simulator after creating your agent. Allows you to
+ initialise the agent before simulation cycle starts
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="onSimulationComplete()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">onSimulationComplete</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Called at the end of the simulation. A chance for the Participant to tidy
+ itself up before the garbage collector comes for it...
 </p></div>
 
     </div>

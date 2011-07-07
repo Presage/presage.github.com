@@ -143,6 +143,8 @@
     <li class="selected api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/environment/package-summary.html">uk.ac.imperial.presage2.core.environment</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/core/event/package-summary.html">uk.ac.imperial.presage2.core.event</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/messaging/package-summary.html">uk.ac.imperial.presage2.core.messaging</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/network/package-summary.html">uk.ac.imperial.presage2.core.network</a></li>
@@ -178,6 +180,8 @@
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentConnector.html">EnvironmentConnector</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentServiceProvider.html">EnvironmentServiceProvider</a></li>
           <li class="selected api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html">EnvironmentSharedStateAccess</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantStateTransformer.html">ParticipantStateTransformer</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/StateTransformer.html">StateTransformer</a></li>
       </ul>
     </li>
               
@@ -416,6 +420,38 @@ Summary:
             
             
             
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html#change(java.lang.String, java.util.UUID, uk.ac.imperial.presage2.core.environment.ParticipantStateTransformer)">change</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> participantID, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantStateTransformer.html">ParticipantStateTransformer</a> change)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html#changeGlobal(java.lang.String, uk.ac.imperial.presage2.core.environment.StateTransformer)">changeGlobal</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/StateTransformer.html">StateTransformer</a> change)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
             <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;?&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
@@ -486,6 +522,68 @@ Summary:
 
 <h2>Public Methods</h2>
 
+
+
+<A NAME="change(java.lang.String, java.util.UUID, uk.ac.imperial.presage2.core.environment.ParticipantStateTransformer)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">change</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> participantID, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantStateTransformer.html">ParticipantStateTransformer</a> change)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="changeGlobal(java.lang.String, uk.ac.imperial.presage2.core.environment.StateTransformer)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">changeGlobal</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/StateTransformer.html">StateTransformer</a> change)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
 
 
 <A NAME="get(java.lang.String, java.util.UUID)"></A>

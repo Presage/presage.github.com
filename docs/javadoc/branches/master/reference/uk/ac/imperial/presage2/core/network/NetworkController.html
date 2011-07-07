@@ -158,6 +158,14 @@
   <a href="../../../../../../uk/ac/imperial/presage2/db/package-summary.html">uk.ac.imperial.presage2.db</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/db/jdo/package-summary.html">uk.ac.imperial.presage2.db.jdo</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/environment/package-summary.html">uk.ac.imperial.presage2.util.environment</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/location/package-summary.html">uk.ac.imperial.presage2.util.location</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/network/package-summary.html">uk.ac.imperial.presage2.util.network</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/participant/package-summary.html">uk.ac.imperial.presage2.util.participant</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
@@ -171,6 +179,7 @@
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAddressFactory.html">NetworkAddressFactory</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkChannel.html">NetworkChannel</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConnectorFactory.html">NetworkConnectorFactory</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConstraint.html">NetworkConstraint</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/network/RequiresRegistration.html">RequiresRegistration</a></li>
       </ul>
     </li>
@@ -179,6 +188,7 @@
       <ul>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/network/BasicNetworkConnector.html">BasicNetworkConnector</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/network/BroadcastMessage.html">BroadcastMessage</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/network/ConstrainedNetworkController.html">ConstrainedNetworkController</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/network/MulticastMessage.html">MulticastMessage</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAddress.html">NetworkAddress</a></li>
@@ -369,6 +379,37 @@ Summary:
 
 
 
+<table class="jd-sumtable jd-sumtable-subclasses"><tr><td colspan="12" style="border:none;margin:0;padding:0;">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="subclasses-direct" class="jd-expando-trigger closed"
+          ><img id="subclasses-direct-trigger"
+          src="../../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>Known Direct Subclasses
+
+  <div id="subclasses-direct">
+      <div id="subclasses-direct-list"
+              class="jd-inheritedlinks"
+              
+              >
+          
+            
+              <a href="../../../../../../uk/ac/imperial/presage2/core/network/ConstrainedNetworkController.html">ConstrainedNetworkController</a>
+            
+          
+      </div>
+      <div id="subclasses-direct-summary"
+              style="display: none;"
+              >
+  <table class="jd-sumtable-expando">
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/network/ConstrainedNetworkController.html">ConstrainedNetworkController</a></td>
+              <td class="jd-descrcol" width="100%"><p>A <code><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkController.html">NetworkController</a></code> which allows the use of <code><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConstraint.html">NetworkConstraint</a></code>s.&nbsp;</td>
+          </tr>
+  </table>
+      </div>
+  </div>
+</td></tr></table>
+
 
 
 
@@ -498,7 +539,7 @@ Summary:
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkController.html#NetworkController(uk.ac.imperial.presage2.core.Time, uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess)">NetworkController</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/Time.html">Time</a> time, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html">EnvironmentSharedStateAccess</a> environment)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkController.html#NetworkController(uk.ac.imperial.presage2.core.Time, uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess, uk.ac.imperial.presage2.core.simulator.Scenario)">NetworkController</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/Time.html">Time</a> time, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html">EnvironmentSharedStateAccess</a> environment, <a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.html">Scenario</a> s)</nobr>
         
   </td></tr>
 
@@ -590,6 +631,24 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkController.html#deliverMessageTo(uk.ac.imperial.presage2.core.network.NetworkAddress, uk.ac.imperial.presage2.core.network.Message)">deliverMessageTo</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAddress.html">NetworkAddress</a> to, <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</nobr>
+        
+        <div class="jd-descrdiv">Deliver a message m to recipient to.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkController.html#doBroadcast(uk.ac.imperial.presage2.core.network.BroadcastMessage)">doBroadcast</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/BroadcastMessage.html">BroadcastMessage</a> m)</nobr>
         
         <div class="jd-descrdiv">Send a broadcast message</div>
@@ -598,7 +657,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -616,7 +675,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -634,7 +693,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1156,7 +1215,7 @@ From interface
 
 
 
-<A NAME="NetworkController(uk.ac.imperial.presage2.core.Time, uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess)"></A>
+<A NAME="NetworkController(uk.ac.imperial.presage2.core.Time, uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess, uk.ac.imperial.presage2.core.simulator.Scenario)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1169,7 +1228,7 @@ From interface
         
       </span>
       <span class="sympad">NetworkController</span>
-      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/Time.html">Time</a> time, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html">EnvironmentSharedStateAccess</a> environment)</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/Time.html">Time</a> time, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html">EnvironmentSharedStateAccess</a> environment, <a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.html">Scenario</a> s)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1335,6 +1394,37 @@ From interface
 
 <h2>Protected Methods</h2>
 
+
+
+<A NAME="deliverMessageTo(uk.ac.imperial.presage2.core.network.NetworkAddress, uk.ac.imperial.presage2.core.network.Message)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">deliverMessageTo</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAddress.html">NetworkAddress</a> to, <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Deliver a message m to recipient to.</p></div>
+
+    </div>
+</div>
 
 
 <A NAME="doBroadcast(uk.ac.imperial.presage2.core.network.BroadcastMessage)"></A>

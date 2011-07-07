@@ -158,6 +158,14 @@
   <a href="../../../../../uk/ac/imperial/presage2/db/package-summary.html">uk.ac.imperial.presage2.db</a></li>
     <li class="api apilevel-">
   <a href="../../../../../uk/ac/imperial/presage2/db/jdo/package-summary.html">uk.ac.imperial.presage2.db.jdo</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../uk/ac/imperial/presage2/util/environment/package-summary.html">uk.ac.imperial.presage2.util.environment</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../uk/ac/imperial/presage2/util/location/package-summary.html">uk.ac.imperial.presage2.util.location</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../uk/ac/imperial/presage2/util/network/package-summary.html">uk.ac.imperial.presage2.util.network</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../uk/ac/imperial/presage2/util/participant/package-summary.html">uk.ac.imperial.presage2.util.participant</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
@@ -166,6 +174,7 @@
               
     <li><h2>Interfaces</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../../uk/ac/imperial/presage2/core/Action.html">Action</a></li>
           <li class="api apilevel-"><a href="../../../../../uk/ac/imperial/presage2/core/Time.html">Time</a></li>
           <li class="selected api apilevel-"><a href="../../../../../uk/ac/imperial/presage2/core/TimeDriven.html">TimeDriven</a></li>
       </ul>
@@ -173,11 +182,16 @@
               
     <li><h2>Classes</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../../uk/ac/imperial/presage2/core/Action.html">Action</a></li>
           <li class="api apilevel-"><a href="../../../../../uk/ac/imperial/presage2/core/IntegerTime.html">IntegerTime</a></li>
+          <li class="api apilevel-"><a href="../../../../../uk/ac/imperial/presage2/core/Time.Bind.html">Time.Bind</a></li>
       </ul>
     </li>
               
+    <li><h2>Annotations</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../uk/ac/imperial/presage2/core/FinishTime.html">FinishTime</a></li>
+      </ul>
+    </li>
               
               
               
@@ -304,7 +318,11 @@ Summary:
               >
           
             
-              <a href="../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html">AbstractParticipant</a>,
+              <a href="../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html">AbstractEnvironment</a>,
+            
+              <a href="../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html">AbstractParticipant</a>,
+            
+              <a href="../../../../../uk/ac/imperial/presage2/core/network/ConstrainedNetworkController.html">ConstrainedNetworkController</a>,
             
               <a href="../../../../../uk/ac/imperial/presage2/core/network/NetworkAdaptorWithNodeDiscovery.html">NetworkAdaptorWithNodeDiscovery</a>,
             
@@ -323,8 +341,17 @@ Summary:
               >
   <table class="jd-sumtable-expando">
         <tr class="alt-color api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../../../uk/ac/imperial/presage2/core/participant/AbstractParticipant.html">AbstractParticipant</a></td>
-              <td class="jd-descrcol" width="100%">&nbsp;</td>
+              <td class="jd-linkcol"><a href="../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html">AbstractEnvironment</a></td>
+              <td class="jd-descrcol" width="100%">Abstract implementation of an environment.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../uk/ac/imperial/presage2/util/participant/AbstractParticipant.html">AbstractParticipant</a></td>
+              <td class="jd-descrcol" width="100%"><p>This implements the core of a <code><a href="../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></code> to manage the majority of the
+ mundane functions allowing the user to start writing the agent's behaviours sooner.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../uk/ac/imperial/presage2/core/network/ConstrainedNetworkController.html">ConstrainedNetworkController</a></td>
+              <td class="jd-descrcol" width="100%"><p>A <code><a href="../../../../../uk/ac/imperial/presage2/core/network/NetworkController.html">NetworkController</a></code> which allows the use of <code><a href="../../../../../uk/ac/imperial/presage2/core/network/NetworkConstraint.html">NetworkConstraint</a></code>s.&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../uk/ac/imperial/presage2/core/network/NetworkAdaptorWithNodeDiscovery.html">NetworkAdaptorWithNodeDiscovery</a></td>

@@ -143,6 +143,8 @@
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/environment/package-summary.html">uk.ac.imperial.presage2.core.environment</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/core/event/package-summary.html">uk.ac.imperial.presage2.core.event</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/messaging/package-summary.html">uk.ac.imperial.presage2.core.messaging</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/network/package-summary.html">uk.ac.imperial.presage2.core.network</a></li>
@@ -183,6 +185,7 @@
               
     <li><h2>Classes</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Area.Bind.html">Area.Bind</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Area2D.html">Area2D</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/AreaService.html">AreaService</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Continuous2DLocation.html">Continuous2DLocation</a></li>
@@ -196,6 +199,14 @@
       </ul>
     </li>
               
+    <li><h2>Annotations</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/SimSize.html">SimSize</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/SimSize.x.html">SimSize.x</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/SimSize.y.html">SimSize.y</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/SimSize.z.html">SimSize.z</a></li>
+      </ul>
+    </li>
               
               
     <li><h2>Exceptions</h2>
@@ -514,7 +525,7 @@ Summary:
           protected
           
           final
-          <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a>&gt;</nobr></td>
+          <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/util/location/HasLocation.html">HasLocation</a>&gt;</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/location/ParticipantLocationService.html#state">state</a></td>
           <td class="jd-descrcol" width="100%"><code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a></code> for this agent's Location.</td>
       </tr>
@@ -608,43 +619,6 @@ Summary:
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/ParticipantLocationService.html#ParticipantLocationService(uk.ac.imperial.presage2.core.participant.Participant, uk.ac.imperial.presage2.core.environment.ParticipantSharedState<uk.ac.imperial.presage2.util.location.Location>, uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess, uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider)">ParticipantLocationService</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a> p, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a>&gt; locationState, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html">EnvironmentSharedStateAccess</a> sharedState, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentServiceProvider.html">EnvironmentServiceProvider</a> serviceProvider)</nobr>
-        
-        <div class="jd-descrdiv"><p>Create a <code><a href="../../../../../../uk/ac/imperial/presage2/util/location/ParticipantLocationService.html">ParticipantLocationService</a></code> for <code><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></code> p.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            </nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/ParticipantLocationService.html#ParticipantLocationService(uk.ac.imperial.presage2.core.participant.Participant, uk.ac.imperial.presage2.core.environment.ParticipantSharedState<uk.ac.imperial.presage2.util.location.Location>, uk.ac.imperial.presage2.util.participant.HasPerceptionRange, uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess, uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider)">ParticipantLocationService</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a> p, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a>&gt; locationState, <a href="../../../../../../uk/ac/imperial/presage2/util/participant/HasPerceptionRange.html">HasPerceptionRange</a> hasRange, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html">EnvironmentSharedStateAccess</a> sharedState, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentServiceProvider.html">EnvironmentServiceProvider</a> serviceProvider)</nobr>
-        
-        <div class="jd-descrdiv"><p>Create a <code><a href="../../../../../../uk/ac/imperial/presage2/util/location/ParticipantLocationService.html">ParticipantLocationService</a></code> for <code><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></code> p using existing <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a></code> for it's 
- current location and perception range provided by hasRange.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            </nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/ParticipantLocationService.html#ParticipantLocationService(uk.ac.imperial.presage2.core.participant.Participant, uk.ac.imperial.presage2.util.location.HasLocation, uk.ac.imperial.presage2.util.participant.HasPerceptionRange, uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess, uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider)">ParticipantLocationService</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a> p, <a href="../../../../../../uk/ac/imperial/presage2/util/location/HasLocation.html">HasLocation</a> hasLoc, <a href="../../../../../../uk/ac/imperial/presage2/util/participant/HasPerceptionRange.html">HasPerceptionRange</a> hasRange, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html">EnvironmentSharedStateAccess</a> sharedState, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentServiceProvider.html">EnvironmentServiceProvider</a> serviceProvider)</nobr>
         
         <div class="jd-descrdiv"><p>Create a <code><a href="../../../../../../uk/ac/imperial/presage2/util/location/ParticipantLocationService.html">ParticipantLocationService</a></code> for <code><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></code> p which has a location provided by hasLoc,
@@ -674,7 +648,7 @@ Summary:
             
             static
             
-            <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a>&gt;</nobr>
+            <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/util/location/HasLocation.html">HasLocation</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/ParticipantLocationService.html#createSharedState(java.util.UUID, uk.ac.imperial.presage2.util.location.HasLocation)">createSharedState</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> pid, <a href="../../../../../../uk/ac/imperial/presage2/util/location/HasLocation.html">HasLocation</a> loc)</nobr>
@@ -710,7 +684,7 @@ Summary:
             
             
             
-            <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a>&gt;</nobr>
+            <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/util/location/HasLocation.html">HasLocation</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/ParticipantLocationService.html#getLocationState()">getLocationState</a></span>()</nobr>
@@ -732,6 +706,25 @@ Summary:
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/ParticipantLocationService.html#getNearbyAgents()">getNearbyAgents</a></span>()</nobr>
         
         <div class="jd-descrdiv">Get the agents who are visible to me at this time and their <code><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a></code>s.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/ParticipantLocationService.html#setAgentLocation(java.util.UUID, uk.ac.imperial.presage2.util.location.Location)">setAgentLocation</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> participantID, <a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a> l)</nobr>
+        
+        <div class="jd-descrdiv">Not available for Participant use!
+</div>
   
   </td></tr>
 
@@ -784,6 +777,24 @@ From class
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/LocationService.html#getAgentLocation(java.util.UUID)">getAgentLocation</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> participantID)</nobr>
         
         <div class="jd-descrdiv">Get the location of a given agent specified by it's participant UUID.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/LocationService.html#setAgentLocation(java.util.UUID, uk.ac.imperial.presage2.util.location.Location)">setAgentLocation</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> participantID, <a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a> l)</nobr>
+        
+        <div class="jd-descrdiv">Update this agent's location to l.</div>
   
   </td></tr>
 
@@ -1218,7 +1229,7 @@ From class
         protected 
          
         final 
-        <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a>&gt;
+        <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/util/location/HasLocation.html">HasLocation</a>&gt;
       </span>
         state
     </h4>
@@ -1276,119 +1287,6 @@ From class
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    </div>
-</div>
-
-
-<A NAME="ParticipantLocationService(uk.ac.imperial.presage2.core.participant.Participant, uk.ac.imperial.presage2.core.environment.ParticipantSharedState<uk.ac.imperial.presage2.util.location.Location>, uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess, uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        
-      </span>
-      <span class="sympad">ParticipantLocationService</span>
-      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a> p, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a>&gt; locationState, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html">EnvironmentSharedStateAccess</a> sharedState, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentServiceProvider.html">EnvironmentServiceProvider</a> serviceProvider)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p><p>Create a <code><a href="../../../../../../uk/ac/imperial/presage2/util/location/ParticipantLocationService.html">ParticipantLocationService</a></code> for <code><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></code> p. If p implements <code><a href="../../../../../../uk/ac/imperial/presage2/util/participant/HasPerceptionRange.html">HasPerceptionRange</a></code> then
- this will be used to find the agent's perception range, otherwise we will use no perception range and this agent will be 
- able to see the <code><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a></code> of all other agents in the environment.</p></p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>p</td>
-          <td>p	<code><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></code> this service is for.</td>
-        </tr>
-        <tr>
-          <th>locationState</td>
-          <td><code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a></code> for this agent's location.</td>
-        </tr>
-        <tr>
-          <th>sharedState</td>
-          <td><code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html">EnvironmentSharedStateAccess</a></code> which this <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code> should use.</td>
-        </tr>
-        <tr>
-          <th>serviceProvider</td>
-          <td><code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentServiceProvider.html">EnvironmentServiceProvider</a></code> for fetching dependencies
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="ParticipantLocationService(uk.ac.imperial.presage2.core.participant.Participant, uk.ac.imperial.presage2.core.environment.ParticipantSharedState<uk.ac.imperial.presage2.util.location.Location>, uk.ac.imperial.presage2.util.participant.HasPerceptionRange, uk.ac.imperial.presage2.core.environment.EnvironmentSharedStateAccess, uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        
-      </span>
-      <span class="sympad">ParticipantLocationService</span>
-      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a> p, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a>&gt; locationState, <a href="../../../../../../uk/ac/imperial/presage2/util/participant/HasPerceptionRange.html">HasPerceptionRange</a> hasRange, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html">EnvironmentSharedStateAccess</a> sharedState, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentServiceProvider.html">EnvironmentServiceProvider</a> serviceProvider)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p><p>Create a <code><a href="../../../../../../uk/ac/imperial/presage2/util/location/ParticipantLocationService.html">ParticipantLocationService</a></code> for <code><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></code> p using existing <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a></code> for it's 
- current location and perception range provided by hasRange. The <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html">EnvironmentSharedStateAccess</a></code> is provided by sharedState.</p></p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>p</td>
-          <td><code><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></code> this service is for.</td>
-        </tr>
-        <tr>
-          <th>locationState</td>
-          <td><code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a></code> for this agent's location.</td>
-        </tr>
-        <tr>
-          <th>hasRange</td>
-          <td><code><a href="../../../../../../uk/ac/imperial/presage2/util/participant/HasPerceptionRange.html">HasPerceptionRange</a></code> which provides the range at which this agent can perceive other agents.</td>
-        </tr>
-        <tr>
-          <th>sharedState</td>
-          <td><code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html">EnvironmentSharedStateAccess</a></code> which this <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code> should use.</td>
-        </tr>
-        <tr>
-          <th>serviceProvider</td>
-          <td><code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentServiceProvider.html">EnvironmentServiceProvider</a></code> for fetching dependencies
-</td>
-        </tr>
-      </table>
-  </div>
 
     </div>
 </div>
@@ -1478,7 +1376,7 @@ From class
          
          
          
-        <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a>&gt;
+        <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/util/location/HasLocation.html">HasLocation</a>&gt;
       </span>
       <span class="sympad">createSharedState</span>
       <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> pid, <a href="../../../../../../uk/ac/imperial/presage2/util/location/HasLocation.html">HasLocation</a> loc)</span>
@@ -1554,16 +1452,8 @@ From class
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li><code><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a></code> of participant.</li></ul>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Throws</h5>
-      <table class="jd-tagtable">  
-        <tr>
-            <th><a href="../../../../../../uk/ac/imperial/presage2/util/location/CannotSeeAgent.html">CannotSeeAgent</a></td>
-            <td></td>
-        </tr>
-      </table>
+      <ul class="nolist"><li><code><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a></code> of participants
+</li></ul>
   </div>
 
     </div>
@@ -1580,7 +1470,7 @@ From class
          
          
          
-        <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a>&gt;
+        <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/util/location/HasLocation.html">HasLocation</a>&gt;
       </span>
       <span class="sympad">getLocationState</span>
       <span class="normal">()</span>
@@ -1632,6 +1522,38 @@ From class
       <ul class="nolist"><li>HashMap of agent's UUID to <code><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a></code>
 </li></ul>
   </div>
+
+    </div>
+</div>
+
+
+<A NAME="setAgentLocation(java.util.UUID, uk.ac.imperial.presage2.util.location.Location)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setAgentLocation</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> participantID, <a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a> l)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Not available for Participant use!
+</p></div>
 
     </div>
 </div>

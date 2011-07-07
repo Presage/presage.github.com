@@ -143,6 +143,8 @@
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/environment/package-summary.html">uk.ac.imperial.presage2.core.environment</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/core/event/package-summary.html">uk.ac.imperial.presage2.core.event</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/messaging/package-summary.html">uk.ac.imperial.presage2.core.messaging</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/network/package-summary.html">uk.ac.imperial.presage2.core.network</a></li>
@@ -183,6 +185,7 @@
               
     <li><h2>Classes</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Area.Bind.html">Area.Bind</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Area2D.html">Area2D</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/AreaService.html">AreaService</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Continuous2DLocation.html">Continuous2DLocation</a></li>
@@ -196,6 +199,14 @@
       </ul>
     </li>
               
+    <li><h2>Annotations</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/SimSize.html">SimSize</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/SimSize.x.html">SimSize.x</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/SimSize.y.html">SimSize.y</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/SimSize.z.html">SimSize.z</a></li>
+      </ul>
+    </li>
               
               
     <li><h2>Exceptions</h2>
@@ -402,12 +413,14 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>An <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code> to provide information
- on the locations of agents.
+<p>An <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code> to provide information on the locations of
+ agents.
  
  <h3>Usage</h3>
  
- <p>Add as a global environment service in the environment<p></p>
+ <p>
+ Add as a global environment service in the environment
+ <p></p>
 
 
 
@@ -550,6 +563,24 @@ Summary:
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/LocationService.html#getAgentLocation(java.util.UUID)">getAgentLocation</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> participantID)</nobr>
         
         <div class="jd-descrdiv">Get the location of a given agent specified by it's participant UUID.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/LocationService.html#setAgentLocation(java.util.UUID, uk.ac.imperial.presage2.util.location.Location)">setAgentLocation</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> participantID, <a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a> l)</nobr>
+        
+        <div class="jd-descrdiv">Update this agent's location to l.</div>
   
   </td></tr>
 
@@ -949,17 +980,40 @@ From class
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li><code><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a></code> of participant.</li></ul>
+      <ul class="nolist"><li><code><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a></code> of participants
+</li></ul>
   </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Throws</h5>
-      <table class="jd-tagtable">  
-        <tr>
-            <th><a href="../../../../../../uk/ac/imperial/presage2/util/location/CannotSeeAgent.html">CannotSeeAgent</a></td>
-            <td></td>
-        </tr>
-      </table>
-  </div>
+
+    </div>
+</div>
+
+
+<A NAME="setAgentLocation(java.util.UUID, uk.ac.imperial.presage2.util.location.Location)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setAgentLocation</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> participantID, <a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a> l)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Update this agent's location to l.</p></div>
 
     </div>
 </div>

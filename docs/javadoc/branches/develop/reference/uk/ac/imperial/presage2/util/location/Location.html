@@ -143,6 +143,8 @@
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/environment/package-summary.html">uk.ac.imperial.presage2.core.environment</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/core/event/package-summary.html">uk.ac.imperial.presage2.core.event</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/messaging/package-summary.html">uk.ac.imperial.presage2.core.messaging</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/network/package-summary.html">uk.ac.imperial.presage2.core.network</a></li>
@@ -183,6 +185,7 @@
               
     <li><h2>Classes</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Area.Bind.html">Area.Bind</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Area2D.html">Area2D</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/AreaService.html">AreaService</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Continuous2DLocation.html">Continuous2DLocation</a></li>
@@ -196,6 +199,14 @@
       </ul>
     </li>
               
+    <li><h2>Annotations</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/SimSize.html">SimSize</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/SimSize.x.html">SimSize.x</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/SimSize.y.html">SimSize.y</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/location/SimSize.z.html">SimSize.z</a></li>
+      </ul>
+    </li>
               
               
     <li><h2>Exceptions</h2>
@@ -536,7 +547,7 @@ Summary:
 	 
     <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
-            abstract
+            
             
             
             
@@ -546,7 +557,11 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html#add(uk.ac.imperial.presage2.util.location.Move)">add</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/util/location/Move.html">Move</a> m)</nobr>
         
-        <div class="jd-descrdiv">Modify this Location by the Move m.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Location is now immutable
+</em></div>
   
   </td></tr>
 
@@ -608,6 +623,24 @@ Summary:
 
 	 
     <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html#setLocation(uk.ac.imperial.presage2.util.location.Location)">setLocation</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a> l)</nobr>
+        
+        <div class="jd-descrdiv">Not available in Immutable Location class.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -901,6 +934,22 @@ From interface
   </td></tr>
 
 
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/location/HasLocation.html#setLocation(uk.ac.imperial.presage2.util.location.Location)">setLocation</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a> l)</nobr>
+        
+  </td></tr>
+
+
 </table>
   </div>
 </div>
@@ -1028,7 +1077,7 @@ From interface
         public 
          
          
-        abstract 
+         
          
         <a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a>
       </span>
@@ -1044,12 +1093,16 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Location is now immutable
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Modify this Location by the Move m.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>this (for operation chaining)
-</li></ul>
+      <ul class="nolist"><li>this (for operation chaining)</li></ul>
   </div>
 
     </div>
@@ -1160,6 +1213,38 @@ From interface
   <div class="jd-tagdata jd-tagdescr"><p>Returns the result of <code><a href="../../../../../../uk/ac/imperial/presage2/util/location/Area.html#contains(uk.ac.imperial.presage2.util.location.Location)">contains(Location)</a></code>
  for a and this. Allows more intuitive syntax when 
  changing that a <code><a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a></code> is in an <code><a href="../../../../../../uk/ac/imperial/presage2/util/location/Area.html">Area</a></code>.</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="setLocation(uk.ac.imperial.presage2.util.location.Location)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setLocation</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/util/location/Location.html">Location</a> l)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Not available in Immutable Location class.
+</p></div>
 
     </div>
 </div>

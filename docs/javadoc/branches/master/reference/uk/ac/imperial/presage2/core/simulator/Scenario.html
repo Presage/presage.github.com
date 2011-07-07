@@ -158,6 +158,14 @@
   <a href="../../../../../../uk/ac/imperial/presage2/db/package-summary.html">uk.ac.imperial.presage2.db</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/db/jdo/package-summary.html">uk.ac.imperial.presage2.db.jdo</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/environment/package-summary.html">uk.ac.imperial.presage2.util.environment</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/location/package-summary.html">uk.ac.imperial.presage2.util.location</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/network/package-summary.html">uk.ac.imperial.presage2.util.network</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/participant/package-summary.html">uk.ac.imperial.presage2.util.participant</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
@@ -173,6 +181,9 @@
     <li><h2>Classes</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/InjectedScenario.html">InjectedScenario</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/MultiThreadedSimulator.html">MultiThreadedSimulator</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.Builder.html">Scenario.Builder</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/ScenarioBuilder.html">ScenarioBuilder</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/ScenarioModule.html">ScenarioModule</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Simulator.html">Simulator</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/SimulatorModule.html">SimulatorModule</a></li>
@@ -182,8 +193,8 @@
               
     <li><h2>Annotations</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/FinishTime.html">FinishTime</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/ScenarioSource.html">ScenarioSource</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Threads.html">Threads</a></li>
       </ul>
     </li>
               
@@ -231,6 +242,8 @@
 
 Summary:
 
+  <a href="#nestedclasses">Nested Classes</a>
+  
 
 
 
@@ -241,7 +254,8 @@ Summary:
 
 
 
-  <a href="#pubmethods">Methods</a>
+
+  &#124; <a href="#pubmethods">Methods</a>
   
 
 
@@ -312,7 +326,9 @@ Summary:
               >
           
             
-              <a href="../../../../../../uk/ac/imperial/presage2/core/simulator/InjectedScenario.html">InjectedScenario</a>
+              <a href="../../../../../../uk/ac/imperial/presage2/core/simulator/InjectedScenario.html">InjectedScenario</a>,
+            
+              <a href="../../../../../../uk/ac/imperial/presage2/core/simulator/ScenarioBuilder.html">ScenarioBuilder</a>
             
           
       </div>
@@ -324,6 +340,11 @@ Summary:
               <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/InjectedScenario.html">InjectedScenario</a></td>
               <td class="jd-descrcol" width="100%"><p>Instance of a <code><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.html">Scenario</a></code> where elements are injected via
  Guice using a <code><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/ScenarioModule.html">ScenarioModule</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/ScenarioBuilder.html">ScenarioBuilder</a></td>
+              <td class="jd-descrcol" width="100%"><p>This is a <code><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.html">Scenario</a></code> which allows you to build up
+ your scenario step by step before submitting it to the <code><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Simulator.html">Simulator</a></code>.&nbsp;</td>
           </tr>
   </table>
       </div>
@@ -369,6 +390,26 @@ Summary:
 
 
 
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<table id="nestedclasses" class="jd-sumtable"><tr><th colspan="12">Nested Classes</th></tr>
+
+
+  
+    <tr class="alt-color api apilevel-" >
+      <td class="jd-typecol"><nobr>
+        
+         
+         
+        
+        class</nobr></td>
+      <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.Builder.html">Scenario.Builder</a></td>
+      <td class="jd-descrcol" width="100%">&nbsp;</td>
+    </tr>
+    
+    
+
+
+
 
 
 
@@ -406,6 +447,54 @@ Summary:
             
             
             
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.html#addParticipant(uk.ac.imperial.presage2.core.participant.Participant)">addParticipant</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a> p)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.html#addPlugin(uk.ac.imperial.presage2.core.plugin.Plugin)">addPlugin</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/plugin/Plugin.html">Plugin</a> p)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.html#addTimeDriven(uk.ac.imperial.presage2.core.TimeDriven)">addTimeDriven</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/TimeDriven.html">TimeDriven</a> t)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
             <a href="../../../../../../uk/ac/imperial/presage2/core/Time.html">Time</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
@@ -417,7 +506,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -433,7 +522,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -449,7 +538,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -510,6 +599,99 @@ Summary:
 
 <h2>Public Methods</h2>
 
+
+
+<A NAME="addParticipant(uk.ac.imperial.presage2.core.participant.Participant)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">addParticipant</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a> p)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="addPlugin(uk.ac.imperial.presage2.core.plugin.Plugin)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">addPlugin</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/plugin/Plugin.html">Plugin</a> p)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="addTimeDriven(uk.ac.imperial.presage2.core.TimeDriven)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">addTimeDriven</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/TimeDriven.html">TimeDriven</a> t)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
 
 
 <A NAME="getFinishTime()"></A>

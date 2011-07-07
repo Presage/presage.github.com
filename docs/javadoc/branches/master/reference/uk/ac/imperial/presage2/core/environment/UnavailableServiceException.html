@@ -158,6 +158,14 @@
   <a href="../../../../../../uk/ac/imperial/presage2/db/package-summary.html">uk.ac.imperial.presage2.db</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/db/jdo/package-summary.html">uk.ac.imperial.presage2.db.jdo</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/environment/package-summary.html">uk.ac.imperial.presage2.util.environment</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/location/package-summary.html">uk.ac.imperial.presage2.util.location</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/network/package-summary.html">uk.ac.imperial.presage2.util.network</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/participant/package-summary.html">uk.ac.imperial.presage2.util.participant</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
@@ -175,11 +183,11 @@
               
     <li><h2>Classes</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/AbstractEnvironment.html">AbstractEnvironment</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentRegistrationRequest.html">EnvironmentRegistrationRequest</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentRegistrationResponse.html">EnvironmentRegistrationResponse</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;T&gt;</li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/SharedState.html">SharedState</a>&lt;T&gt;</li>
       </ul>
     </li>
               
@@ -273,6 +281,9 @@ Summary:
   
 
 
+
+  &#124; <a href="#pubmethods">Methods</a>
+  
 
 
 
@@ -378,6 +389,10 @@ Summary:
 <div class="jd-descr">
 
 
+<h2>Class Overview</h2>
+<p>Thrown when a requested <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code> is not available.
+ i.e. In cannot be given in the current context.</p>
+
 
 
 
@@ -442,7 +457,7 @@ Summary:
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/UnavailableServiceException.html#UnavailableServiceException()">UnavailableServiceException</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/UnavailableServiceException.html#UnavailableServiceException(java.lang.Class<? extends uk.ac.imperial.presage2.core.environment.EnvironmentService>)">UnavailableServiceException</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&nbsp;extends&nbsp;<a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a>&gt; type)</nobr>
         
   </td></tr>
 
@@ -453,6 +468,31 @@ Summary:
 
 
 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="jd-sumtable"><tr><th colspan="12">Public Methods</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/UnavailableServiceException.html#getMessage()">getMessage</a></span>()</nobr>
+        
+  </td></tr>
+
+
+
+</table>
 
 
 
@@ -907,7 +947,7 @@ From class
 
 
 
-<A NAME="UnavailableServiceException()"></A>
+<A NAME="UnavailableServiceException(java.lang.Class<? extends uk.ac.imperial.presage2.core.environment.EnvironmentService>)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -920,7 +960,7 @@ From class
         
       </span>
       <span class="sympad">UnavailableServiceException</span>
-      <span class="normal">()</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&nbsp;extends&nbsp;<a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a>&gt; type)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -948,6 +988,42 @@ From class
 
 <!-- ========= METHOD DETAIL ======== -->
 <!-- Public methdos -->
+
+<h2>Public Methods</h2>
+
+
+
+<A NAME="getMessage()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getMessage</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
 
 
 

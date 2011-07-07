@@ -143,6 +143,8 @@
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/environment/package-summary.html">uk.ac.imperial.presage2.core.environment</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/core/event/package-summary.html">uk.ac.imperial.presage2.core.event</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/messaging/package-summary.html">uk.ac.imperial.presage2.core.messaging</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/core/network/package-summary.html">uk.ac.imperial.presage2.core.network</a></li>
@@ -176,6 +178,7 @@
     <li><h2>Classes</h2>
       <ul>
           <li class="selected api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html">AbstractEnvironment</a></li>
+          <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironmentModule.html">AbstractEnvironmentModule</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/CommunicationRangeService.html">CommunicationRangeService</a></li>
           <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/EnvironmentMembersService.html">EnvironmentMembersService</a></li>
       </ul>
@@ -445,7 +448,7 @@ Summary:
           <td class="jd-typecol"><nobr>
           protected
           
-          final
+          
           boolean</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#deferActions">deferActions</a></td>
           <td class="jd-descrcol" width="100%"></td>
@@ -490,8 +493,30 @@ Summary:
           protected
           
           
+          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Queue.html">Queue</a>&lt;AbstractEnvironment.SharedStateChanger&gt;</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#globalStateChange">globalStateChange</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          protected
+          
+          
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a>,&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>,&nbsp;<a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;?&gt;&gt;&gt;</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#participantState">participantState</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          protected
+          
+          
+          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Queue.html">Queue</a>&lt;AbstractEnvironment.ParticipantSharedStateChanger&gt;</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#participantStateChange">participantStateChange</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -535,7 +560,9 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#AbstractEnvironment()">AbstractEnvironment</a></span>()</nobr>
         
-        <div class="jd-descrdiv"><p>Creates the Environment, initialising it ready for participants to register and act.</div>
+        <div class="jd-descrdiv"><p>
+ Creates the Environment, initialising it ready for participants to
+ register and act.</div>
   
   </td></tr>
 
@@ -566,7 +593,8 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#act(uk.ac.imperial.presage2.core.Action, java.util.UUID, java.util.UUID)">act</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/Action.html">Action</a> action, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> actor, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> authkey)</nobr>
         
-        <div class="jd-descrdiv"><p>Perform an <code><a href="../../../../../../uk/ac/imperial/presage2/core/Action.html">Action</a></code> on the environment.</div>
+        <div class="jd-descrdiv"><p>
+ Perform an <code><a href="../../../../../../uk/ac/imperial/presage2/core/Action.html">Action</a></code> on the environment.</div>
   
   </td></tr>
 
@@ -582,10 +610,8 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#deregister(java.util.UUID, java.util.UUID)">deregister</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> participantID, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> authkey)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#change(java.lang.String, java.util.UUID, uk.ac.imperial.presage2.core.environment.ParticipantStateTransformer)">change</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> participantID, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantStateTransformer.html">ParticipantStateTransformer</a> change)</nobr>
         
-        <div class="jd-descrdiv"><p>Deregister a participant with the environment.</div>
-  
   </td></tr>
 
 
@@ -597,18 +623,71 @@ Summary:
             
             
             
-            <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;?&gt;</nobr>
+            void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#get(java.lang.String, java.util.UUID)">get</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> participantID)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#changeGlobal(java.lang.String, uk.ac.imperial.presage2.core.environment.StateTransformer)">changeGlobal</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/StateTransformer.html">StateTransformer</a> change)</nobr>
         
-        <div class="jd-descrdiv"><p>Return a shared state value from an individual agent</p></div>
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#deferActions(boolean)">deferActions</a></span>(boolean defer)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#deregister(java.util.UUID, java.util.UUID)">deregister</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> participantID, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> authkey)</nobr>
+        
+        <div class="jd-descrdiv"><p>
+ Deregister a participant with the environment.</div>
   
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;?&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#get(java.lang.String, java.util.UUID)">get</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> participantID)</nobr>
+        
+        <div class="jd-descrdiv"><p>
+ Return a shared state value from an individual agent
+ </p></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -626,7 +705,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -638,13 +717,14 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#getGlobal(java.lang.String)">getGlobal</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name)</nobr>
         
-        <div class="jd-descrdiv"><p>Return a global state value referenced by name.</div>
+        <div class="jd-descrdiv"><p>
+ Return a global state value referenced by name.</div>
   
   </td></tr>
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -660,7 +740,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -674,6 +754,22 @@ Summary:
         
         <div class="jd-descrdiv"><p>Registers a <code><a href="../../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></code> with the simulation environment.</div>
   
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#registerTimeDriven(uk.ac.imperial.presage2.core.simulator.Scenario)">registerTimeDriven</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.html">Scenario</a> s)</nobr>
+        
   </td></tr>
 
 
@@ -691,6 +787,38 @@ Summary:
 	 
     <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#addActionHandlers(java.util.Set<uk.ac.imperial.presage2.core.environment.ActionHandler>)">addActionHandlers</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Set.html">Set</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/environment/ActionHandler.html">ActionHandler</a>&gt; handlers)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#addGlobalEnvironmentServices(java.util.Set<uk.ac.imperial.presage2.core.environment.EnvironmentService>)">addGlobalEnvironmentServices</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Set.html">Set</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a>&gt; services)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
             abstract
             
             
@@ -701,7 +829,9 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/environment/AbstractEnvironment.html#generateServices(uk.ac.imperial.presage2.core.environment.EnvironmentRegistrationRequest)">generateServices</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentRegistrationRequest.html">EnvironmentRegistrationRequest</a> request)</nobr>
         
-        <div class="jd-descrdiv"><p>Generate a Set of <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code>s for a participant to be sent.</div>
+        <div class="jd-descrdiv"><p>
+ Generate a Set of <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code>s for a participant to be
+ sent.</div>
   
   </td></tr>
 
@@ -709,7 +839,7 @@ Summary:
 	 
     <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
-            abstract
+            
             
             
             
@@ -1149,6 +1279,38 @@ From interface
             
             
             
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html#change(java.lang.String, java.util.UUID, uk.ac.imperial.presage2.core.environment.ParticipantStateTransformer)">change</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> participantID, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantStateTransformer.html">ParticipantStateTransformer</a> change)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html#changeGlobal(java.lang.String, uk.ac.imperial.presage2.core.environment.StateTransformer)">changeGlobal</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/StateTransformer.html">StateTransformer</a> change)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
             <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;?&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
@@ -1279,7 +1441,7 @@ From interface
       <span class="normal">
         protected 
          
-        final 
+         
         boolean
       </span>
         deferActions
@@ -1392,6 +1554,36 @@ From interface
 
 
 
+<A NAME="globalStateChange"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Queue.html">Queue</a>&lt;AbstractEnvironment.SharedStateChanger&gt;
+      </span>
+        globalStateChange
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
 <A NAME="participantState"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -1403,6 +1595,36 @@ From interface
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a>,&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>,&nbsp;<a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;?&gt;&gt;&gt;
       </span>
         participantState
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="participantStateChange"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Queue.html">Queue</a>&lt;AbstractEnvironment.ParticipantSharedStateChanger&gt;
+      </span>
+        participantStateChange
     </h4>
       <div class="api-level">
         
@@ -1487,8 +1709,13 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p><p>Creates the Environment, initialising it ready for participants to register and act.</p>
- <p>The following is initialised:</p>
+  <div class="jd-tagdata jd-tagdescr"><p><p>
+ Creates the Environment, initialising it ready for participants to
+ register and act.
+ </p>
+ <p>
+ The following is initialised:
+ </p>
  <ul>
  <li>Registered participants map</li>
  <li>Global shared state</li>
@@ -1542,7 +1769,9 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p><p>Perform an <code><a href="../../../../../../uk/ac/imperial/presage2/core/Action.html">Action</a></code> on the environment.</p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p><p>
+ Perform an <code><a href="../../../../../../uk/ac/imperial/presage2/core/Action.html">Action</a></code> on the environment.
+ </p></p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Throws</h5>
       <table class="jd-tagtable">  
@@ -1557,6 +1786,99 @@ From interface
       <ul class="nolist"><li><code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentConnector.html#act(uk.ac.imperial.presage2.core.Action, java.util.UUID, java.util.UUID)">act(uk.ac.imperial.presage2.core.Action, java.util.UUID, java.util.UUID)</a></code></li>
       </ul>
   </div>
+
+    </div>
+</div>
+
+
+<A NAME="change(java.lang.String, java.util.UUID, uk.ac.imperial.presage2.core.environment.ParticipantStateTransformer)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">change</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> participantID, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantStateTransformer.html">ParticipantStateTransformer</a> change)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="changeGlobal(java.lang.String, uk.ac.imperial.presage2.core.environment.StateTransformer)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">changeGlobal</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="../../../../../../uk/ac/imperial/presage2/core/environment/StateTransformer.html">StateTransformer</a> change)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="deferActions(boolean)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">deferActions</span>
+      <span class="normal">(boolean defer)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
 
     </div>
 </div>
@@ -1587,7 +1909,8 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p><p>Deregister a participant with the environment.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p><p>
+ Deregister a participant with the environment.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">See Also</h5>
       <ul class="nolist"><li><code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentConnector.html#deregister(java.util.UUID, java.util.UUID)">deregister(java.util.UUID, java.util.UUID)</a></code></li>
@@ -1623,7 +1946,9 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p><p>Return a shared state value from an individual agent</p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p><p>
+ Return a shared state value from an individual agent
+ </p></p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">See Also</h5>
       <ul class="nolist"><li><code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html#get(java.lang.String, java.util.UUID)">get(java.lang.String, java.util.UUID)</a></code></li>
@@ -1700,7 +2025,9 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p><p>Return a global state value referenced by name.</p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p><p>
+ Return a global state value referenced by name.
+ </p></p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">See Also</h5>
       <ul class="nolist"><li><code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentSharedStateAccess.html#getGlobal(java.lang.String)">getGlobal(java.lang.String)</a></code></li>
@@ -1778,6 +2105,37 @@ From interface
 </div>
 
 
+<A NAME="registerTimeDriven(uk.ac.imperial.presage2.core.simulator.Scenario)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">registerTimeDriven</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.html">Scenario</a> s)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
 
 
 
@@ -1785,6 +2143,68 @@ From interface
 
 <h2>Protected Methods</h2>
 
+
+
+<A NAME="addActionHandlers(java.util.Set<uk.ac.imperial.presage2.core.environment.ActionHandler>)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">addActionHandlers</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Set.html">Set</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/environment/ActionHandler.html">ActionHandler</a>&gt; handlers)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="addGlobalEnvironmentServices(java.util.Set<uk.ac.imperial.presage2.core.environment.EnvironmentService>)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">addGlobalEnvironmentServices</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Set.html">Set</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a>&gt; services)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
 
 
 <A NAME="generateServices(uk.ac.imperial.presage2.core.environment.EnvironmentRegistrationRequest)"></A>
@@ -1812,7 +2232,10 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p><p>Generate a Set of <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code>s for a participant to be sent.</p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p><p>
+ Generate a Set of <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code>s for a participant to be
+ sent.
+ </p></p></div>
 
     </div>
 </div>
@@ -1826,7 +2249,7 @@ From interface
         protected 
          
          
-        abstract 
+         
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Set.html">Set</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/environment/ActionHandler.html">ActionHandler</a>&gt;
       </span>
@@ -1877,8 +2300,8 @@ From interface
       
   <div class="jd-tagdata jd-tagdescr"><p>Initialise the global environment services this environment will provide.
  
- This services will then be provided through the <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentServiceProvider.html">EnvironmentServiceProvider</a></code>
- interface.</p></div>
+ This services will then be provided through the
+ <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentServiceProvider.html">EnvironmentServiceProvider</a></code> interface.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>Set of global services to provide.

@@ -158,6 +158,14 @@
   <a href="../../../../../../uk/ac/imperial/presage2/db/package-summary.html">uk.ac.imperial.presage2.db</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../uk/ac/imperial/presage2/db/jdo/package-summary.html">uk.ac.imperial.presage2.db.jdo</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/environment/package-summary.html">uk.ac.imperial.presage2.util.environment</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/location/package-summary.html">uk.ac.imperial.presage2.util.location</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/network/package-summary.html">uk.ac.imperial.presage2.util.network</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/participant/package-summary.html">uk.ac.imperial.presage2.util.participant</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
@@ -175,11 +183,11 @@
               
     <li><h2>Classes</h2>
       <ul>
-        <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/AbstractEnvironment.html">AbstractEnvironment</a></li>
         <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentRegistrationRequest.html">EnvironmentRegistrationRequest</a></li>
         <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentRegistrationResponse.html">EnvironmentRegistrationResponse</a></li>
         <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></li>
         <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;T&gt;</li>
+        <li class="api apilevel-"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/SharedState.html">SharedState</a>&lt;T&gt;</li>
       </ul>
     </li>
               
@@ -290,25 +298,25 @@
     
   <table class="jd-sumtable-expando">
         <tr class="alt-color api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/AbstractEnvironment.html">AbstractEnvironment</a></td>
-              <td class="jd-descrcol" width="100%">Abstract implementation of an environment.&nbsp;</td>
-          </tr>
-        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentRegistrationRequest.html">EnvironmentRegistrationRequest</a></td>
               <td class="jd-descrcol" width="100%">A request to register with the environment.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentRegistrationResponse.html">EnvironmentRegistrationResponse</a></td>
               <td class="jd-descrcol" width="100%"><p>The response to a <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentRegistrationRequest.html">EnvironmentRegistrationRequest</a></code>.&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></td>
               <td class="jd-descrcol" width="100%"><p>An EnvironmentService provides a high level service to a Participant and/or
  the NetworkController by accessing the raw data in the environment shared state.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/ParticipantSharedState.html">ParticipantSharedState</a>&lt;T&gt;</td>
               <td class="jd-descrcol" width="100%">&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/SharedState.html">SharedState</a>&lt;T&gt;</td>
+              <td class="jd-descrcol" width="100%">General shared state in the environment.&nbsp;</td>
           </tr>
   </table>
     </div>
@@ -337,7 +345,7 @@
           </tr>
         <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/UnavailableServiceException.html">UnavailableServiceException</a></td>
-              <td class="jd-descrcol" width="100%">&nbsp;</td>
+              <td class="jd-descrcol" width="100%">Thrown when a requested <code><a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentService.html">EnvironmentService</a></code> is not available.&nbsp;</td>
           </tr>
         <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/environment/UnregisteredParticipantException.html">UnregisteredParticipantException</a></td>
