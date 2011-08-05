@@ -131,9 +131,9 @@
     </select>
   </div>
   <script>
-   var SINCE_DATA = [ '0.2.1', '0.2.2', '0.2.3-SNAPSHOT' ];
+   var SINCE_DATA = [ '0.2.1', '0.2.2', '0.2.3', '0.2.4-SNAPSHOT' ];
     
-    var SINCE_LABELS = [ '0.2.1', '0.2.2', '0.2.3-SNAPSHOT' ];
+    var SINCE_LABELS = [ '0.2.1', '0.2.2', '0.2.3', '0.2.4-SNAPSHOT' ];
     buildApiLevelSelector();
     addLoadEvent(changeApiLevel);
   </script>
@@ -158,9 +158,11 @@
                 
     <li class="selected api apilevel-0.2.1">
   <a href="../../../../../uk/ac/imperial/presage2/core/package-summary.html">uk.ac.imperial.presage2.core</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../uk/ac/imperial/presage2/core/db/package-summary.html">uk.ac.imperial.presage2.core.db</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../uk/ac/imperial/presage2/core/environment/package-summary.html">uk.ac.imperial.presage2.core.environment</a></li>
-    <li class="api apilevel-0.2.2">
+    <li class="api apilevel-0.2.3">
   <a href="../../../../../uk/ac/imperial/presage2/core/event/package-summary.html">uk.ac.imperial.presage2.core.event</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../uk/ac/imperial/presage2/core/messaging/package-summary.html">uk.ac.imperial.presage2.core.messaging</a></li>
@@ -174,14 +176,18 @@
   <a href="../../../../../uk/ac/imperial/presage2/core/simulator/package-summary.html">uk.ac.imperial.presage2.core.simulator</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../uk/ac/imperial/presage2/core/util/random/package-summary.html">uk.ac.imperial.presage2.core.util.random</a></li>
-    <li class="api apilevel-0.2.1">
-  <a href="../../../../../uk/ac/imperial/presage2/db/package-summary.html">uk.ac.imperial.presage2.db</a></li>
-    <li class="api apilevel-0.2.1">
-  <a href="../../../../../uk/ac/imperial/presage2/db/jdo/package-summary.html">uk.ac.imperial.presage2.db.jdo</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../uk/ac/imperial/presage2/db/sql/package-summary.html">uk.ac.imperial.presage2.db.sql</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../uk/ac/imperial/presage2/db/sql/mysql/package-summary.html">uk.ac.imperial.presage2.db.sql.mysql</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../uk/ac/imperial/presage2/db/sql/sqlite/package-summary.html">uk.ac.imperial.presage2.db.sql.sqlite</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../uk/ac/imperial/presage2/util/environment/package-summary.html">uk.ac.imperial.presage2.util.environment</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../uk/ac/imperial/presage2/util/location/package-summary.html">uk.ac.imperial.presage2.util.location</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../uk/ac/imperial/presage2/util/location/area/package-summary.html">uk.ac.imperial.presage2.util.location.area</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../uk/ac/imperial/presage2/util/network/package-summary.html">uk.ac.imperial.presage2.util.network</a></li>
     <li class="api apilevel-0.2.1">
@@ -346,13 +352,23 @@ Summary:
             
               <a href="../../../../../uk/ac/imperial/presage2/core/network/ConstrainedNetworkController.html">ConstrainedNetworkController</a>,
             
+              <a href="../../../../../uk/ac/imperial/presage2/util/location/LocationStoragePlugin.html">LocationStoragePlugin</a>,
+            
+              <a href="../../../../../uk/ac/imperial/presage2/db/sql/mysql/MysqlStorage.html">MysqlStorage</a>,
+            
               <a href="../../../../../uk/ac/imperial/presage2/core/network/NetworkConnectorWithNodeDiscovery.html">NetworkConnectorWithNodeDiscovery</a>,
             
               <a href="../../../../../uk/ac/imperial/presage2/core/network/NetworkController.html">NetworkController</a>,
             
+              <a href="../../../../../uk/ac/imperial/presage2/util/network/NetworkMessageMonitor.html">NetworkMessageMonitor</a>,
+            
               <a href="../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a>,
             
               <a href="../../../../../uk/ac/imperial/presage2/core/plugin/Plugin.html">Plugin</a>,
+            
+              <a href="../../../../../uk/ac/imperial/presage2/db/sql/SQLStorage.html">SQLStorage</a>,
+            
+              <a href="../../../../../uk/ac/imperial/presage2/db/sql/sqlite/SQLiteStorage.html">SQLiteStorage</a>,
             
               <a href="../../../../../uk/ac/imperial/presage2/core/plugin/VisualPlugin.html">VisualPlugin</a>
             
@@ -379,7 +395,15 @@ Summary:
  A <code><a href="../../../../../uk/ac/imperial/presage2/core/network/NetworkController.html">NetworkController</a></code> which allows the use of <code><a href="../../../../../uk/ac/imperial/presage2/core/network/NetworkConstraint.html">NetworkConstraint</a></code>
  s.&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-0.2.2" >
+        <tr class=" api apilevel-0.2.4-SNAPSHOT" >
+              <td class="jd-linkcol"><a href="../../../../../uk/ac/imperial/presage2/util/location/LocationStoragePlugin.html">LocationStoragePlugin</a></td>
+              <td class="jd-descrcol" width="100%">&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-0.2.4-SNAPSHOT" >
+              <td class="jd-linkcol"><a href="../../../../../uk/ac/imperial/presage2/db/sql/mysql/MysqlStorage.html">MysqlStorage</a></td>
+              <td class="jd-descrcol" width="100%">&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-0.2.3" >
               <td class="jd-linkcol"><a href="../../../../../uk/ac/imperial/presage2/core/network/NetworkConnectorWithNodeDiscovery.html">NetworkConnectorWithNodeDiscovery</a></td>
               <td class="jd-descrcol" width="100%"><p>
  A <code><a href="../../../../../uk/ac/imperial/presage2/core/network/NetworkConnector.html">NetworkConnector</a></code> which implements <code><a href="../../../../../uk/ac/imperial/presage2/core/network/NetworkConnectorWithNodeDiscovery.html#getConnectedNodes()">getConnectedNodes()</a></code>.&nbsp;</td>
@@ -389,15 +413,27 @@ Summary:
               <td class="jd-descrcol" width="100%"><p>
  This is a central controller through which all messages go.&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-0.2.1" >
+        <tr class=" api apilevel-0.2.4-SNAPSHOT" >
+              <td class="jd-linkcol"><a href="../../../../../uk/ac/imperial/presage2/util/network/NetworkMessageMonitor.html">NetworkMessageMonitor</a></td>
+              <td class="jd-descrcol" width="100%">&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-0.2.1" >
               <td class="jd-linkcol"><a href="../../../../../uk/ac/imperial/presage2/core/participant/Participant.html">Participant</a></td>
               <td class="jd-descrcol" width="100%">This is the interface used by the simulator to interact with agents.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-0.2.1" >
+        <tr class=" api apilevel-0.2.1" >
               <td class="jd-linkcol"><a href="../../../../../uk/ac/imperial/presage2/core/plugin/Plugin.html">Plugin</a></td>
               <td class="jd-descrcol" width="100%">&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-0.2.1" >
+        <tr class="alt-color api apilevel-0.2.4-SNAPSHOT" >
+              <td class="jd-linkcol"><a href="../../../../../uk/ac/imperial/presage2/db/sql/SQLStorage.html">SQLStorage</a></td>
+              <td class="jd-descrcol" width="100%">Implementation of a <code><a href="../../../../../uk/ac/imperial/presage2/core/db/StorageService.html">StorageService</a></code> backed by a <code><a href="../../../../../uk/ac/imperial/presage2/db/sql/SQLService.html">SQLService</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-0.2.4-SNAPSHOT" >
+              <td class="jd-linkcol"><a href="../../../../../uk/ac/imperial/presage2/db/sql/sqlite/SQLiteStorage.html">SQLiteStorage</a></td>
+              <td class="jd-descrcol" width="100%">Implementation of <code><a href="../../../../../uk/ac/imperial/presage2/db/sql/SQLStorage.html">SQLStorage</a></code> for an SQLite database.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-0.2.1" >
               <td class="jd-linkcol"><a href="../../../../../uk/ac/imperial/presage2/core/plugin/VisualPlugin.html">VisualPlugin</a></td>
               <td class="jd-descrcol" width="100%">&nbsp;</td>
           </tr>

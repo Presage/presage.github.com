@@ -83,7 +83,7 @@
 </noscript>
 </head>
 
-<body class="0.2.2">
+<body class="0.2.3">
 
 <div id="header">
     <div id="headerLeft">
@@ -131,9 +131,9 @@
     </select>
   </div>
   <script>
-   var SINCE_DATA = [ '0.2.1', '0.2.2', '0.2.3-SNAPSHOT' ];
+   var SINCE_DATA = [ '0.2.1', '0.2.2', '0.2.3', '0.2.4-SNAPSHOT' ];
     
-    var SINCE_LABELS = [ '0.2.1', '0.2.2', '0.2.3-SNAPSHOT' ];
+    var SINCE_LABELS = [ '0.2.1', '0.2.2', '0.2.3', '0.2.4-SNAPSHOT' ];
     buildApiLevelSelector();
     addLoadEvent(changeApiLevel);
   </script>
@@ -158,9 +158,11 @@
                 
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/core/package-summary.html">uk.ac.imperial.presage2.core</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../../uk/ac/imperial/presage2/core/db/package-summary.html">uk.ac.imperial.presage2.core.db</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/core/environment/package-summary.html">uk.ac.imperial.presage2.core.environment</a></li>
-    <li class="api apilevel-0.2.2">
+    <li class="api apilevel-0.2.3">
   <a href="../../../../../../uk/ac/imperial/presage2/core/event/package-summary.html">uk.ac.imperial.presage2.core.event</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/core/messaging/package-summary.html">uk.ac.imperial.presage2.core.messaging</a></li>
@@ -174,14 +176,18 @@
   <a href="../../../../../../uk/ac/imperial/presage2/core/simulator/package-summary.html">uk.ac.imperial.presage2.core.simulator</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/core/util/random/package-summary.html">uk.ac.imperial.presage2.core.util.random</a></li>
-    <li class="api apilevel-0.2.1">
-  <a href="../../../../../../uk/ac/imperial/presage2/db/package-summary.html">uk.ac.imperial.presage2.db</a></li>
-    <li class="api apilevel-0.2.1">
-  <a href="../../../../../../uk/ac/imperial/presage2/db/jdo/package-summary.html">uk.ac.imperial.presage2.db.jdo</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../../uk/ac/imperial/presage2/db/sql/package-summary.html">uk.ac.imperial.presage2.db.sql</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../../uk/ac/imperial/presage2/db/sql/mysql/package-summary.html">uk.ac.imperial.presage2.db.sql.mysql</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../../uk/ac/imperial/presage2/db/sql/sqlite/package-summary.html">uk.ac.imperial.presage2.db.sql.sqlite</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/util/environment/package-summary.html">uk.ac.imperial.presage2.util.environment</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/util/location/package-summary.html">uk.ac.imperial.presage2.util.location</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/location/area/package-summary.html">uk.ac.imperial.presage2.util.location.area</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/util/network/package-summary.html">uk.ac.imperial.presage2.util.network</a></li>
     <li class="api apilevel-0.2.1">
@@ -206,20 +212,20 @@
     <li><h2>Classes</h2>
       <ul>
           <li class="api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/core/network/BasicNetworkConnector.html">BasicNetworkConnector</a></li>
-          <li class="api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/core/network/BroadcastMessage.html">BroadcastMessage</a></li>
+          <li class="api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/core/network/BroadcastMessage.html">BroadcastMessage</a>&lt;T&gt;</li>
           <li class="api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/core/network/ConstrainedNetworkController.html">ConstrainedNetworkController</a></li>
-          <li class="api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a></li>
-          <li class="api apilevel-0.2.2"><a href="../../../../../../uk/ac/imperial/presage2/core/network/MessageBlockedEvent.html">MessageBlockedEvent</a></li>
-          <li class="api apilevel-0.2.2"><a href="../../../../../../uk/ac/imperial/presage2/core/network/MessageDeliveryEvent.html">MessageDeliveryEvent</a></li>
-          <li class="api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/core/network/MulticastMessage.html">MulticastMessage</a></li>
+          <li class="api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;T&gt;</li>
+          <li class="api apilevel-0.2.3"><a href="../../../../../../uk/ac/imperial/presage2/core/network/MessageBlockedEvent.html">MessageBlockedEvent</a></li>
+          <li class="api apilevel-0.2.3"><a href="../../../../../../uk/ac/imperial/presage2/core/network/MessageDeliveryEvent.html">MessageDeliveryEvent</a></li>
+          <li class="api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/core/network/MulticastMessage.html">MulticastMessage</a>&lt;T&gt;</li>
           <li class="api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAddress.html">NetworkAddress</a></li>
           <li class="api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConnector.html">NetworkConnector</a></li>
-          <li class="selected api apilevel-0.2.2"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConnectorWithNodeDiscovery.html">NetworkConnectorWithNodeDiscovery</a></li>
+          <li class="selected api apilevel-0.2.3"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConnectorWithNodeDiscovery.html">NetworkConnectorWithNodeDiscovery</a></li>
           <li class="api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkController.html">NetworkController</a></li>
           <li class="api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkGuiceModule.html">NetworkGuiceModule</a></li>
           <li class="api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkRegistrationRequest.html">NetworkRegistrationRequest</a></li>
           <li class="api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/core/network/RealNetworkConnectorFactory.html">RealNetworkConnectorFactory</a></li>
-          <li class="api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/core/network/UnicastMessage.html">UnicastMessage</a></li>
+          <li class="api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/core/network/UnicastMessage.html">UnicastMessage</a>&lt;T&gt;</li>
       </ul>
     </li>
               
@@ -331,6 +337,9 @@ Summary:
   
 
 
+  &#124; <a href="#pubctors">Ctors</a>
+  
+
 
   &#124; <a href="#proctors">Protected Ctors</a>
   
@@ -349,7 +358,7 @@ Summary:
 <div class="api-level">
   
 
-  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.2">API Level 0.2.2</a>
+  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.3">API Level 0.2.3</a>
 
 
   
@@ -399,7 +408,7 @@ Summary:
 
 <div id="naMessage"></div>
 
-<div id="jd-content" class="api apilevel-0.2.2">
+<div id="jd-content" class="api apilevel-0.2.3">
 <table class="jd-inheritance-table">
 
 
@@ -536,7 +545,7 @@ Summary:
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&gt;</nobr></td>
+          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt;&gt;</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/network/BasicNetworkConnector.html#receivedMessages">receivedMessages</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -618,6 +627,31 @@ Summary:
 
 
 
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-0.2.4-SNAPSHOT" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            </nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConnectorWithNodeDiscovery.html#NetworkConnectorWithNodeDiscovery(uk.ac.imperial.presage2.core.network.NetworkChannel, uk.ac.imperial.presage2.core.network.NetworkAddress, uk.ac.imperial.presage2.core.Time, uk.ac.imperial.presage2.core.simulator.Scenario)">NetworkConnectorWithNodeDiscovery</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkChannel.html">NetworkChannel</a> controller, <a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAddress.html">NetworkAddress</a> address, <a href="../../../../../../uk/ac/imperial/presage2/core/Time.html">Time</a> t, <a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.html">Scenario</a> s)</nobr>
+        
+  </td></tr>
+
+
+
+</table>
+
+
 
 
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -626,7 +660,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-0.2.2" >
+    <tr class="alt-color api apilevel-0.2.3" >
         <td class="jd-typecol"><nobr>
             
             
@@ -653,7 +687,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-0.2.2" >
+    <tr class="alt-color api apilevel-0.2.4-SNAPSHOT" >
         <td class="jd-typecol"><nobr>
             
             synchronized
@@ -663,18 +697,19 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConnectorWithNodeDiscovery.html#deliverMessage(uk.ac.imperial.presage2.core.network.Message)">deliverMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConnectorWithNodeDiscovery.html#deliverMessage(uk.ac.imperial.presage2.core.network.Message<?>)">deliverMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt; m)</nobr>
         
-        <div class="jd-descrdiv"><p>Message delivery from NetworkController.</div>
+        <div class="jd-descrdiv"><p>
+ Message delivery from NetworkController.</div>
   
   </td></tr>
 
 
 	 
-    <tr class=" api apilevel-0.2.2" >
+    <tr class=" api apilevel-0.2.3" >
         <td class="jd-typecol"><nobr>
             
-            
+            synchronized
             
             
             
@@ -687,7 +722,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-0.2.2" >
+    <tr class="alt-color api apilevel-0.2.3" >
         <td class="jd-typecol"><nobr>
             
             
@@ -703,7 +738,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-0.2.2" >
+    <tr class=" api apilevel-0.2.3" >
         <td class="jd-typecol"><nobr>
             
             
@@ -753,7 +788,7 @@ From class
 
 
 	 
-    <tr class="alt-color api apilevel-0.2.1" >
+    <tr class="alt-color api apilevel-0.2.4-SNAPSHOT" >
         <td class="jd-typecol"><nobr>
             
             synchronized
@@ -763,15 +798,16 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/BasicNetworkConnector.html#deliverMessage(uk.ac.imperial.presage2.core.network.Message)">deliverMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/BasicNetworkConnector.html#deliverMessage(uk.ac.imperial.presage2.core.network.Message<?>)">deliverMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt; m)</nobr>
         
-        <div class="jd-descrdiv"><p>Message delivery from NetworkController.</div>
+        <div class="jd-descrdiv"><p>
+ Message delivery from NetworkController.</div>
   
   </td></tr>
 
 
 	 
-    <tr class=" api apilevel-0.2.2" >
+    <tr class=" api apilevel-0.2.3" >
         <td class="jd-typecol"><nobr>
             
             
@@ -794,7 +830,7 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&gt;</nobr>
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt;&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/BasicNetworkConnector.html#getMessages()">getMessages</a></span>()</nobr>
@@ -806,7 +842,7 @@ From class
 
 
 	 
-    <tr class=" api apilevel-0.2.1" >
+    <tr class=" api apilevel-0.2.4-SNAPSHOT" >
         <td class="jd-typecol"><nobr>
             
             
@@ -816,7 +852,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/BasicNetworkConnector.html#sendMessage(uk.ac.imperial.presage2.core.network.Message)">sendMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/BasicNetworkConnector.html#sendMessage(uk.ac.imperial.presage2.core.network.Message<?>)">sendMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt; m)</nobr>
         
         <div class="jd-descrdiv">Participant requesting to send a message.</div>
   
@@ -850,7 +886,7 @@ From class
 
 
 	 
-    <tr class="alt-color api apilevel-0.2.1" >
+    <tr class="alt-color api apilevel-0.2.4-SNAPSHOT" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -860,9 +896,10 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConnector.html#deliverMessage(uk.ac.imperial.presage2.core.network.Message)">deliverMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConnector.html#deliverMessage(uk.ac.imperial.presage2.core.network.Message<?>)">deliverMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt; m)</nobr>
         
-        <div class="jd-descrdiv"><p>Message delivery from NetworkController.</div>
+        <div class="jd-descrdiv"><p>
+ Message delivery from NetworkController.</div>
   
   </td></tr>
 
@@ -886,7 +923,7 @@ From class
 
 
 	 
-    <tr class="alt-color api apilevel-0.2.1" >
+    <tr class="alt-color api apilevel-0.2.4-SNAPSHOT" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -896,7 +933,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConnector.html#sendMessage(uk.ac.imperial.presage2.core.network.Message)">sendMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConnector.html#sendMessage(uk.ac.imperial.presage2.core.network.Message<?>)">sendMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt; m)</nobr>
         
         <div class="jd-descrdiv">Participant requesting to send a message.</div>
   
@@ -1192,7 +1229,7 @@ From interface
 
 
 	 
-    <tr class=" api apilevel-0.2.2" >
+    <tr class=" api apilevel-0.2.3" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -1218,7 +1255,7 @@ From interface
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&gt;</nobr>
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt;&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAdaptor.html#getMessages()">getMessages</a></span>()</nobr>
@@ -1229,7 +1266,7 @@ From interface
 
 
 	 
-    <tr class=" api apilevel-0.2.1" >
+    <tr class=" api apilevel-0.2.4-SNAPSHOT" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -1239,7 +1276,7 @@ From interface
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAdaptor.html#sendMessage(uk.ac.imperial.presage2.core.network.Message)">sendMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAdaptor.html#sendMessage(uk.ac.imperial.presage2.core.network.Message<?>)">sendMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt; m)</nobr>
         
         <div class="jd-descrdiv">Send a message</div>
   
@@ -1273,7 +1310,7 @@ From interface
 
 
 	 
-    <tr class="alt-color api apilevel-0.2.1" >
+    <tr class="alt-color api apilevel-0.2.4-SNAPSHOT" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -1283,7 +1320,7 @@ From interface
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkChannel.html#deliverMessage(uk.ac.imperial.presage2.core.network.Message)">deliverMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkChannel.html#deliverMessage(uk.ac.imperial.presage2.core.network.Message<?>)">deliverMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt; m)</nobr>
         
         <div class="jd-descrdiv">Deliver a message through the network channel.</div>
   
@@ -1325,6 +1362,46 @@ From interface
 <!-- Public ctors -->
 
 
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2>Public Constructors</h2>
+
+
+
+<A NAME="NetworkConnectorWithNodeDiscovery(uk.ac.imperial.presage2.core.network.NetworkChannel, uk.ac.imperial.presage2.core.network.NetworkAddress, uk.ac.imperial.presage2.core.Time, uk.ac.imperial.presage2.core.simulator.Scenario)"></A>
+
+<div class="jd-details api apilevel-0.2.4-SNAPSHOT"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        
+      </span>
+      <span class="sympad">NetworkConnectorWithNodeDiscovery</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkChannel.html">NetworkChannel</a> controller, <a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAddress.html">NetworkAddress</a> address, <a href="../../../../../../uk/ac/imperial/presage2/core/Time.html">Time</a> t, <a href="../../../../../../uk/ac/imperial/presage2/core/simulator/Scenario.html">Scenario</a> s)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.4-SNAPSHOT">API Level 0.2.4-SNAPSHOT</a>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+
+
 
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <!-- Protected ctors -->
@@ -1335,7 +1412,7 @@ From interface
 
 <A NAME="NetworkConnectorWithNodeDiscovery(uk.ac.imperial.presage2.core.network.NetworkChannel, uk.ac.imperial.presage2.core.network.NetworkAddressFactory, java.util.UUID)"></A>
 
-<div class="jd-details api apilevel-0.2.2"> 
+<div class="jd-details api apilevel-0.2.3"> 
     <h4 class="jd-details-title">
       <span class="normal">
         protected 
@@ -1351,7 +1428,7 @@ From interface
       <div class="api-level">
         <div>
 
-  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.2">API Level 0.2.2</a>
+  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.3">API Level 0.2.3</a>
 
 </div>
         
@@ -1376,9 +1453,9 @@ From interface
 
 
 
-<A NAME="deliverMessage(uk.ac.imperial.presage2.core.network.Message)"></A>
+<A NAME="deliverMessage(uk.ac.imperial.presage2.core.network.Message<?>)"></A>
 
-<div class="jd-details api apilevel-0.2.2"> 
+<div class="jd-details api apilevel-0.2.4-SNAPSHOT"> 
     <h4 class="jd-details-title">
       <span class="normal">
         public 
@@ -1389,12 +1466,12 @@ From interface
         void
       </span>
       <span class="sympad">deliverMessage</span>
-      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt; m)</span>
     </h4>
       <div class="api-level">
         <div>
 
-  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.2">API Level 0.2.2</a>
+  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.4-SNAPSHOT">API Level 0.2.4-SNAPSHOT</a>
 
 </div>
         
@@ -1403,7 +1480,9 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p><p>Message delivery from NetworkController.</p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p><p>
+ Message delivery from NetworkController.
+ </p></p></div>
 
     </div>
 </div>
@@ -1411,14 +1490,14 @@ From interface
 
 <A NAME="getConnectedNodes()"></A>
 
-<div class="jd-details api apilevel-0.2.2"> 
+<div class="jd-details api apilevel-0.2.3"> 
     <h4 class="jd-details-title">
       <span class="normal">
         public 
          
          
          
-         
+        synchronized 
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Set.html">Set</a>&lt;<a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAddress.html">NetworkAddress</a>&gt;
       </span>
       <span class="sympad">getConnectedNodes</span>
@@ -1427,7 +1506,7 @@ From interface
       <div class="api-level">
         <div>
 
-  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.2">API Level 0.2.2</a>
+  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.3">API Level 0.2.3</a>
 
 </div>
         
@@ -1453,7 +1532,7 @@ From interface
 
 <A NAME="incrementTime()"></A>
 
-<div class="jd-details api apilevel-0.2.2"> 
+<div class="jd-details api apilevel-0.2.3"> 
     <h4 class="jd-details-title">
       <span class="normal">
         public 
@@ -1469,7 +1548,7 @@ From interface
       <div class="api-level">
         <div>
 
-  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.2">API Level 0.2.2</a>
+  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.3">API Level 0.2.3</a>
 
 </div>
         
@@ -1486,7 +1565,7 @@ From interface
 
 <A NAME="registerTimeDriven(uk.ac.imperial.presage2.core.simulator.Scenario)"></A>
 
-<div class="jd-details api apilevel-0.2.2"> 
+<div class="jd-details api apilevel-0.2.3"> 
     <h4 class="jd-details-title">
       <span class="normal">
         public 
@@ -1502,7 +1581,7 @@ From interface
       <div class="api-level">
         <div>
 
-  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.2">API Level 0.2.2</a>
+  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.3">API Level 0.2.3</a>
 
 </div>
         

@@ -131,9 +131,9 @@
     </select>
   </div>
   <script>
-   var SINCE_DATA = [ '0.2.1', '0.2.2', '0.2.3-SNAPSHOT' ];
+   var SINCE_DATA = [ '0.2.1', '0.2.2', '0.2.3', '0.2.4-SNAPSHOT' ];
     
-    var SINCE_LABELS = [ '0.2.1', '0.2.2', '0.2.3-SNAPSHOT' ];
+    var SINCE_LABELS = [ '0.2.1', '0.2.2', '0.2.3', '0.2.4-SNAPSHOT' ];
     buildApiLevelSelector();
     addLoadEvent(changeApiLevel);
   </script>
@@ -158,9 +158,11 @@
                 
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/core/package-summary.html">uk.ac.imperial.presage2.core</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../../uk/ac/imperial/presage2/core/db/package-summary.html">uk.ac.imperial.presage2.core.db</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/core/environment/package-summary.html">uk.ac.imperial.presage2.core.environment</a></li>
-    <li class="api apilevel-0.2.2">
+    <li class="api apilevel-0.2.3">
   <a href="../../../../../../uk/ac/imperial/presage2/core/event/package-summary.html">uk.ac.imperial.presage2.core.event</a></li>
     <li class="selected api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/core/messaging/package-summary.html">uk.ac.imperial.presage2.core.messaging</a></li>
@@ -174,14 +176,18 @@
   <a href="../../../../../../uk/ac/imperial/presage2/core/simulator/package-summary.html">uk.ac.imperial.presage2.core.simulator</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/core/util/random/package-summary.html">uk.ac.imperial.presage2.core.util.random</a></li>
-    <li class="api apilevel-0.2.1">
-  <a href="../../../../../../uk/ac/imperial/presage2/db/package-summary.html">uk.ac.imperial.presage2.db</a></li>
-    <li class="api apilevel-0.2.1">
-  <a href="../../../../../../uk/ac/imperial/presage2/db/jdo/package-summary.html">uk.ac.imperial.presage2.db.jdo</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../../uk/ac/imperial/presage2/db/sql/package-summary.html">uk.ac.imperial.presage2.db.sql</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../../uk/ac/imperial/presage2/db/sql/mysql/package-summary.html">uk.ac.imperial.presage2.db.sql.mysql</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../../uk/ac/imperial/presage2/db/sql/sqlite/package-summary.html">uk.ac.imperial.presage2.db.sql.sqlite</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/util/environment/package-summary.html">uk.ac.imperial.presage2.util.environment</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/util/location/package-summary.html">uk.ac.imperial.presage2.util.location</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/location/area/package-summary.html">uk.ac.imperial.presage2.util.location.area</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/util/network/package-summary.html">uk.ac.imperial.presage2.util.network</a></li>
     <li class="api apilevel-0.2.1">
@@ -333,13 +339,13 @@ Summary:
               >
           
             
-              <a href="../../../../../../uk/ac/imperial/presage2/core/network/BroadcastMessage.html">BroadcastMessage</a>,
+              <a href="../../../../../../uk/ac/imperial/presage2/core/network/BroadcastMessage.html">BroadcastMessage</a>&lt;T&gt;,
             
-              <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>,
+              <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;T&gt;,
             
-              <a href="../../../../../../uk/ac/imperial/presage2/core/network/MulticastMessage.html">MulticastMessage</a>,
+              <a href="../../../../../../uk/ac/imperial/presage2/core/network/MulticastMessage.html">MulticastMessage</a>&lt;T&gt;,
             
-              <a href="../../../../../../uk/ac/imperial/presage2/core/network/UnicastMessage.html">UnicastMessage</a>
+              <a href="../../../../../../uk/ac/imperial/presage2/core/network/UnicastMessage.html">UnicastMessage</a>&lt;T&gt;
             
           
       </div>
@@ -348,20 +354,24 @@ Summary:
               >
   <table class="jd-sumtable-expando">
         <tr class="alt-color api apilevel-0.2.1" >
-              <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/network/BroadcastMessage.html">BroadcastMessage</a></td>
-              <td class="jd-descrcol" width="100%"><p>This is a basic broadcast message to be sent between agents.&nbsp;</td>
+              <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/network/BroadcastMessage.html">BroadcastMessage</a>&lt;T&gt;</td>
+              <td class="jd-descrcol" width="100%"><p>
+ This is a basic broadcast message to be sent between agents.&nbsp;</td>
           </tr>
         <tr class=" api apilevel-0.2.1" >
-              <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a></td>
-              <td class="jd-descrcol" width="100%"><p>This is a basic message to be sent between agents.&nbsp;</td>
+              <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;T&gt;</td>
+              <td class="jd-descrcol" width="100%"><p>
+ This is a basic message to be sent between agents.&nbsp;</td>
           </tr>
         <tr class="alt-color api apilevel-0.2.1" >
-              <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/network/MulticastMessage.html">MulticastMessage</a></td>
-              <td class="jd-descrcol" width="100%"><p>This is a basic multicast message to be sent between agents.&nbsp;</td>
+              <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/network/MulticastMessage.html">MulticastMessage</a>&lt;T&gt;</td>
+              <td class="jd-descrcol" width="100%"><p>
+ This is a basic multicast message to be sent between agents.&nbsp;</td>
           </tr>
         <tr class=" api apilevel-0.2.1" >
-              <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/network/UnicastMessage.html">UnicastMessage</a></td>
-              <td class="jd-descrcol" width="100%"><p>This is a basic unicast message to be sent between agents.&nbsp;</td>
+              <td class="jd-linkcol"><a href="../../../../../../uk/ac/imperial/presage2/core/network/UnicastMessage.html">UnicastMessage</a>&lt;T&gt;</td>
+              <td class="jd-descrcol" width="100%"><p>
+ This is a basic unicast message to be sent between agents.&nbsp;</td>
           </tr>
   </table>
       </div>
@@ -373,8 +383,9 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>An input is something which can be queued at an agent's input queue and processed by the agent.
- This is the base level of agent-agent and agent-environment interaction. </p>
+<p>An input is something which can be queued at an agent's input queue and
+ processed by the agent. This is the base level of agent-agent and
+ agent-environment interaction.</p>
 
 
 
@@ -470,7 +481,25 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-0.2.1" >
+    <tr class="alt-color api apilevel-0.2.4-SNAPSHOT" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/messaging/Input.html#getType()">getType</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Get the type of this Input</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-0.2.1" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -606,6 +635,39 @@ Summary:
       <ul class="nolist"><li><code><a href="../../../../../../uk/ac/imperial/presage2/core/Time.html">Time</a></code>
 </li></ul>
   </div>
+
+    </div>
+</div>
+
+
+<A NAME="getType()"></A>
+
+<div class="jd-details api apilevel-0.2.4-SNAPSHOT"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getType</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.4-SNAPSHOT">API Level 0.2.4-SNAPSHOT</a>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Get the type of this Input</p></div>
 
     </div>
 </div>

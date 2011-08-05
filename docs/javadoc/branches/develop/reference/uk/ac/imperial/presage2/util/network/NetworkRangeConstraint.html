@@ -131,9 +131,9 @@
     </select>
   </div>
   <script>
-   var SINCE_DATA = [ '0.2.1', '0.2.2', '0.2.3-SNAPSHOT' ];
+   var SINCE_DATA = [ '0.2.1', '0.2.2', '0.2.3', '0.2.4-SNAPSHOT' ];
     
-    var SINCE_LABELS = [ '0.2.1', '0.2.2', '0.2.3-SNAPSHOT' ];
+    var SINCE_LABELS = [ '0.2.1', '0.2.2', '0.2.3', '0.2.4-SNAPSHOT' ];
     buildApiLevelSelector();
     addLoadEvent(changeApiLevel);
   </script>
@@ -158,9 +158,11 @@
                 
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/core/package-summary.html">uk.ac.imperial.presage2.core</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../../uk/ac/imperial/presage2/core/db/package-summary.html">uk.ac.imperial.presage2.core.db</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/core/environment/package-summary.html">uk.ac.imperial.presage2.core.environment</a></li>
-    <li class="api apilevel-0.2.2">
+    <li class="api apilevel-0.2.3">
   <a href="../../../../../../uk/ac/imperial/presage2/core/event/package-summary.html">uk.ac.imperial.presage2.core.event</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/core/messaging/package-summary.html">uk.ac.imperial.presage2.core.messaging</a></li>
@@ -174,14 +176,18 @@
   <a href="../../../../../../uk/ac/imperial/presage2/core/simulator/package-summary.html">uk.ac.imperial.presage2.core.simulator</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/core/util/random/package-summary.html">uk.ac.imperial.presage2.core.util.random</a></li>
-    <li class="api apilevel-0.2.1">
-  <a href="../../../../../../uk/ac/imperial/presage2/db/package-summary.html">uk.ac.imperial.presage2.db</a></li>
-    <li class="api apilevel-0.2.1">
-  <a href="../../../../../../uk/ac/imperial/presage2/db/jdo/package-summary.html">uk.ac.imperial.presage2.db.jdo</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../../uk/ac/imperial/presage2/db/sql/package-summary.html">uk.ac.imperial.presage2.db.sql</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../../uk/ac/imperial/presage2/db/sql/mysql/package-summary.html">uk.ac.imperial.presage2.db.sql.mysql</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../../uk/ac/imperial/presage2/db/sql/sqlite/package-summary.html">uk.ac.imperial.presage2.db.sql.sqlite</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/util/environment/package-summary.html">uk.ac.imperial.presage2.util.environment</a></li>
     <li class="api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/util/location/package-summary.html">uk.ac.imperial.presage2.util.location</a></li>
+    <li class="api apilevel-0.2.4-SNAPSHOT">
+  <a href="../../../../../../uk/ac/imperial/presage2/util/location/area/package-summary.html">uk.ac.imperial.presage2.util.location.area</a></li>
     <li class="selected api apilevel-0.2.1">
   <a href="../../../../../../uk/ac/imperial/presage2/util/network/package-summary.html">uk.ac.imperial.presage2.util.network</a></li>
     <li class="api apilevel-0.2.1">
@@ -195,7 +201,8 @@
               
     <li><h2>Classes</h2>
       <ul>
-          <li class="api apilevel-0.2.2"><a href="../../../../../../uk/ac/imperial/presage2/util/network/NetworkModule.html">NetworkModule</a></li>
+          <li class="api apilevel-0.2.4-SNAPSHOT"><a href="../../../../../../uk/ac/imperial/presage2/util/network/NetworkMessageMonitor.html">NetworkMessageMonitor</a></li>
+          <li class="api apilevel-0.2.3"><a href="../../../../../../uk/ac/imperial/presage2/util/network/NetworkModule.html">NetworkModule</a></li>
           <li class="selected api apilevel-0.2.1"><a href="../../../../../../uk/ac/imperial/presage2/util/network/NetworkRangeConstraint.html">NetworkRangeConstraint</a></li>
       </ul>
     </li>
@@ -275,6 +282,9 @@ Summary:
   &#124; <a href="#pubmethods">Methods</a>
   
 
+
+  &#124; <a href="#promethods">Protected Methods</a>
+  
 
 
   &#124; <a href="#inhmethods">Inherited Methods</a>
@@ -410,7 +420,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-0.2.1" >
+    <tr class="alt-color api apilevel-0.2.4-SNAPSHOT" >
         <td class="jd-typecol"><nobr>
             
             
@@ -420,7 +430,7 @@ Summary:
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/network/NetworkRangeConstraint.html#NetworkRangeConstraint(uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider)">NetworkRangeConstraint</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentServiceProvider.html">EnvironmentServiceProvider</a> serviceProvider)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/network/NetworkRangeConstraint.html#NetworkRangeConstraint(uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider, uk.ac.imperial.presage2.core.event.EventBus)">NetworkRangeConstraint</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentServiceProvider.html">EnvironmentServiceProvider</a> serviceProvider, <a href="../../../../../../uk/ac/imperial/presage2/core/event/EventBus.html">EventBus</a> eb)</nobr>
         
   </td></tr>
 
@@ -439,7 +449,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-0.2.1" >
+    <tr class="alt-color api apilevel-0.2.4-SNAPSHOT" >
         <td class="jd-typecol"><nobr>
             
             
@@ -449,7 +459,7 @@ Summary:
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/network/NetworkRangeConstraint.html#blockMessageDelivery(uk.ac.imperial.presage2.core.network.NetworkAddress, uk.ac.imperial.presage2.core.network.Message)">blockMessageDelivery</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAddress.html">NetworkAddress</a> to, <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/network/NetworkRangeConstraint.html#blockMessageDelivery(uk.ac.imperial.presage2.core.network.NetworkAddress, uk.ac.imperial.presage2.core.network.Message<?>)">blockMessageDelivery</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAddress.html">NetworkAddress</a> to, <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt; m)</nobr>
         
         <div class="jd-descrdiv">Block the message m from being delivered to recipient to.</div>
   
@@ -457,17 +467,17 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-0.2.1" >
+    <tr class=" api apilevel-0.2.4-SNAPSHOT" >
         <td class="jd-typecol"><nobr>
             
             
             
             
             
-            <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a></nobr>
+            <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/network/NetworkRangeConstraint.html#constrainMessage(uk.ac.imperial.presage2.core.network.Message)">constrainMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/network/NetworkRangeConstraint.html#constrainMessage(uk.ac.imperial.presage2.core.network.Message<?>)">constrainMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt; m)</nobr>
         
         <div class="jd-descrdiv">Apply constraints to the <code><a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a></code> m and return the modified
  version of the message.</div>
@@ -479,6 +489,31 @@ Summary:
 </table>
 
 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="promethods" class="jd-sumtable"><tr><th colspan="12">Protected Methods</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-0.2.4-SNAPSHOT" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/util/network/NetworkRangeConstraint.html#areLinked(java.util.UUID, java.util.UUID)">areLinked</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> a1, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> a2)</nobr>
+        
+  </td></tr>
+
+
+
+</table>
 
 
 
@@ -712,7 +747,7 @@ From interface
 
 
 	 
-    <tr class="alt-color api apilevel-0.2.1" >
+    <tr class="alt-color api apilevel-0.2.4-SNAPSHOT" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -722,7 +757,7 @@ From interface
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConstraint.html#blockMessageDelivery(uk.ac.imperial.presage2.core.network.NetworkAddress, uk.ac.imperial.presage2.core.network.Message)">blockMessageDelivery</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAddress.html">NetworkAddress</a> to, <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConstraint.html#blockMessageDelivery(uk.ac.imperial.presage2.core.network.NetworkAddress, uk.ac.imperial.presage2.core.network.Message<?>)">blockMessageDelivery</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAddress.html">NetworkAddress</a> to, <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt; m)</nobr>
         
         <div class="jd-descrdiv">Block the message m from being delivered to recipient to.</div>
   
@@ -730,17 +765,17 @@ From interface
 
 
 	 
-    <tr class=" api apilevel-0.2.1" >
+    <tr class=" api apilevel-0.2.4-SNAPSHOT" >
         <td class="jd-typecol"><nobr>
             abstract
             
             
             
             
-            <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a></nobr>
+            <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConstraint.html#constrainMessage(uk.ac.imperial.presage2.core.network.Message)">constrainMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</nobr>
+        <span class="sympad"><a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkConstraint.html#constrainMessage(uk.ac.imperial.presage2.core.network.Message<?>)">constrainMessage</a></span>(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt; m)</nobr>
         
         <div class="jd-descrdiv">Apply constraints to the <code><a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a></code> m and return the modified
  version of the message.</div>
@@ -788,9 +823,9 @@ From interface
 
 
 
-<A NAME="NetworkRangeConstraint(uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider)"></A>
+<A NAME="NetworkRangeConstraint(uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider, uk.ac.imperial.presage2.core.event.EventBus)"></A>
 
-<div class="jd-details api apilevel-0.2.1"> 
+<div class="jd-details api apilevel-0.2.4-SNAPSHOT"> 
     <h4 class="jd-details-title">
       <span class="normal">
         public 
@@ -801,12 +836,12 @@ From interface
         
       </span>
       <span class="sympad">NetworkRangeConstraint</span>
-      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentServiceProvider.html">EnvironmentServiceProvider</a> serviceProvider)</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/environment/EnvironmentServiceProvider.html">EnvironmentServiceProvider</a> serviceProvider, <a href="../../../../../../uk/ac/imperial/presage2/core/event/EventBus.html">EventBus</a> eb)</span>
     </h4>
       <div class="api-level">
         <div>
 
-  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.1">API Level 0.2.1</a>
+  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.4-SNAPSHOT">API Level 0.2.4-SNAPSHOT</a>
 
 </div>
         
@@ -845,9 +880,9 @@ From interface
 
 
 
-<A NAME="blockMessageDelivery(uk.ac.imperial.presage2.core.network.NetworkAddress, uk.ac.imperial.presage2.core.network.Message)"></A>
+<A NAME="blockMessageDelivery(uk.ac.imperial.presage2.core.network.NetworkAddress, uk.ac.imperial.presage2.core.network.Message<?>)"></A>
 
-<div class="jd-details api apilevel-0.2.1"> 
+<div class="jd-details api apilevel-0.2.4-SNAPSHOT"> 
     <h4 class="jd-details-title">
       <span class="normal">
         public 
@@ -858,12 +893,12 @@ From interface
         boolean
       </span>
       <span class="sympad">blockMessageDelivery</span>
-      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAddress.html">NetworkAddress</a> to, <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/network/NetworkAddress.html">NetworkAddress</a> to, <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt; m)</span>
     </h4>
       <div class="api-level">
         <div>
 
-  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.1">API Level 0.2.1</a>
+  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.4-SNAPSHOT">API Level 0.2.4-SNAPSHOT</a>
 
 </div>
         
@@ -888,8 +923,8 @@ From interface
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>True if the NetworkController should block the message,
- 			false otherwise.
+      <ul class="nolist"><li>True if the NetworkController should block the message, false
+         otherwise.
 </li></ul>
   </div>
 
@@ -897,9 +932,9 @@ From interface
 </div>
 
 
-<A NAME="constrainMessage(uk.ac.imperial.presage2.core.network.Message)"></A>
+<A NAME="constrainMessage(uk.ac.imperial.presage2.core.network.Message<?>)"></A>
 
-<div class="jd-details api apilevel-0.2.1"> 
+<div class="jd-details api apilevel-0.2.4-SNAPSHOT"> 
     <h4 class="jd-details-title">
       <span class="normal">
         public 
@@ -907,15 +942,15 @@ From interface
          
          
          
-        <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>
+        <a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt;
       </span>
       <span class="sympad">constrainMessage</span>
-      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a> m)</span>
+      <span class="normal">(<a href="../../../../../../uk/ac/imperial/presage2/core/network/Message.html">Message</a>&lt;?&gt; m)</span>
     </h4>
       <div class="api-level">
         <div>
 
-  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.1">API Level 0.2.1</a>
+  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.4-SNAPSHOT">API Level 0.2.4-SNAPSHOT</a>
 
 </div>
         
@@ -935,6 +970,44 @@ From interface
 
 
 <!-- ========= METHOD DETAIL ======== -->
+
+<h2>Protected Methods</h2>
+
+
+
+<A NAME="areLinked(java.util.UUID, java.util.UUID)"></A>
+
+<div class="jd-details api apilevel-0.2.4-SNAPSHOT"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+         
+         
+         
+        boolean
+      </span>
+      <span class="sympad">areLinked</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> a1, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/UUID.html">UUID</a> a2)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+  Since: <a href="../../../../../../guide/appendix/api-levels.html#level0.2.4-SNAPSHOT">API Level 0.2.4-SNAPSHOT</a>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
 
 
 
