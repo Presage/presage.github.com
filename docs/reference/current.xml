@@ -125,7 +125,7 @@
  abstract="true"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <method name="clone"
@@ -256,6 +256,378 @@
 </package>
 <package name="uk.ac.imperial.presage2.core.cli"
 >
+<class name="Experiment"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.util.Iterator">
+</implements>
+<constructor name="Experiment"
+ type="uk.ac.imperial.presage2.core.cli.Experiment"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="description" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="addArrayParameter"
+ return="uk.ac.imperial.presage2.core.cli.Experiment"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="values" type="java.lang.Object...">
+</parameter>
+</method>
+<method name="addArrayParameter"
+ return="uk.ac.imperial.presage2.core.cli.Experiment"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="values" type="java.lang.String...">
+</parameter>
+</method>
+<method name="addFixedParameter"
+ return="uk.ac.imperial.presage2.core.cli.Experiment"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+</method>
+<method name="addFixedParameter"
+ return="uk.ac.imperial.presage2.core.cli.Experiment"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="addParameter"
+ return="uk.ac.imperial.presage2.core.cli.Experiment"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="values" type="java.lang.Iterable&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="addRangeParameter"
+ return="uk.ac.imperial.presage2.core.cli.Experiment"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="start" type="int">
+</parameter>
+<parameter name="count" type="int">
+</parameter>
+<parameter name="interval" type="int">
+</parameter>
+</method>
+<method name="build"
+ return="uk.ac.imperial.presage2.core.cli.Experiment"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="InvalidParametersException" type="uk.ac.imperial.presage2.core.cli.InvalidParametersException">
+</exception>
+</method>
+<method name="getDescription"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="InvalidParametersException"
+ extends="java.lang.Exception"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="InvalidParametersException"
+ type="uk.ac.imperial.presage2.core.cli.InvalidParametersException"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="string" type="java.lang.String">
+</parameter>
+</constructor>
+</class>
+<class name="MultiExperiment"
+ extends="uk.ac.imperial.presage2.core.cli.Experiment"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="MultiExperiment"
+ type="uk.ac.imperial.presage2.core.cli.MultiExperiment"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="description" type="java.lang.String">
+</parameter>
+<parameter name="exprs" type="uk.ac.imperial.presage2.core.cli.Experiment...">
+</parameter>
+</constructor>
+<method name="add"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="e" type="uk.ac.imperial.presage2.core.cli.Experiment">
+</parameter>
+</method>
+<method name="addParameter"
+ return="uk.ac.imperial.presage2.core.cli.Experiment"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="values" type="java.lang.Iterable&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="build"
+ return="uk.ac.imperial.presage2.core.cli.Experiment"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="InvalidParametersException" type="uk.ac.imperial.presage2.core.cli.InvalidParametersException">
+</exception>
+</method>
+<method name="hasNext"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="next"
+ return="uk.ac.imperial.presage2.core.cli.Simulation"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="remove"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="ParameterSweep"
+ extends="uk.ac.imperial.presage2.core.cli.Experiment"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ParameterSweep"
+ type="uk.ac.imperial.presage2.core.cli.ParameterSweep"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="simNamePattern" type="java.lang.String">
+</parameter>
+<parameter name="className" type="java.lang.String">
+</parameter>
+<parameter name="simSteps" type="int">
+</parameter>
+</constructor>
+<constructor name="ParameterSweep"
+ type="uk.ac.imperial.presage2.core.cli.ParameterSweep"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="description" type="java.lang.String">
+</parameter>
+<parameter name="simNamePattern" type="java.lang.String">
+</parameter>
+<parameter name="className" type="java.lang.String">
+</parameter>
+<parameter name="simSteps" type="int">
+</parameter>
+</constructor>
+<method name="addParameter"
+ return="uk.ac.imperial.presage2.core.cli.Experiment"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="values" type="java.lang.Iterable&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="build"
+ return="uk.ac.imperial.presage2.core.cli.Experiment"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="InvalidParametersException" type="uk.ac.imperial.presage2.core.cli.InvalidParametersException">
+</exception>
+</method>
+<method name="hasNext"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="next"
+ return="uk.ac.imperial.presage2.core.cli.Simulation"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="remove"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
 <class name="Presage2CLI"
  extends="java.lang.Object"
  abstract="false"
@@ -351,6 +723,16 @@
  visibility="protected"
 >
 </field>
+<field name="db"
+ type="uk.ac.imperial.presage2.core.db.DatabaseModule"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
 <field name="injector"
  type="com.google.inject.Injector"
  transient="false"
@@ -382,6 +764,36 @@
 >
 <implements name="java.lang.annotation.Annotation">
 </implements>
+</class>
+<class name="Simulation"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Simulation"
+ type="uk.ac.imperial.presage2.core.cli.Simulation"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="insert"
+ return="uk.ac.imperial.presage2.core.db.persistent.PersistentSimulation"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="sto" type="uk.ac.imperial.presage2.core.db.StorageService">
+</parameter>
+</method>
 </class>
 </package>
 <package name="uk.ac.imperial.presage2.core.cli.run"
@@ -1124,6 +1536,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<implements name="com.google.inject.Provider">
+</implements>
 <method name="createAgent"
  return="uk.ac.imperial.presage2.core.db.persistent.PersistentAgent"
  abstract="true"
@@ -1235,6 +1649,563 @@
 </parameter>
 </method>
 </interface>
+<class name="TupleStorageService"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="uk.ac.imperial.presage2.core.db.StorageService">
+</implements>
+<constructor name="TupleStorageService"
+ type="uk.ac.imperial.presage2.core.db.TupleStorageService"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="createAgent"
+ return="uk.ac.imperial.presage2.core.db.persistent.PersistentAgent"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="agentID" type="java.util.UUID">
+</parameter>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="createSimulation"
+ return="uk.ac.imperial.presage2.core.db.persistent.PersistentSimulation"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="classname" type="java.lang.String">
+</parameter>
+<parameter name="state" type="java.lang.String">
+</parameter>
+<parameter name="finishTime" type="int">
+</parameter>
+</method>
+<method name="fetchParameter"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+</method>
+<method name="fetchParameterKeys"
+ return="java.util.Set&lt;java.lang.String&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+</method>
+<method name="fetchTuple"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+</method>
+<method name="fetchTuple"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+</method>
+<method name="fetchTuple"
+ return="T"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="type" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="fetchTuple"
+ return="T"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="type" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="fetchTuple"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+</method>
+<method name="fetchTuple"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+</method>
+<method name="fetchTuple"
+ return="T"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="type" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="fetchTuple"
+ return="T"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="type" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="get"
+ return="uk.ac.imperial.presage2.core.db.persistent.PersistentSimulation"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getAgent"
+ return="uk.ac.imperial.presage2.core.db.persistent.PersistentAgent"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="agentID" type="java.util.UUID">
+</parameter>
+</method>
+<method name="getAgentState"
+ return="uk.ac.imperial.presage2.core.db.persistent.TransientAgentState"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="agentID" type="java.util.UUID">
+</parameter>
+<parameter name="time" type="int">
+</parameter>
+</method>
+<method name="getNextId"
+ return="long"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="getSimulation"
+ return="uk.ac.imperial.presage2.core.db.persistent.PersistentSimulation"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getSimulationById"
+ return="uk.ac.imperial.presage2.core.db.persistent.PersistentSimulation"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="long">
+</parameter>
+</method>
+<method name="setSimulation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="sim" type="uk.ac.imperial.presage2.core.db.persistent.PersistentSimulation">
+</parameter>
+</method>
+<method name="storeParameter"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="value" type="double">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="value" type="int">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="value" type="double">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="value" type="int">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="value" type="double">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="value" type="int">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="value" type="double">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="value" type="int">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="id" type="long">
+</parameter>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+</class>
 </package>
 <package name="uk.ac.imperial.presage2.core.db.persistent"
 >
@@ -1291,6 +2262,21 @@
 <parameter name="key" type="java.lang.String">
 </parameter>
 </method>
+<method name="getProperty"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+</method>
 <method name="getState"
  return="uk.ac.imperial.presage2.core.db.persistent.TransientAgentState"
  abstract="true"
@@ -1315,6 +2301,23 @@
  visibility="public"
 >
 <parameter name="time" type="int">
+</parameter>
+</method>
+<method name="setProperty"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="value" type="java.lang.String">
 </parameter>
 </method>
 <method name="setProperty"
@@ -1460,29 +2463,7 @@
 <parameter name="value" type="java.lang.String">
 </parameter>
 </method>
-<method name="getAgents"
- return="java.util.Set&lt;uk.ac.imperial.presage2.core.db.persistent.PersistentAgent&gt;"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getChildren"
- return="java.util.List&lt;java.lang.Long&gt;"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getClassName"
+<method name="fetchTuple"
  return="java.lang.String"
  abstract="true"
  native="false"
@@ -1492,9 +2473,126 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<parameter name="key" type="java.lang.String">
+</parameter>
 </method>
-<method name="getCreatedAt"
- return="long"
+<method name="fetchTuple"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+</method>
+<method name="fetchTuple"
+ return="T"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="type" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="fetchTuple"
+ return="T"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="type" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="fetchTuple"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+</method>
+<method name="fetchTuple"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+</method>
+<method name="fetchTuple"
+ return="T"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="type" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="fetchTuple"
+ return="T"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="type" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="getClassName"
+ return="java.lang.String"
  abstract="true"
  native="false"
  synchronized="false"
@@ -1581,17 +2679,6 @@
  visibility="public"
 >
 </method>
-<method name="getParentSimulation"
- return="uk.ac.imperial.presage2.core.db.persistent.PersistentSimulation"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
 <method name="getStartedAt"
  return="long"
  abstract="true"
@@ -1640,19 +2727,6 @@
 <parameter name="time" type="long">
 </parameter>
 </method>
-<method name="setParentSimulation"
- return="void"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="parent" type="uk.ac.imperial.presage2.core.db.persistent.PersistentSimulation">
-</parameter>
-</method>
 <method name="setStartedAt"
  return="void"
  abstract="true"
@@ -1677,6 +2751,210 @@
  visibility="public"
 >
 <parameter name="newState" type="java.lang.String">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="value" type="double">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="value" type="int">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="value" type="double">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="value" type="int">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="value" type="double">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="value" type="int">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="value" type="double">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="value" type="int">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="t" type="int">
+</parameter>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="storeTuple"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="agent" type="java.util.UUID">
+</parameter>
+<parameter name="value" type="java.lang.String">
 </parameter>
 </method>
 </interface>
@@ -1773,7 +3051,7 @@
 </parameter>
 </method>
 <method name="handle"
- return="uk.ac.imperial.presage2.core.messaging.Input"
+ return="java.lang.Object"
  abstract="true"
  native="false"
  synchronized="false"
@@ -2718,7 +3996,7 @@
  abstract="true"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <method name="getPerformative"
@@ -2882,7 +4160,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 <method name="getConnectedNodes"
@@ -2899,7 +4177,7 @@
 </exception>
 </method>
 <method name="getMessages"
- return="java.util.List&lt;uk.ac.imperial.presage2.core.network.Message&lt;?&gt;&gt;"
+ return="java.util.List&lt;uk.ac.imperial.presage2.core.network.Message&gt;"
  abstract="false"
  native="false"
  synchronized="false"
@@ -2919,7 +4197,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 <field name="receivedMessages"
@@ -2972,7 +4250,7 @@
 </parameter>
 <parameter name="from" type="uk.ac.imperial.presage2.core.network.NetworkAddress">
 </parameter>
-<parameter name="data" type="T">
+<parameter name="data" type="java.lang.Object">
 </parameter>
 </constructor>
 <constructor name="BroadcastMessage"
@@ -3002,7 +4280,7 @@
 </parameter>
 <parameter name="timestamp" type="uk.ac.imperial.presage2.core.Time">
 </parameter>
-<parameter name="data" type="T">
+<parameter name="data" type="java.lang.Object">
 </parameter>
 </constructor>
 </class>
@@ -3073,6 +4351,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<implements name="uk.ac.imperial.presage2.core.Action">
+</implements>
 <implements name="uk.ac.imperial.presage2.core.messaging.Input">
 </implements>
 <constructor name="Message"
@@ -3106,7 +4386,7 @@
 </parameter>
 <parameter name="from" type="uk.ac.imperial.presage2.core.network.NetworkAddress">
 </parameter>
-<parameter name="data" type="T">
+<parameter name="data" type="java.lang.Object">
 </parameter>
 </constructor>
 <constructor name="Message"
@@ -3136,7 +4416,7 @@
 </parameter>
 <parameter name="timestamp" type="uk.ac.imperial.presage2.core.Time">
 </parameter>
-<parameter name="data" type="T">
+<parameter name="data" type="java.lang.Object">
 </parameter>
 </constructor>
 <method name="getConversationKey"
@@ -3151,7 +4431,7 @@
 >
 </method>
 <method name="getData"
- return="T"
+ return="java.lang.Object"
  abstract="false"
  native="false"
  synchronized="false"
@@ -3279,7 +4559,7 @@
 >
 </field>
 <field name="data"
- type="T"
+ type="java.lang.Object"
  transient="false"
  volatile="false"
  static="false"
@@ -3350,7 +4630,7 @@
 <implements name="uk.ac.imperial.presage2.core.event.Event">
 </implements>
 <method name="getMessage"
- return="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;"
+ return="uk.ac.imperial.presage2.core.network.Message"
  abstract="false"
  native="false"
  synchronized="false"
@@ -3424,7 +4704,7 @@
 <implements name="uk.ac.imperial.presage2.core.event.Event">
 </implements>
 <method name="getMessage"
- return="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;"
+ return="uk.ac.imperial.presage2.core.network.Message"
  abstract="false"
  native="false"
  synchronized="false"
@@ -3510,7 +4790,7 @@
 </parameter>
 <parameter name="from" type="uk.ac.imperial.presage2.core.network.NetworkAddress">
 </parameter>
-<parameter name="data" type="T">
+<parameter name="data" type="java.lang.Object">
 </parameter>
 </constructor>
 <constructor name="MulticastMessage"
@@ -3548,7 +4828,7 @@
 </parameter>
 <parameter name="to" type="java.util.List&lt;uk.ac.imperial.presage2.core.network.NetworkAddress&gt;">
 </parameter>
-<parameter name="data" type="T">
+<parameter name="data" type="java.lang.Object">
 </parameter>
 </constructor>
 <constructor name="MulticastMessage"
@@ -3594,7 +4874,7 @@
 </parameter>
 <parameter name="timestamp" type="uk.ac.imperial.presage2.core.Time">
 </parameter>
-<parameter name="data" type="T">
+<parameter name="data" type="java.lang.Object">
 </parameter>
 </constructor>
 <method name="addRecipient"
@@ -3677,7 +4957,7 @@
 </exception>
 </method>
 <method name="getMessages"
- return="java.util.List&lt;uk.ac.imperial.presage2.core.network.Message&lt;?&gt;&gt;"
+ return="java.util.List&lt;uk.ac.imperial.presage2.core.network.Message&gt;"
  abstract="true"
  native="false"
  synchronized="false"
@@ -3697,7 +4977,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 </interface>
@@ -3779,7 +5059,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 </interface>
@@ -3831,7 +5111,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 <method name="getAddress"
@@ -3855,7 +5135,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 <field name="address"
@@ -3994,11 +5274,11 @@
 >
 <parameter name="to" type="uk.ac.imperial.presage2.core.network.NetworkAddress">
 </parameter>
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 <method name="constrainMessage"
- return="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;"
+ return="uk.ac.imperial.presage2.core.network.Message"
  abstract="true"
  native="false"
  synchronized="false"
@@ -4007,7 +5287,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 </interface>
@@ -4049,7 +5329,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 <method name="deliverMessageTo"
@@ -4064,7 +5344,7 @@
 >
 <parameter name="to" type="uk.ac.imperial.presage2.core.network.NetworkAddress">
 </parameter>
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 <method name="doBroadcast"
@@ -4077,7 +5357,7 @@
  deprecated="not deprecated"
  visibility="protected"
 >
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.BroadcastMessage&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.BroadcastMessage">
 </parameter>
 </method>
 <method name="doMulticast"
@@ -4090,7 +5370,7 @@
  deprecated="not deprecated"
  visibility="protected"
 >
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.MulticastMessage&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.MulticastMessage">
 </parameter>
 </method>
 <method name="doUnicast"
@@ -4103,7 +5383,7 @@
  deprecated="not deprecated"
  visibility="protected"
 >
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.UnicastMessage&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.UnicastMessage">
 </parameter>
 </method>
 <method name="getPong"
@@ -4129,7 +5409,7 @@
  deprecated="not deprecated"
  visibility="protected"
 >
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 <method name="incrementTime"
@@ -4153,8 +5433,6 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="e" type="uk.ac.imperial.presage2.core.simulator.ParticipantsComplete">
-</parameter>
 </method>
 <method name="register"
  return="void"
@@ -4192,7 +5470,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="pool" type="uk.ac.imperial.presage2.core.simulator.ThreadPool">
+<parameter name="pool" type="uk.ac.imperial.presage2.core.simulator.ScheduleExecutor">
 </parameter>
 </method>
 <field name="DELIVER_MESSAGE_EVENTS_ENABLED"
@@ -4296,7 +5574,7 @@
 >
 </field>
 <field name="threadPool"
- type="uk.ac.imperial.presage2.core.simulator.ThreadPool"
+ type="uk.ac.imperial.presage2.core.simulator.ScheduleExecutor"
  transient="false"
  volatile="false"
  static="false"
@@ -4523,7 +5801,7 @@
 </parameter>
 <parameter name="to" type="uk.ac.imperial.presage2.core.network.NetworkAddress">
 </parameter>
-<parameter name="data" type="T">
+<parameter name="data" type="java.lang.Object">
 </parameter>
 </constructor>
 <constructor name="UnicastMessage"
@@ -4557,7 +5835,7 @@
 </parameter>
 <parameter name="timestamp" type="uk.ac.imperial.presage2.core.Time">
 </parameter>
-<parameter name="data" type="T">
+<parameter name="data" type="java.lang.Object">
 </parameter>
 </constructor>
 <method name="getTo"
@@ -4597,7 +5875,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="message" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="message" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </constructor>
 <field name="message"
@@ -4626,7 +5904,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="message" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="message" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 <parameter name="recipients" type="java.util.List&lt;uk.ac.imperial.presage2.core.network.NetworkAddress&gt;">
 </parameter>
@@ -4638,7 +5916,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="message" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="message" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 <parameter name="recipient" type="uk.ac.imperial.presage2.core.network.NetworkAddress">
 </parameter>
@@ -4676,8 +5954,6 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<implements name="uk.ac.imperial.presage2.core.TimeDriven">
-</implements>
 <method name="enqueueInput"
  return="void"
  abstract="true"
@@ -4688,7 +5964,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="inputs" type="java.util.Collection&lt;? extends uk.ac.imperial.presage2.core.messaging.Input&gt;">
+<parameter name="input" type="java.lang.Object">
 </parameter>
 </method>
 <method name="enqueueInput"
@@ -4701,19 +5977,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="input" type="uk.ac.imperial.presage2.core.messaging.Input">
+<parameter name="inputs" type="java.util.Collection&lt;? extends java.lang.Object&gt;">
 </parameter>
-</method>
-<method name="execute"
- return="void"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="deprecated"
- visibility="public"
->
 </method>
 <method name="getID"
  return="java.util.UUID"
@@ -4728,39 +5993,6 @@
 </method>
 <method name="getName"
  return="java.lang.String"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getTime"
- return="uk.ac.imperial.presage2.core.Time"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="initialise"
- return="void"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="onSimulationComplete"
- return="void"
  abstract="true"
  native="false"
  synchronized="false"
@@ -4890,7 +6122,7 @@
  abstract="true"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <implements name="uk.ac.imperial.presage2.core.TimeDriven">
@@ -4996,75 +6228,40 @@
 </package>
 <package name="uk.ac.imperial.presage2.core.simulator"
 >
-<class name="EndOfTimeCycle"
+<class name="Finalisor"
  extends="java.lang.Object"
- abstract="false"
+ abstract="true"
  static="false"
  final="false"
  deprecated="not deprecated"
  visibility="public"
 >
-<implements name="uk.ac.imperial.presage2.core.event.Event">
+<implements name="java.lang.annotation.Annotation">
 </implements>
-<method name="getTime"
- return="uk.ac.imperial.presage2.core.Time"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
 </class>
-<class name="Events"
+<class name="FinishCondition"
  extends="java.lang.Object"
- abstract="false"
+ abstract="true"
  static="false"
  final="false"
  deprecated="not deprecated"
  visibility="public"
 >
-<constructor name="Events"
- type="uk.ac.imperial.presage2.core.simulator.Events"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</constructor>
-<field name="INITIALISED"
- type="uk.ac.imperial.presage2.core.event.Event"
- transient="false"
- volatile="false"
- static="true"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-</field>
-</class>
-<class name="Events.Initialised"
- extends="java.lang.Object"
- abstract="false"
- static="true"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<implements name="uk.ac.imperial.presage2.core.event.Event">
+<implements name="java.lang.annotation.Annotation">
 </implements>
-<constructor name="Events.Initialised"
- type="uk.ac.imperial.presage2.core.simulator.Events.Initialised"
+</class>
+<class name="Initialisor"
+ extends="java.lang.Object"
+ abstract="true"
  static="false"
  final="false"
  deprecated="not deprecated"
  visibility="public"
 >
-</constructor>
+<implements name="java.lang.annotation.Annotation">
+</implements>
 </class>
-<class name="ExecutorServiceThreadPool"
+<class name="MultiThreadedSchedule"
  extends="java.lang.Object"
  abstract="false"
  static="false"
@@ -5072,7 +6269,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<implements name="uk.ac.imperial.presage2.core.simulator.ThreadPool">
+<implements name="uk.ac.imperial.presage2.core.simulator.ScheduleExecutor">
 </implements>
 <method name="getThreadCount"
  return="int"
@@ -5121,7 +6318,22 @@
 >
 <parameter name="s" type="java.lang.Runnable">
 </parameter>
-<parameter name="condition" type="uk.ac.imperial.presage2.core.simulator.ThreadPool.WaitCondition">
+<parameter name="condition" type="uk.ac.imperial.presage2.core.simulator.ScheduleExecutor.WaitCondition">
+</parameter>
+</method>
+<method name="submitScheduledConditional"
+ return="java.util.concurrent.Future&lt;java.lang.Boolean&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="s" type="java.util.concurrent.Callable&lt;java.lang.Boolean&gt;">
+</parameter>
+<parameter name="condition" type="uk.ac.imperial.presage2.core.simulator.ScheduleExecutor.WaitCondition">
 </parameter>
 </method>
 <method name="waitFor"
@@ -5134,416 +6346,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="condition" type="uk.ac.imperial.presage2.core.simulator.ThreadPool.WaitCondition">
-</parameter>
-</method>
-</class>
-<class name="FinalizeEvent"
- extends="java.lang.Object"
- abstract="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<implements name="uk.ac.imperial.presage2.core.event.Event">
-</implements>
-<method name="getTime"
- return="uk.ac.imperial.presage2.core.Time"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-</class>
-<class name="InjectedScenario"
- extends="java.lang.Object"
- abstract="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<implements name="uk.ac.imperial.presage2.core.simulator.Scenario">
-</implements>
-<constructor name="InjectedScenario"
- type="uk.ac.imperial.presage2.core.simulator.InjectedScenario"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="participants" type="java.util.Set&lt;uk.ac.imperial.presage2.core.participant.Participant&gt;">
-</parameter>
-<parameter name="plugins" type="java.util.Set&lt;uk.ac.imperial.presage2.core.plugin.Plugin&gt;">
-</parameter>
-<parameter name="timedriven" type="java.util.Set&lt;uk.ac.imperial.presage2.core.TimeDriven&gt;">
-</parameter>
-<parameter name="env" type="uk.ac.imperial.presage2.core.TimeDriven">
-</parameter>
-<parameter name="finish" type="uk.ac.imperial.presage2.core.Time">
-</parameter>
-</constructor>
-<method name="addEnvironment"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="e" type="uk.ac.imperial.presage2.core.TimeDriven">
-</parameter>
-</method>
-<method name="addParticipant"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="p" type="uk.ac.imperial.presage2.core.participant.Participant">
-</parameter>
-</method>
-<method name="addPlugin"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="p" type="uk.ac.imperial.presage2.core.plugin.Plugin">
-</parameter>
-</method>
-<method name="addTimeDriven"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="t" type="uk.ac.imperial.presage2.core.TimeDriven">
-</parameter>
-</method>
-<method name="getEnvironment"
- return="uk.ac.imperial.presage2.core.TimeDriven"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getFinishTime"
- return="uk.ac.imperial.presage2.core.Time"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getParticipants"
- return="java.util.Set&lt;uk.ac.imperial.presage2.core.participant.Participant&gt;"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getPlugins"
- return="java.util.Set&lt;uk.ac.imperial.presage2.core.plugin.Plugin&gt;"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getTimeDriven"
- return="java.util.Set&lt;uk.ac.imperial.presage2.core.TimeDriven&gt;"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="removeParticipant"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="id" type="java.util.UUID">
-</parameter>
-</method>
-</class>
-<class name="InjectedSimulation"
- extends="uk.ac.imperial.presage2.core.simulator.RunnableSimulation"
- abstract="true"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<constructor name="InjectedSimulation"
- type="uk.ac.imperial.presage2.core.simulator.InjectedSimulation"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</constructor>
-<constructor name="InjectedSimulation"
- type="uk.ac.imperial.presage2.core.simulator.InjectedSimulation"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="modules" type="java.util.Set&lt;com.google.inject.AbstractModule&gt;">
-</parameter>
-</constructor>
-<method name="addModule"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="module" type="com.google.inject.AbstractModule">
-</parameter>
-</method>
-<method name="addModules"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="modules" type="java.util.Set&lt;com.google.inject.AbstractModule&gt;">
-</parameter>
-</method>
-<method name="addToScenario"
- return="void"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="s" type="uk.ac.imperial.presage2.core.simulator.Scenario">
-</parameter>
-</method>
-<method name="getInjector"
- return="com.google.inject.Injector"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="protected"
->
-</method>
-<method name="getModules"
- return="java.util.Set&lt;com.google.inject.AbstractModule&gt;"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</method>
-<method name="load"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-</class>
-<class name="MultiThreadedSimulator"
- extends="uk.ac.imperial.presage2.core.simulator.Simulator"
- abstract="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<implements name="uk.ac.imperial.presage2.core.simulator.ThreadPool">
-</implements>
-<constructor name="MultiThreadedSimulator"
- type="uk.ac.imperial.presage2.core.simulator.MultiThreadedSimulator"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="scenario" type="uk.ac.imperial.presage2.core.simulator.Scenario">
-</parameter>
-<parameter name="t" type="uk.ac.imperial.presage2.core.Time">
-</parameter>
-<parameter name="eventBus" type="uk.ac.imperial.presage2.core.event.EventBus">
-</parameter>
-<parameter name="threads" type="int">
-</parameter>
-</constructor>
-<constructor name="MultiThreadedSimulator"
- type="uk.ac.imperial.presage2.core.simulator.MultiThreadedSimulator"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="scenario" type="uk.ac.imperial.presage2.core.simulator.Scenario">
-</parameter>
-<parameter name="t" type="uk.ac.imperial.presage2.core.Time">
-</parameter>
-<parameter name="eventBus" type="uk.ac.imperial.presage2.core.event.EventBus">
-</parameter>
-<parameter name="threads" type="uk.ac.imperial.presage2.core.simulator.MultiThreadedSimulator.ThreadsValue">
-</parameter>
-</constructor>
-<method name="complete"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getThreadCount"
- return="int"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="initialise"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="run"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="shutdown"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="submit"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="s" type="java.lang.Runnable">
-</parameter>
-</method>
-<method name="submitScheduled"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="s" type="java.lang.Runnable">
-</parameter>
-<parameter name="condition" type="uk.ac.imperial.presage2.core.simulator.ThreadPool.WaitCondition">
-</parameter>
-</method>
-<method name="waitFor"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="condition" type="uk.ac.imperial.presage2.core.simulator.ThreadPool.WaitCondition">
+<parameter name="condition" type="uk.ac.imperial.presage2.core.simulator.ScheduleExecutor.WaitCondition">
 </parameter>
 </method>
 </class>
@@ -5558,28 +6361,6 @@
 <implements name="java.lang.annotation.Annotation">
 </implements>
 </class>
-<class name="ParticipantsComplete"
- extends="java.lang.Object"
- abstract="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<implements name="uk.ac.imperial.presage2.core.event.Event">
-</implements>
-<method name="getTime"
- return="uk.ac.imperial.presage2.core.Time"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-</class>
 <class name="RunnableSimulation"
  extends="java.lang.Object"
  abstract="true"
@@ -5590,6 +6371,8 @@
 >
 <implements name="java.lang.Runnable">
 </implements>
+<implements name="uk.ac.imperial.presage2.core.simulator.Scheduler">
+</implements>
 <constructor name="RunnableSimulation"
  type="uk.ac.imperial.presage2.core.simulator.RunnableSimulation"
  static="false"
@@ -5598,8 +6381,8 @@
  visibility="public"
 >
 </constructor>
-<method name="getCurrentSimulationTime"
- return="uk.ac.imperial.presage2.core.Time"
+<method name="addModule"
+ return="void"
  abstract="false"
  native="false"
  synchronized="false"
@@ -5608,22 +6391,24 @@
  deprecated="not deprecated"
  visibility="public"
 >
-</method>
-<method name="getParameter"
- return="java.lang.String"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="name" type="java.lang.String">
+<parameter name="module" type="com.google.inject.AbstractModule">
 </parameter>
 </method>
-<method name="getParameters"
- return="java.util.Map&lt;java.lang.String, java.lang.Class&lt;?&gt;&gt;"
+<method name="addObjectClass"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clazz" type="java.lang.Class&lt;?&gt;">
+</parameter>
+</method>
+<method name="addToSchedule"
+ return="void"
  abstract="false"
  native="false"
  synchronized="false"
@@ -5632,63 +6417,10 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<parameter name="o" type="java.lang.Object">
+</parameter>
 </method>
-<method name="getScenario"
- return="uk.ac.imperial.presage2.core.simulator.Scenario"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getSimluationPercentComplete"
- return="int"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getSimulationFinishTime"
- return="uk.ac.imperial.presage2.core.Time"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getSimulator"
- return="uk.ac.imperial.presage2.core.simulator.Simulator"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getState"
- return="uk.ac.imperial.presage2.core.simulator.RunnableSimulation.SimulationState"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="initDatabase"
+<method name="finish"
  return="void"
  abstract="false"
  native="false"
@@ -5699,7 +6431,31 @@
  visibility="protected"
 >
 </method>
-<method name="load"
+<method name="finishTimeCondition"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="t" type="int">
+</parameter>
+</method>
+<method name="initialise"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="initialiseScenario"
  return="void"
  abstract="true"
  native="false"
@@ -5709,6 +6465,27 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<parameter name="scenario" type="uk.ac.imperial.presage2.core.simulator.Scenario">
+</parameter>
+</method>
+<method name="loadParameters"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="provided" type="java.util.Map&lt;java.lang.String, java.lang.String&gt;">
+</parameter>
+<exception name="IllegalAccessException" type="java.lang.IllegalAccessException">
+</exception>
+<exception name="IllegalArgumentException" type="java.lang.IllegalArgumentException">
+</exception>
+<exception name="UndefinedParameterException" type="uk.ac.imperial.presage2.core.simulator.UndefinedParameterException">
+</exception>
 </method>
 <method name="main"
  return="void"
@@ -5737,44 +6514,6 @@
 <exception name="UndefinedParameterException" type="uk.ac.imperial.presage2.core.simulator.UndefinedParameterException">
 </exception>
 </method>
-<method name="newFromClassName"
- return="uk.ac.imperial.presage2.core.simulator.RunnableSimulation"
- abstract="false"
- native="false"
- synchronized="false"
- static="true"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="className" type="java.lang.String">
-</parameter>
-<parameter name="ctorParams" type="java.lang.Object...">
-</parameter>
-<exception name="ClassNotFoundException" type="java.lang.ClassNotFoundException">
-</exception>
-<exception name="IllegalAccessException" type="java.lang.IllegalAccessException">
-</exception>
-<exception name="InstantiationException" type="java.lang.InstantiationException">
-</exception>
-<exception name="InvocationTargetException" type="java.lang.reflect.InvocationTargetException">
-</exception>
-<exception name="NoSuchMethodException" type="java.lang.NoSuchMethodException">
-</exception>
-</method>
-<method name="onNewTimeCycle"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="e" type="uk.ac.imperial.presage2.core.simulator.EndOfTimeCycle">
-</parameter>
-</method>
 <method name="run"
  return="void"
  abstract="false"
@@ -5796,26 +6535,14 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="db" type="uk.ac.imperial.presage2.core.db.DatabaseService">
-</parameter>
-<parameter name="sto" type="uk.ac.imperial.presage2.core.db.StorageService">
-</parameter>
 <parameter name="simID" type="long">
 </parameter>
 <parameter name="threads" type="int">
 </parameter>
-<exception name="ClassNotFoundException" type="java.lang.ClassNotFoundException">
-</exception>
-<exception name="IllegalAccessException" type="java.lang.IllegalAccessException">
-</exception>
-<exception name="InstantiationException" type="java.lang.InstantiationException">
-</exception>
-<exception name="InvocationTargetException" type="java.lang.reflect.InvocationTargetException">
-</exception>
-<exception name="NoSuchMethodException" type="java.lang.NoSuchMethodException">
+<exception name="Exception" type="java.lang.Exception">
 </exception>
 </method>
-<method name="setDatabase"
+<method name="step"
  return="void"
  abstract="false"
  native="false"
@@ -5825,87 +6552,7 @@
  deprecated="not deprecated"
  visibility="protected"
 >
-<parameter name="database" type="uk.ac.imperial.presage2.core.db.DatabaseService">
-</parameter>
 </method>
-<method name="setEventBus"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="e" type="uk.ac.imperial.presage2.core.event.EventBus">
-</parameter>
-</method>
-<method name="setParameter"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="name" type="java.lang.String">
-</parameter>
-<parameter name="value" type="java.lang.String">
-</parameter>
-<exception name="IllegalAccessException" type="java.lang.IllegalAccessException">
-</exception>
-<exception name="IllegalArgumentException" type="java.lang.IllegalArgumentException">
-</exception>
-<exception name="InvocationTargetException" type="java.lang.reflect.InvocationTargetException">
-</exception>
-</method>
-<method name="setParameters"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="provided" type="java.util.Map&lt;java.lang.String, java.lang.String&gt;">
-</parameter>
-<exception name="IllegalAccessException" type="java.lang.IllegalAccessException">
-</exception>
-<exception name="IllegalArgumentException" type="java.lang.IllegalArgumentException">
-</exception>
-<exception name="InvocationTargetException" type="java.lang.reflect.InvocationTargetException">
-</exception>
-<exception name="UndefinedParameterException" type="uk.ac.imperial.presage2.core.simulator.UndefinedParameterException">
-</exception>
-</method>
-<method name="setStorage"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="db" type="uk.ac.imperial.presage2.core.db.StorageService">
-</parameter>
-</method>
-<field name="database"
- type="uk.ac.imperial.presage2.core.db.DatabaseService"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
 <field name="finishTime"
  type="int"
  transient="false"
@@ -5916,28 +6563,8 @@
  visibility="public"
 >
 </field>
-<field name="graphDb"
- type="uk.ac.imperial.presage2.core.db.StorageService"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="deprecated"
- visibility="protected"
->
-</field>
-<field name="logger"
- type="org.apache.log4j.Logger"
- transient="false"
- volatile="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="scenario"
- type="uk.ac.imperial.presage2.core.simulator.Scenario"
+<field name="threads"
+ type="int"
  transient="false"
  volatile="false"
  static="false"
@@ -5946,79 +6573,6 @@
  visibility="protected"
 >
 </field>
-<field name="simPersist"
- type="uk.ac.imperial.presage2.core.db.persistent.PersistentSimulation"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="simulator"
- type="uk.ac.imperial.presage2.core.simulator.Simulator"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="state"
- type="uk.ac.imperial.presage2.core.simulator.RunnableSimulation.SimulationState"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="storage"
- type="uk.ac.imperial.presage2.core.db.StorageService"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-</class>
-<class name="RunnableSimulation.SimulationState"
- extends="java.lang.Enum"
- abstract="false"
- static="true"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-<method name="valueOf"
- return="uk.ac.imperial.presage2.core.simulator.RunnableSimulation.SimulationState"
- abstract="false"
- native="false"
- synchronized="false"
- static="true"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="name" type="java.lang.String">
-</parameter>
-</method>
-<method name="values"
- return="uk.ac.imperial.presage2.core.simulator.RunnableSimulation.SimulationState[]"
- abstract="false"
- native="false"
- synchronized="false"
- static="true"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
 </class>
 <interface name="Scenario"
  abstract="true"
@@ -6027,7 +6581,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<method name="addEnvironment"
+<method name="addAgent"
  return="void"
  abstract="true"
  native="false"
@@ -6037,7 +6591,46 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="e" type="uk.ac.imperial.presage2.core.TimeDriven">
+<parameter name="o" type="java.lang.Object">
+</parameter>
+</method>
+<method name="addClass"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="c" type="java.lang.Class&lt;?&gt;">
+</parameter>
+</method>
+<method name="addEnvironment"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="deprecated"
+ visibility="public"
+>
+<parameter name="object" type="uk.ac.imperial.presage2.core.TimeDriven">
+</parameter>
+</method>
+<method name="addObject"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="o" type="java.lang.Object">
 </parameter>
 </method>
 <method name="addParticipant"
@@ -6047,23 +6640,10 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
-<parameter name="p" type="uk.ac.imperial.presage2.core.participant.Participant">
-</parameter>
-</method>
-<method name="addPlugin"
- return="void"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="p" type="uk.ac.imperial.presage2.core.plugin.Plugin">
+<parameter name="agent" type="uk.ac.imperial.presage2.core.participant.Participant">
 </parameter>
 </method>
 <method name="addTimeDriven"
@@ -6073,510 +6653,14 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
-<parameter name="t" type="uk.ac.imperial.presage2.core.TimeDriven">
-</parameter>
-</method>
-<method name="getEnvironment"
- return="uk.ac.imperial.presage2.core.TimeDriven"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getFinishTime"
- return="uk.ac.imperial.presage2.core.Time"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getParticipants"
- return="java.util.Set&lt;uk.ac.imperial.presage2.core.participant.Participant&gt;"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getPlugins"
- return="java.util.Set&lt;uk.ac.imperial.presage2.core.plugin.Plugin&gt;"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getTimeDriven"
- return="java.util.Set&lt;uk.ac.imperial.presage2.core.TimeDriven&gt;"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="removeParticipant"
- return="void"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="id" type="java.util.UUID">
+<parameter name="object" type="uk.ac.imperial.presage2.core.TimeDriven">
 </parameter>
 </method>
 </interface>
-<class name="Scenario.Builder"
- extends="java.lang.Object"
- abstract="false"
- static="true"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<constructor name="Scenario.Builder"
- type="uk.ac.imperial.presage2.core.simulator.Scenario.Builder"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="modules" type="com.google.inject.AbstractModule...">
-</parameter>
-</constructor>
-<method name="getInjector"
- return="com.google.inject.Injector"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<field name="injector"
- type="com.google.inject.Injector"
- transient="false"
- volatile="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-</field>
-</class>
-<class name="ScenarioModule"
- extends="com.google.inject.AbstractModule"
- abstract="true"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<constructor name="ScenarioModule"
- type="uk.ac.imperial.presage2.core.simulator.ScenarioModule"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</constructor>
-<method name="configure"
- return="void"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</method>
-</class>
-<class name="ScenarioSource"
- extends="java.lang.Object"
- abstract="true"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<implements name="java.lang.annotation.Annotation">
-</implements>
-</class>
-<class name="SimTime"
- extends="java.lang.Object"
- abstract="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<constructor name="SimTime"
- type="uk.ac.imperial.presage2.core.simulator.SimTime"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="t" type="uk.ac.imperial.presage2.core.Time">
-</parameter>
-</constructor>
-<method name="get"
- return="uk.ac.imperial.presage2.core.Time"
- abstract="false"
- native="false"
- synchronized="false"
- static="true"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-</class>
-<class name="Simulator"
- extends="java.lang.Object"
- abstract="true"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<implements name="uk.ac.imperial.presage2.core.simulator.ThreadPool">
-</implements>
-<constructor name="Simulator"
- type="uk.ac.imperial.presage2.core.simulator.Simulator"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="scenario" type="uk.ac.imperial.presage2.core.simulator.Scenario">
-</parameter>
-<parameter name="t" type="uk.ac.imperial.presage2.core.Time">
-</parameter>
-<parameter name="eventBus" type="uk.ac.imperial.presage2.core.event.EventBus">
-</parameter>
-</constructor>
-<method name="complete"
- return="void"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getCurrentSimulationTime"
- return="uk.ac.imperial.presage2.core.Time"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="initialise"
- return="void"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="run"
- return="void"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="setDatabaseService"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="db" type="uk.ac.imperial.presage2.core.db.DatabaseService">
-</parameter>
-</method>
-<method name="shutdown"
- return="void"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="start"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<field name="database"
- type="uk.ac.imperial.presage2.core.db.DatabaseService"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="eventBus"
- type="uk.ac.imperial.presage2.core.event.EventBus"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="scenario"
- type="uk.ac.imperial.presage2.core.simulator.Scenario"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="simTime"
- type="uk.ac.imperial.presage2.core.simulator.SimTime"
- transient="false"
- volatile="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="time"
- type="uk.ac.imperial.presage2.core.Time"
- transient="false"
- volatile="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-</class>
-<class name="SimulatorModule"
- extends="com.google.inject.AbstractModule"
- abstract="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<method name="configure"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</method>
-<method name="multiThreadedSimulator"
- return="uk.ac.imperial.presage2.core.simulator.SimulatorModule"
- abstract="false"
- native="false"
- synchronized="false"
- static="true"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="threads" type="int">
-</parameter>
-</method>
-<method name="singleThreadedSimulator"
- return="uk.ac.imperial.presage2.core.simulator.SimulatorModule"
- abstract="false"
- native="false"
- synchronized="false"
- static="true"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-</class>
-<class name="SingleThreadedSimulator"
- extends="uk.ac.imperial.presage2.core.simulator.Simulator"
- abstract="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<implements name="uk.ac.imperial.presage2.core.simulator.ThreadPool">
-</implements>
-<constructor name="SingleThreadedSimulator"
- type="uk.ac.imperial.presage2.core.simulator.SingleThreadedSimulator"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="scenario" type="uk.ac.imperial.presage2.core.simulator.Scenario">
-</parameter>
-<parameter name="t" type="uk.ac.imperial.presage2.core.Time">
-</parameter>
-<parameter name="eventBus" type="uk.ac.imperial.presage2.core.event.EventBus">
-</parameter>
-</constructor>
-<method name="complete"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getThreadCount"
- return="int"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="initialise"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="run"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="shutdown"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="submit"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="s" type="java.lang.Runnable">
-</parameter>
-</method>
-<method name="submitScheduled"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="s" type="java.lang.Runnable">
-</parameter>
-<parameter name="condition" type="uk.ac.imperial.presage2.core.simulator.ThreadPool.WaitCondition">
-</parameter>
-</method>
-<method name="waitFor"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="condition" type="uk.ac.imperial.presage2.core.simulator.ThreadPool.WaitCondition">
-</parameter>
-</method>
-</class>
-<interface name="ThreadPool"
+<interface name="ScheduleExecutor"
  abstract="true"
  static="false"
  final="false"
@@ -6630,7 +6714,22 @@
 >
 <parameter name="s" type="java.lang.Runnable">
 </parameter>
-<parameter name="condition" type="uk.ac.imperial.presage2.core.simulator.ThreadPool.WaitCondition">
+<parameter name="condition" type="uk.ac.imperial.presage2.core.simulator.ScheduleExecutor.WaitCondition">
+</parameter>
+</method>
+<method name="submitScheduledConditional"
+ return="java.util.concurrent.Future&lt;java.lang.Boolean&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="s" type="java.util.concurrent.Callable&lt;java.lang.Boolean&gt;">
+</parameter>
+<parameter name="condition" type="uk.ac.imperial.presage2.core.simulator.ScheduleExecutor.WaitCondition">
 </parameter>
 </method>
 <method name="waitFor"
@@ -6643,11 +6742,11 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="condition" type="uk.ac.imperial.presage2.core.simulator.ThreadPool.WaitCondition">
+<parameter name="condition" type="uk.ac.imperial.presage2.core.simulator.ScheduleExecutor.WaitCondition">
 </parameter>
 </method>
 </interface>
-<class name="ThreadPool.WaitCondition"
+<class name="ScheduleExecutor.WaitCondition"
  extends="java.lang.Enum"
  abstract="false"
  static="true"
@@ -6656,7 +6755,7 @@
  visibility="public"
 >
 <method name="valueOf"
- return="uk.ac.imperial.presage2.core.simulator.ThreadPool.WaitCondition"
+ return="uk.ac.imperial.presage2.core.simulator.ScheduleExecutor.WaitCondition"
  abstract="false"
  native="false"
  synchronized="false"
@@ -6669,7 +6768,7 @@
 </parameter>
 </method>
 <method name="values"
- return="uk.ac.imperial.presage2.core.simulator.ThreadPool.WaitCondition[]"
+ return="uk.ac.imperial.presage2.core.simulator.ScheduleExecutor.WaitCondition[]"
  abstract="false"
  native="false"
  synchronized="false"
@@ -6680,7 +6779,7 @@
 >
 </method>
 </class>
-<class name="Threads"
+<class name="Step"
  extends="java.lang.Object"
  abstract="true"
  static="false"
@@ -6834,11 +6933,11 @@
 >
 <parameter name="to" type="uk.ac.imperial.presage2.core.network.NetworkAddress">
 </parameter>
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 <method name="constrainMessage"
- return="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;"
+ return="uk.ac.imperial.presage2.core.network.Message"
  abstract="false"
  native="false"
  synchronized="false"
@@ -6847,7 +6946,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 </class>
@@ -7172,19 +7271,6 @@
  deprecated="not deprecated"
  visibility="protected"
 >
-</method>
-<method name="initialise"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="e" type="uk.ac.imperial.presage2.core.simulator.Events.Initialised">
-</parameter>
 </method>
 <method name="initialiseTranslators"
  return="void"
@@ -8631,19 +8717,6 @@
  visibility="protected"
 >
 </method>
-<method name="initialise"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="e" type="uk.ac.imperial.presage2.core.simulator.Events.Initialised">
-</parameter>
-</method>
 <method name="setEventBus"
  return="void"
  abstract="false"
@@ -9725,8 +9798,6 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<implements name="uk.ac.imperial.presage2.core.plugin.Plugin">
-</implements>
 <constructor name="LocationStoragePlugin"
  type="uk.ac.imperial.presage2.util.location.LocationStoragePlugin"
  static="false"
@@ -9744,22 +9815,9 @@
 >
 <parameter name="serviceProvider" type="uk.ac.imperial.presage2.core.environment.EnvironmentServiceProvider">
 </parameter>
-<parameter name="t" type="uk.ac.imperial.presage2.core.Time">
-</parameter>
 <exception name="UnavailableServiceException" type="uk.ac.imperial.presage2.core.environment.UnavailableServiceException">
 </exception>
 </constructor>
-<method name="execute"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="deprecated"
- visibility="public"
->
-</method>
 <method name="incrementTime"
  return="void"
  abstract="false"
@@ -9770,28 +9828,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
-</method>
-<method name="initialise"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="onSimulationComplete"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
+<parameter name="t" type="int">
+</parameter>
 </method>
 <method name="setStorage"
  return="void"
@@ -9803,7 +9841,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="storage" type="uk.ac.imperial.presage2.core.db.StorageService">
+<parameter name="psim" type="uk.ac.imperial.presage2.core.db.persistent.PersistentSimulation">
 </parameter>
 </method>
 </class>
@@ -10841,11 +10879,11 @@
 >
 <parameter name="to" type="uk.ac.imperial.presage2.core.network.NetworkAddress">
 </parameter>
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 <method name="constrainMessage"
- return="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;"
+ return="uk.ac.imperial.presage2.core.network.Message"
  abstract="false"
  native="false"
  synchronized="false"
@@ -10854,7 +10892,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 </class>
@@ -10885,24 +10923,21 @@
 <parameter name="name" type="java.lang.String">
 </parameter>
 </constructor>
-<constructor name="AbstractParticipant"
- type="uk.ac.imperial.presage2.util.participant.AbstractParticipant"
+<method name="act"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
  static="false"
  final="false"
  deprecated="not deprecated"
- visibility="protected"
+ visibility="public"
 >
-<parameter name="id" type="java.util.UUID">
+<parameter name="a" type="uk.ac.imperial.presage2.core.Action">
 </parameter>
-<parameter name="name" type="java.lang.String">
-</parameter>
-<parameter name="environment" type="uk.ac.imperial.presage2.core.environment.EnvironmentConnector">
-</parameter>
-<parameter name="network" type="uk.ac.imperial.presage2.core.network.NetworkAdaptor">
-</parameter>
-<parameter name="time" type="uk.ac.imperial.presage2.core.Time">
-</parameter>
-</constructor>
+<exception name="ActionHandlingException" type="uk.ac.imperial.presage2.core.environment.ActionHandlingException">
+</exception>
+</method>
 <method name="enqueueInput"
  return="void"
  abstract="false"
@@ -10913,7 +10948,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="inputs" type="java.util.Collection&lt;? extends uk.ac.imperial.presage2.core.messaging.Input&gt;">
+<parameter name="input" type="java.lang.Object">
 </parameter>
 </method>
 <method name="enqueueInput"
@@ -10926,19 +10961,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="input" type="uk.ac.imperial.presage2.core.messaging.Input">
+<parameter name="inputs" type="java.util.Collection&lt;? extends java.lang.Object&gt;">
 </parameter>
-</method>
-<method name="execute"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="deprecated"
- visibility="public"
->
 </method>
 <method name="getEnvironmentService"
  return="T"
@@ -10988,28 +11012,6 @@
  visibility="protected"
 >
 </method>
-<method name="getTime"
- return="uk.ac.imperial.presage2.core.Time"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="incrementTime"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
 <method name="initialise"
  return="void"
  abstract="false"
@@ -11021,19 +11023,6 @@
  visibility="public"
 >
 </method>
-<method name="initialiseEnvironment"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="e" type="uk.ac.imperial.presage2.core.environment.EnvironmentConnector">
-</parameter>
-</method>
 <method name="initialiseInputQueue"
  return="void"
  abstract="false"
@@ -11043,43 +11032,6 @@
  final="false"
  deprecated="not deprecated"
  visibility="protected"
->
-</method>
-<method name="initialiseNetwork"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="networkFactory" type="uk.ac.imperial.presage2.core.network.NetworkConnectorFactory">
-</parameter>
-</method>
-<method name="initialiseTime"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="t" type="uk.ac.imperial.presage2.core.Time">
-</parameter>
-</method>
-<method name="onSimulationComplete"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
 >
 </method>
 <method name="persistParticipant"
@@ -11106,19 +11058,6 @@
  visibility="protected"
 >
 <parameter name="services" type="java.util.Set&lt;uk.ac.imperial.presage2.core.environment.EnvironmentService&gt;">
-</parameter>
-</method>
-<method name="processInput"
- return="void"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="in" type="uk.ac.imperial.presage2.core.messaging.Input">
 </parameter>
 </method>
 <field name="authkey"
@@ -11161,16 +11100,6 @@
  visibility="protected"
 >
 </field>
-<field name="network"
- type="uk.ac.imperial.presage2.core.network.NetworkAdaptor"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
 <field name="persist"
  type="uk.ac.imperial.presage2.core.db.persistent.PersistentAgent"
  transient="false"
@@ -11191,6 +11120,38 @@
  visibility="protected"
 >
 </field>
+</class>
+<class name="AbstractParticipant.State"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AbstractParticipant.State"
+ type="uk.ac.imperial.presage2.util.participant.AbstractParticipant.State"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="initialValue" type="T">
+</parameter>
+</constructor>
+<method name="get"
+ return="T"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 </class>
 <interface name="HasCommunicationRange"
  abstract="true"
@@ -11230,6 +11191,17 @@
 >
 </method>
 </interface>
+<class name="StateAccessor"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
 </package>
 <package name="uk.ac.imperial.presage2.util.protocols"
 >
@@ -11564,8 +11536,6 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<implements name="uk.ac.imperial.presage2.core.TimeDriven">
-</implements>
 <constructor name="FSMProtocol"
  type="uk.ac.imperial.presage2.util.protocols.FSMProtocol"
  static="false"
@@ -11590,6 +11560,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<parameter name="t" type="int">
+</parameter>
 </method>
 <method name="spawn"
  return="uk.ac.imperial.presage2.util.protocols.Conversation"
@@ -11625,7 +11597,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 <method name="spawn"
@@ -11703,7 +11675,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="message" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="message" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 <parameter name="conv" type="uk.ac.imperial.presage2.util.protocols.FSMConversation">
 </parameter>
@@ -11720,7 +11692,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="message" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="message" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 <parameter name="conv" type="uk.ac.imperial.presage2.util.protocols.FSMConversation">
 </parameter>
@@ -11773,7 +11745,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="message" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="message" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 <parameter name="conv" type="uk.ac.imperial.presage2.util.protocols.FSMConversation">
 </parameter>
@@ -11869,8 +11841,6 @@
 >
 <implements name="uk.ac.imperial.presage2.core.messaging.InputHandler">
 </implements>
-<implements name="uk.ac.imperial.presage2.core.TimeDriven">
-</implements>
 <constructor name="Protocol"
  type="uk.ac.imperial.presage2.util.protocols.Protocol"
  static="false"
@@ -11929,6 +11899,19 @@
 <parameter name="in" type="uk.ac.imperial.presage2.core.messaging.Input">
 </parameter>
 </method>
+<method name="incrementTime"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="t" type="int">
+</parameter>
+</method>
 <method name="spawn"
  return="uk.ac.imperial.presage2.util.protocols.Conversation"
  abstract="true"
@@ -11963,7 +11946,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message&lt;?&gt;">
+<parameter name="m" type="uk.ac.imperial.presage2.core.network.Message">
 </parameter>
 </method>
 <method name="spawn"
